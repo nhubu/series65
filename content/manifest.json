@@ -1,5 +1,5 @@
 {
- "version": "8aaa6bf9dd",
+ "version": "37e572ca1f",
  "units": [
   {
    "unit": 1,
@@ -91,6 +91,19 @@
    "questions": 21,
    "flashcards": 7,
    "minutes": 28
+  },
+  {
+   "unit": 8,
+   "file": "unit08.json",
+   "title": "Regulation of Securities & Issuers",
+   "status": "complete",
+   "function": 4,
+   "examQuestions": 2,
+   "lessons": 5,
+   "concepts": 13,
+   "questions": 36,
+   "flashcards": 13,
+   "minutes": 53
   }
  ]
 }
