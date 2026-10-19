@@ -1,5 +1,5 @@
 {
- "version": "37e572ca1f",
+ "version": "305371f95d",
  "units": [
   {
    "unit": 1,
@@ -104,6 +104,19 @@
    "questions": 36,
    "flashcards": 13,
    "minutes": 53
+  },
+  {
+   "unit": 9,
+   "file": "unit09.json",
+   "title": "Regulation of Investment Advisers",
+   "status": "complete",
+   "function": 4,
+   "examQuestions": 6,
+   "lessons": 8,
+   "concepts": 19,
+   "questions": 50,
+   "flashcards": 19,
+   "minutes": 82
   }
  ]
 }
