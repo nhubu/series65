@@ -1,5 +1,5 @@
 {
- "version": "10914da471",
+ "version": "3eabdbe28e",
  "units": [
   {
    "unit": 1,
@@ -13,6 +13,19 @@
    "questions": 31,
    "flashcards": 13,
    "minutes": 37
+  },
+  {
+   "unit": 2,
+   "file": "unit02.json",
+   "title": "Fixed-Income (Debt) Securities",
+   "status": "complete",
+   "function": 2,
+   "examQuestions": 5,
+   "lessons": 9,
+   "concepts": 20,
+   "questions": 52,
+   "flashcards": 20,
+   "minutes": 83
   }
  ]
 }
