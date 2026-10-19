@@ -1,6 +1,6 @@
-/* Series 65 Coach service worker — build ca88bb0534 */
-const CACHE = 's65-ca88bb0534';
-const PRECACHE = ["./", "index.html", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png", "content/manifest.json", "content/unit01.json", "content/unit02.json", "content/unit03.json", "content/unit04.json"];
+/* Series 65 Coach service worker — build 8828e8ac6c */
+const CACHE = 's65-8828e8ac6c';
+const PRECACHE = ["./", "index.html", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png", "content/manifest.json", "content/unit01.json", "content/unit02.json", "content/unit03.json", "content/unit04.json", "content/unit05.json"];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(PRECACHE)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

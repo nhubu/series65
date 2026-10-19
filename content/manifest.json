@@ -1,5 +1,5 @@
 {
- "version": "4bc51d3748",
+ "version": "491b93bac2",
  "units": [
   {
    "unit": 1,
@@ -52,6 +52,19 @@
    "questions": 21,
    "flashcards": 7,
    "minutes": 37
+  },
+  {
+   "unit": 5,
+   "file": "unit05.json",
+   "title": "Alternative Investments",
+   "status": "complete",
+   "function": 2,
+   "examQuestions": 4,
+   "lessons": 5,
+   "concepts": 10,
+   "questions": 22,
+   "flashcards": 10,
+   "minutes": 41
   }
  ]
 }
