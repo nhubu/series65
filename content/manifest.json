@@ -1,5 +1,5 @@
 {
- "version": "491b93bac2",
+ "version": "8aaa6bf9dd",
  "units": [
   {
    "unit": 1,
@@ -65,6 +65,32 @@
    "questions": 22,
    "flashcards": 10,
    "minutes": 41
+  },
+  {
+   "unit": 6,
+   "file": "unit06.json",
+   "title": "Basic Economic Concepts",
+   "status": "complete",
+   "function": 1,
+   "examQuestions": 6,
+   "lessons": 4,
+   "concepts": 9,
+   "questions": 25,
+   "flashcards": 9,
+   "minutes": 38
+  },
+  {
+   "unit": 7,
+   "file": "unit07.json",
+   "title": "Financial Reporting",
+   "status": "complete",
+   "function": 1,
+   "examQuestions": 4,
+   "lessons": 3,
+   "concepts": 7,
+   "questions": 21,
+   "flashcards": 7,
+   "minutes": 28
   }
  ]
 }

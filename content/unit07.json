@@ -1,0 +1,1216 @@
+{
+ "unit": 7,
+ "title": "Financial Reporting",
+ "fullTitle": "Financial Reporting",
+ "function": 1,
+ "examQuestions": 4,
+ "pdfPages": [
+  153,
+  168
+ ],
+ "printedPages": [
+  135,
+  150
+ ],
+ "status": "complete",
+ "los": [
+  {
+   "id": "7.a",
+   "text": "Recognize the relationship between assets, liabilities, and owners' equity."
+  },
+  {
+   "id": "7.b",
+   "text": "Identify the effects on the balance sheet from certain corporate actions."
+  },
+  {
+   "id": "7.c",
+   "text": "Recognize income statement items."
+  },
+  {
+   "id": "7.d",
+   "text": "Identify the use of the statement of cash flows."
+  },
+  {
+   "id": "7.e",
+   "text": "Distinguish between the different forms used in SEC reporting."
+  }
+ ],
+ "concepts": [
+  {
+   "id": "C07.01",
+   "lo": "7.a",
+   "topic": "Balance sheet",
+   "subtopic": "The equation; assets by liquidity",
+   "pages": [
+    154,
+    155
+   ],
+   "explanation": "Fundamental analysts read financial statements to judge profitability, liquidity, financial strength and efficiency. The balance sheet is a snapshot at a point in time: Assets − Liabilities = Owners' equity (net worth), or Assets = Liabilities + Equity — the two sides must balance. Assets are listed in order of liquidity. Current assets convert to cash within 12 months: cash and equivalents (money market instruments, marketable securities), accounts receivable (net of allowance for bad debts), inventory (raw materials, work in process, finished goods), prepaid expenses (rent, insurance, advertising already paid). Fixed assets — property, plant, equipment — are shown at cost less accumulated depreciation (which may differ from market value). Other assets are intangibles — formulas, brand names, contract rights, trademarks, goodwill — written down through amortization; valuable to the owner, little value to others.",
+   "rules": [
+    "Assets = Liabilities + Equity.",
+    "Current = within 12 months; fixed = PP&E at cost less depreciation; other = intangibles (amortized)."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Owners' equity = total assets − total liabilities"
+   ],
+   "examples": [],
+   "prereqs": [],
+   "misconceptions": [
+    "Treating prepaid expenses as a liability — they are a current asset."
+   ],
+   "lessons": [
+    "L07.1"
+   ],
+   "questions": [
+    "Q07.001",
+    "Q07.002",
+    "F07.001"
+   ]
+  },
+  {
+   "id": "C07.02",
+   "lo": "7.a",
+   "topic": "Balance sheet",
+   "subtopic": "Liabilities, working capital, shareholders' equity, treasury stock, capitalization",
+   "pages": [
+    155,
+    158
+   ],
+   "explanation": "Current liabilities are due within 12 months: accounts payable, accrued wages, the current portion of long-term debt, notes payable, accrued taxes; deferred tax credits are treated as a liability. Working capital = current assets − current liabilities. Long-term liabilities are due beyond 12 months: bonds, mortgages, long-term notes. Shareholders' equity (net worth) = what is left for owners after creditors: capital stock at par (common and preferred — common par is arbitrary), capital in excess of par (paid-in surplus/additional paid-in capital — the amount received above par when shares were issued), and retained earnings (earned surplus — cumulative profits not paid as dividends; losses reduce it). Treasury stock (issued shares reacquired by the company) appears as a negative in equity and reduces net worth. Capitalization = long-term debt + equity; capital structure is the mix. Four elements: long-term debt, capital stock, capital in excess of par, retained earnings.",
+   "rules": [
+    "Working capital = current assets − current liabilities.",
+    "Equity = par stock + paid-in surplus + retained earnings (− treasury stock).",
+    "Capitalization = long-term debt + equity."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Capital surplus per share = issue price − par"
+   ],
+   "examples": [
+    "$10 par stock sold at $35 → $25 per share goes to capital surplus.",
+    "Sample company: $50M debt + $20M preferred + $20M common equity = $90M capitalization."
+   ],
+   "prereqs": [
+    "C07.01"
+   ],
+   "misconceptions": [
+    "Calling the premium over par 'retained earnings' or 'paid-in earnings'."
+   ],
+   "lessons": [
+    "L07.1"
+   ],
+   "questions": [
+    "Q07.003",
+    "Q07.004",
+    "Q07.005",
+    "F07.002"
+   ]
+  },
+  {
+   "id": "C07.03",
+   "lo": "7.b",
+   "topic": "Balance sheet effects",
+   "subtopic": "Issuing securities, conversion, redemption, dividends, splits, leverage",
+   "pages": [
+    158,
+    160
+   ],
+   "explanation": "Issuing stock: cash (assets) and equity both rise. Issuing bonds: cash rises, liabilities rise — equity unchanged. Converting bonds to stock: liabilities fall, equity rises, assets unchanged (both changes on the same side). Redeeming bonds: cash falls, long-term liabilities fall — working capital falls (current asset used to retire long-term debt), though future cash flow improves (no more interest); redeeming above par (e.g., at 103) reduces equity by the premium. Declaring a cash dividend: retained earnings fall, current liabilities rise; paying it: cash and current liabilities fall. A stock split changes only par value per share and share count — equity unchanged. If assets stay the same but equity falls, liabilities must have risen. Financial leverage = using long-term debt to raise return on equity; a high debt-to-equity ratio = highly leveraged (industrial companies at 50%+; utilities can carry more because of stable cash flows); leverage helps when returns exceed debt costs, raises default risk in downturns, and makes the company more sensitive to interest-rate changes.",
+   "rules": [
+    "Conversion: liabilities ↓, equity ↑, assets same.",
+    "Bond redemption: cash ↓, LT liabilities ↓, working capital ↓, current liabilities unchanged.",
+    "Dividend declared: retained earnings ↓, current liabilities ↑.",
+    "Split: no change to equity."
+   ],
+   "exceptions": [
+    "Redeeming debt above par reduces equity by the premium."
+   ],
+   "formulas": [],
+   "examples": [
+    "Call $5M of bonds at 103: current assets −$5.15M, long-term liabilities −$5M, equity −$150K, current liabilities unchanged."
+   ],
+   "prereqs": [
+    "C07.02"
+   ],
+   "misconceptions": [
+    "Thinking paying a dividend changes net worth — the declaration did; payment just swaps cash for the liability."
+   ],
+   "lessons": [
+    "L07.2"
+   ],
+   "questions": [
+    "Q07.006",
+    "Q07.007",
+    "Q07.008",
+    "Q07.009",
+    "F07.003"
+   ]
+  },
+  {
+   "id": "C07.04",
+   "lo": "7.c",
+   "topic": "Income statement",
+   "subtopic": "Components; interest vs. dividends; depreciation; fiscal year",
+   "pages": [
+    160,
+    161
+   ],
+   "explanation": "The income statement (P&L) summarizes revenues and expenses for a period (quarter, year to date, year) — what came in, what went out, what is left. Revenues (sales) − cost of goods sold (labor, materials, production including depreciation) = gross operating profit (gross margin; as a percent of sales, the margin of profit). Less other operating costs (rent, utilities) = net operating profit = EBIT (earnings before interest and taxes). Less interest (not an operating expense, but deductible) = pre-tax income. Less taxes = net income, from which dividends are paid; the remainder goes to retained earnings. Three primary components: revenue, COGS, pre-tax income. Interest is tax-deductible and taxed once (to the recipient); dividends are paid from after-tax income and taxed again to shareholders (double taxation). Accelerated depreciation front-loads expense: lower pre-tax income and taxes early, higher later. A fiscal year is any 12-month accounting year not ending December 31 (the U.S. government's runs October 1–September 30). Technical analysts ignore these statements.",
+   "rules": [
+    "Sales − COGS = gross margin; − operating costs = EBIT; − interest = pre-tax income; − tax = net income.",
+    "Interest: deductible, taxed once. Dividends: after-tax, taxed twice."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Margin of profit = gross margin ÷ net sales"
+   ],
+   "examples": [],
+   "prereqs": [
+    "C07.02"
+   ],
+   "misconceptions": [
+    "Treating interest as an operating expense or dividends as deductible."
+   ],
+   "lessons": [
+    "L07.2"
+   ],
+   "questions": [
+    "Q07.010",
+    "Q07.011",
+    "Q07.012",
+    "F07.004"
+   ]
+  },
+  {
+   "id": "C07.05",
+   "lo": "7.c",
+   "topic": "Accounting fundamentals",
+   "subtopic": "Audited vs. unaudited, GAAP, auditor's opinion, cash vs. accrual, footnotes",
+   "pages": [
+    161,
+    163
+   ],
+   "explanation": "Routine internal (or outside-prepared) statements are unaudited; formal reports to the SEC and shareholders must be audited by an independent CPA under GAAP (generally accepted accounting principles). The auditor's opinion: unqualified = no reservations (best); qualified = reservations about accuracy or completeness. Cash accounting records revenue and expenses when cash changes hands (small businesses); accrual accounting records them when earned/incurred ('booked') — larger companies. Footnotes disclose accounting methods, extraordinary items, inventory method (FIFO/LIFO), pending litigation, management philosophy, details of long-term debt (maturities, rates, call and conversion provisions, covenants, pledged assets, debt maturing in each of the next five years) and off-the-books financing such as debt guarantees.",
+   "rules": [
+    "Audited = independent CPA, GAAP, required for SEC/shareholder reports.",
+    "Unqualified opinion is best; qualified means reservations.",
+    "Litigation, off-book debt, accounting methods → footnotes."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [
+    "A $3,000 system installed in May, paid in August: cash method books it in August; accrual books it in May."
+   ],
+   "prereqs": [],
+   "misconceptions": [
+    "Putting potential litigation on the balance sheet."
+   ],
+   "lessons": [
+    "L07.2"
+   ],
+   "questions": [
+    "Q07.013",
+    "Q07.014",
+    "Q07.015",
+    "F07.005"
+   ]
+  },
+  {
+   "id": "C07.06",
+   "lo": "7.d",
+   "topic": "Statement of cash flows",
+   "subtopic": "Operating, investing, financing activities",
+   "pages": [
+    163,
+    164
+   ],
+   "explanation": "The cash flow statement shows sources and uses of cash and beginning/ending cash. Three sections: operating activities — receipts from sales and services plus interest and dividends received, less payments for inventory, payroll, taxes, interest, utilities, rent (the key figure; mostly income-statement items); investing activities — buying and selling securities, land, buildings, equipment, and making/collecting loans; financing activities — cash to and from owners and creditors: issuing stock or bonds, repurchasing stock (treasury), retiring bonds, paying dividends (balance-sheet items). Non-cash charges such as depreciation and amortization are added back to net income to estimate cash flow. There is no 'cash flow from sales activities'. Accounting changes do not appear.",
+   "rules": [
+    "Operating: sales, expenses, interest and dividends received.",
+    "Investing: buy/sell assets and securities, loans.",
+    "Financing: issue/retire stock and bonds, dividends paid.",
+    "Cash flow ≈ net income + depreciation/amortization."
+   ],
+   "exceptions": [
+    "Interest and dividends received are operating, not investing."
+   ],
+   "formulas": [
+    "Cash flow = net income + non-cash charges"
+   ],
+   "examples": [
+    "Revenue $9M, expenses $6M including $500K depreciation, net income $2.25M → cash flow $2.75M."
+   ],
+   "prereqs": [
+    "C07.04"
+   ],
+   "misconceptions": [
+    "Classifying dividends received as investing."
+   ],
+   "lessons": [
+    "L07.3"
+   ],
+   "questions": [
+    "Q07.016",
+    "Q07.017",
+    "Q07.018",
+    "F07.006"
+   ]
+  },
+  {
+   "id": "C07.07",
+   "lo": "7.e",
+   "topic": "SEC reporting",
+   "subtopic": "Forms 8-K, 10-K, 10-Q, annual report, EDGAR",
+   "pages": [
+    165,
+    166
+   ],
+   "explanation": "Registered under the Securities Act of 1933, public companies report periodically under the Securities Exchange Act of 1934; filings are public on EDGAR. Form 8-K: newsworthy events — management or name changes, mergers/acquisitions, bankruptcy, major product introductions, sale of a product line or subsidiary, a director resigning over a disagreement — filed within four business days; domestic issuers only (foreign issuers and ADRs exempt); relocating a subsidiary does not trigger it. Form 10-K: annual report to the SEC with audited financials and detailed financial information (deadlines not tested). Form 10-Q: quarterly, unaudited, filed after each of the first three fiscal quarters (the 10-K covers the fourth). The annual report to shareholders: audited statements plus marketing-style narrative, CEO letter, proxies; a company may send the 10-K instead. Most current data in late August for a calendar-year company: the June 30 10-Q.",
+   "rules": [
+    "8-K: events, 4 business days, domestic only.",
+    "10-K: annual, audited. 10-Q: quarterly ×3, unaudited.",
+    "Company may give shareholders the 10-K instead of an annual report."
+   ],
+   "exceptions": [
+    "Foreign issuers and ADRs do not file 8-Ks."
+   ],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [],
+   "misconceptions": [
+    "Expecting a fourth-quarter 10-Q."
+   ],
+   "lessons": [
+    "L07.3"
+   ],
+   "questions": [
+    "Q07.019",
+    "Q07.020",
+    "Q07.021",
+    "F07.007"
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "L07.1",
+   "title": "Reading a balance sheet",
+   "objective": "Apply the balance sheet equation, classify assets and liabilities, compute working capital, break down shareholders' equity, and define capitalization.",
+   "minutes": 9,
+   "concepts": [
+    "C07.01",
+    "C07.02"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "The equation",
+     "b": "Fundamental analysts use financial statements to judge **profitability, liquidity, financial strength and efficiency**. The **balance sheet** is a snapshot at one moment:\n\n**Assets − Liabilities = Owners' equity (net worth)**, or **Assets = Liabilities + Equity**. The two sides always balance — everything owned, minus everything owed, is what belongs to the owners."
+    },
+    {
+     "t": "teach",
+     "h": "Assets, in order of liquidity",
+     "b": "- **Current assets** — convertible to cash within **12 months**: **cash and equivalents** (money market instruments, marketable securities); **accounts receivable** (net of an allowance for bad debts); **inventory** (raw materials, work in process, finished goods); **prepaid expenses** (rent, insurance, advertising paid in advance).\n- **Fixed assets** — property, plant and equipment, shown at **cost less accumulated depreciation** (which may bear no relation to market value).\n- **Other assets** — **intangibles**: formulas, brand names, contract rights, trademarks, **goodwill**. Written down by **amortization**. Valuable to the owner, little value to anyone else."
+    },
+    {
+     "t": "teach",
+     "h": "Liabilities and working capital",
+     "b": "- **Current liabilities** — due within 12 months: accounts payable, accrued wages, the **current portion of long-term debt**, notes payable, accrued taxes. **Deferred tax credits** are treated as a liability.\n- **Long-term liabilities** — due beyond 12 months: bonds, mortgages, long-term notes.\n\n**Working capital = current assets − current liabilities.** Positive, one hopes."
+    },
+    {
+     "t": "teach",
+     "h": "Shareholders' equity and capitalization",
+     "b": "Equity (net worth) is the owners' claim after creditors. Three parts:\n- **Capital stock at par** — common and preferred at par value. Common par is arbitrary; preferred par matters (the dividend is a percent of it).\n- **Capital in excess of par** — also *paid-in surplus*, *capital surplus*, *additional paid-in capital*: what the company received **above par** when it issued shares. $10 par sold at $35 → $25 of capital surplus.\n- **Retained earnings** — *earned surplus*: cumulative profits **not paid out as dividends**; losses reduce it.\n\n**Treasury stock** — shares issued and then bought back — sits in equity as a **negative** and **reduces net worth**.\n\n**Capitalization** = **long-term debt + equity**; the **capital structure** is the mix. Four elements: long-term debt, capital stock, capital in excess of par, retained earnings."
+    },
+    {
+     "t": "example",
+     "b": "Amalgamated Widget: $50M of 8% convertible debentures, $20M preferred, $1M common at par, $4M capital surplus, $15M retained earnings. Equity = $40M; capitalization = $50M + $40M = $90M."
+    },
+    {
+     "t": "check",
+     "q": "Q07.004"
+    }
+   ],
+   "practice": [
+    "Q07.001",
+    "Q07.002",
+    "Q07.003",
+    "Q07.005"
+   ]
+  },
+  {
+   "id": "L07.2",
+   "title": "Corporate actions, the income statement, and accounting basics",
+   "objective": "Trace the balance-sheet effect of issuing, converting, redeeming, paying dividends and splitting; walk the income statement from sales to net income; and distinguish audited/unaudited, cash/accrual and the role of footnotes.",
+   "minutes": 11,
+   "concepts": [
+    "C07.03",
+    "C07.04",
+    "C07.05"
+   ],
+   "blocks": [
+    {
+     "t": "compare",
+     "h": "What each corporate action does to the balance sheet",
+     "rows": [
+      [
+       "Action",
+       "Assets",
+       "Liabilities",
+       "Equity",
+       "Note"
+      ],
+      [
+       "Issue stock",
+       "Cash ↑",
+       "—",
+       "↑",
+       ""
+      ],
+      [
+       "Issue bonds",
+       "Cash ↑",
+       "↑",
+       "—",
+       "Equity unchanged"
+      ],
+      [
+       "Convert bonds to stock",
+       "—",
+       "↓",
+       "↑",
+       "Same side; assets untouched"
+      ],
+      [
+       "Redeem bonds",
+       "Cash ↓",
+       "LT debt ↓",
+       "↓ if paid above par",
+       "Working capital ↓; future cash flow ↑ (no interest)"
+      ],
+      [
+       "Declare cash dividend",
+       "—",
+       "Current liab. ↑",
+       "Retained earnings ↓",
+       "Net worth falls at declaration"
+      ],
+      [
+       "Pay the dividend",
+       "Cash ↓",
+       "Current liab. ↓",
+       "—",
+       ""
+      ],
+      [
+       "Stock split",
+       "—",
+       "—",
+       "—",
+       "Only par/share and share count change"
+      ]
+     ]
+    },
+    {
+     "t": "teach",
+     "h": "Reasoning from the equation",
+     "b": "If assets are unchanged and equity fell, **liabilities must have risen**. Issuing preferred stock raises equity; issuing debentures does not; paying a declared dividend just swaps cash for a liability; redeeming debt **above par** (calling $5M at 103 costs $5.15M) cuts equity by the $150K premium while current liabilities stay put.\n\n**Financial leverage** is using long-term debt to boost return on equity. A high debt-to-equity ratio (industrials at **50%+**) means highly leveraged; **utilities** can carry more thanks to stable cash flows. Leverage pays when returns beat debt costs, raises **default risk** in downturns, and makes the firm more sensitive to **interest-rate changes**."
+    },
+    {
+     "t": "check",
+     "q": "Q07.007"
+    },
+    {
+     "t": "teach",
+     "h": "The income statement",
+     "b": "The **income statement** (P&L) covers a **period**: what came in, what went out, what's left.\n- **Revenues (sales)**\n- − **Cost of goods sold** (labor, materials, production — including **depreciation**) = **gross operating profit / gross margin** (÷ sales = margin of profit)\n- − other operating costs (rent, utilities) = net operating profit = **EBIT**\n- − **interest** (not an operating expense, but it **reduces taxable income**) = **pre-tax income**\n- − taxes = **net income** → dividends paid from here; the rest goes to **retained earnings**.\n\nThe three primary components: **revenue, COGS, pre-tax income**.\n\n**Interest is deductible and taxed once** (to the lender); **dividends come from after-tax income and are taxed again** to shareholders — double taxation. **Accelerated depreciation** front-loads expense: lower pre-tax income and taxes now, higher later. A **fiscal year** is any accounting year not ending December 31 (the U.S. government's runs Oct 1–Sep 30). Technical analysts ignore all of this."
+    },
+    {
+     "t": "compare",
+     "h": "Which statement is it on?",
+     "rows": [
+      [
+       "Balance sheet",
+       "Income statement"
+      ],
+      [
+       "Current liabilities",
+       "Revenues"
+      ],
+      [
+       "Net worth",
+       "Cost of goods sold"
+      ],
+      [
+       "Retained earnings",
+       "Net income"
+      ],
+      [
+       "Cash",
+       "Interest paid"
+      ]
+     ]
+    },
+    {
+     "t": "teach",
+     "h": "Audits, methods, footnotes",
+     "b": "- Monthly in-house statements are **unaudited**. Reports to the **SEC and shareholders** must be **audited** by an **independent** CPA under **GAAP**.\n- Auditor's opinion: **unqualified** = no reservations (best); **qualified** = reservations about accuracy or completeness.\n- **Cash accounting** books revenue and expenses when money moves (small firms). **Accrual accounting** books them when earned or incurred (larger firms). A system installed in May and paid in August: cash method records August; accrual records May.\n- **Footnotes** hold accounting methods, extraordinary items, **FIFO/LIFO**, **pending litigation**, management philosophy, long-term-debt detail (maturities, rates, call/conversion terms, covenants, pledged assets, debt due in each of the next five years), and **off-the-books financing** such as debt guarantees."
+    },
+    {
+     "t": "check",
+     "q": "Q07.014"
+    }
+   ],
+   "practice": [
+    "Q07.006",
+    "Q07.008",
+    "Q07.009",
+    "Q07.010",
+    "Q07.011",
+    "Q07.012",
+    "Q07.013",
+    "Q07.015"
+   ]
+  },
+  {
+   "id": "L07.3",
+   "title": "Cash flow and SEC filings",
+   "objective": "Classify cash flows into operating, investing and financing activities, compute cash flow from net income and depreciation, and identify Forms 8-K, 10-K and 10-Q and the annual report.",
+   "minutes": 8,
+   "concepts": [
+    "C07.06",
+    "C07.07"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Statement of cash flows",
+     "b": "Reports sources and uses of cash and beginning/ending balances, in three parts:\n- **Operating activities** — cash from selling goods and services **plus interest and dividends received**, less payments for inventory, payroll, taxes, interest, utilities, rent. The key figure; built mostly from **income-statement** items.\n- **Investing activities** — buying and selling securities, land, buildings, equipment; making and collecting loans.\n- **Financing activities** — cash to and from owners and creditors: issuing stock or bonds, buying back stock, retiring bonds, **paying dividends**. Built from **balance-sheet** items.\n\nThere is no 'cash flow from sales activities,' and accounting changes don't appear.\n\nQuick estimate: **cash flow = net income + non-cash charges** (depreciation, amortization). Revenue $9M, expenses $6M including $500K of depreciation, net income $2.25M → cash flow **$2.75M**."
+    },
+    {
+     "t": "check",
+     "q": "Q07.017"
+    },
+    {
+     "t": "teach",
+     "h": "SEC filings",
+     "b": "Securities register under the **1933 Act**; public companies then report under the **1934 Act**, and the filings sit on **EDGAR**.\n- **Form 8-K** — **newsworthy events**: management or name change, merger/acquisition, bankruptcy, major product launch, sale of a product line or subsidiary, a director **resigning over a disagreement**. Filed within **four business days**. **Domestic issuers only** — foreign issuers and ADRs are exempt. Merely **relocating** a subsidiary does not trigger it.\n- **Form 10-K** — the **annual** report to the SEC: comprehensive, with **audited** financials; more financial detail than the glossy annual report.\n- **Form 10-Q** — **quarterly**, **unaudited**, filed after each of the **first three** fiscal quarters (the 10-K covers the fourth).\n- **Annual report to shareholders** — audited statements plus marketing narrative, CEO letter, proxies. SEC rules let a company send the **10-K instead**.\n\nLate August, calendar-year company, most current numbers? The **June 30 Form 10-Q**."
+    },
+    {
+     "t": "check",
+     "q": "Q07.020"
+    }
+   ],
+   "practice": [
+    "Q07.016",
+    "Q07.018",
+    "Q07.019",
+    "Q07.021"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q07.001",
+   "concept": "C07.01",
+   "lo": "7.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    154
+   ],
+   "stem": "A company reports total assets of $80 million and total liabilities of $55 million. Its owners' equity is",
+   "options": [
+    "$135 million.",
+    "$55 million.",
+    "$25 million.",
+    "cannot be determined without the income statement."
+   ],
+   "answer": 2,
+   "explanation": "Assets − liabilities = owners' equity: $80M − $55M = $25M.",
+   "why": [
+    "That adds instead of subtracting.",
+    "That is the liabilities figure.",
+    "",
+    "The balance sheet alone determines equity."
+   ]
+  },
+  {
+   "id": "Q07.002",
+   "concept": "C07.01",
+   "lo": "7.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    154,
+    155
+   ],
+   "stem": "Which of the following is classified as a current asset?",
+   "options": [
+    "Accounts payable",
+    "Prepaid insurance",
+    "Goodwill",
+    "A factory building"
+   ],
+   "answer": 1,
+   "explanation": "Prepaid expenses are current assets — paid for but not yet used. Accounts payable is a current liability; goodwill is an intangible; a building is a fixed asset.",
+   "why": [
+    "A current liability.",
+    "",
+    "An intangible 'other' asset.",
+    "A fixed asset."
+   ]
+  },
+  {
+   "id": "Q07.003",
+   "concept": "C07.02",
+   "lo": "7.a",
+   "type": "calc",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    155
+   ],
+   "stem": "A company has current assets of $14 million, fixed assets of $30 million, current liabilities of $9 million and long-term debt of $20 million. Its working capital is",
+   "options": [
+    "$5 million.",
+    "$15 million.",
+    "$25 million.",
+    "$44 million."
+   ],
+   "answer": 0,
+   "explanation": "Working capital = current assets − current liabilities = $14M − $9M = $5M.",
+   "calc": "14 − 9 = 5",
+   "why": [
+    "",
+    "That is total assets minus all liabilities (equity).",
+    "That is current assets less long-term debt — not the definition.",
+    "That is total assets."
+   ]
+  },
+  {
+   "id": "Q07.004",
+   "concept": "C07.02",
+   "lo": "7.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    156,
+    157
+   ],
+   "stem": "A corporation issues 2 million shares of $1 par common stock at $12 per share. The $22 million above par is recorded as",
+   "options": [
+    "retained earnings.",
+    "capital in excess of par (paid-in surplus).",
+    "treasury stock.",
+    "a current liability."
+   ],
+   "answer": 1,
+   "explanation": "The amount received over par value is capital in excess of par, also called paid-in surplus, capital surplus or additional paid-in capital.",
+   "why": [
+    "Retained earnings are accumulated undistributed profits.",
+    "",
+    "Treasury stock is reacquired shares, a negative in equity.",
+    "Equity, not a liability."
+   ]
+  },
+  {
+   "id": "Q07.005",
+   "concept": "C07.02",
+   "lo": "7.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    157
+   ],
+   "stem": "When a corporation repurchases its own previously issued shares, those treasury shares",
+   "options": [
+    "increase the company's net worth.",
+    "are shown as a negative amount in shareholders' equity, reducing net worth.",
+    "are recorded as a long-term liability.",
+    "continue to be counted as outstanding."
+   ],
+   "answer": 1,
+   "explanation": "Treasury stock is carried at cost as a negative in the equity section; the shares are no longer outstanding.",
+   "why": [
+    "Net worth falls.",
+    "",
+    "Not a liability.",
+    "They are no longer outstanding in public hands."
+   ]
+  },
+  {
+   "id": "Q07.006",
+   "concept": "C07.03",
+   "lo": "7.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    158
+   ],
+   "stem": "When bondholders convert their convertible debentures into common stock, the effect on the issuer's balance sheet is",
+   "options": [
+    "assets increase and liabilities increase.",
+    "liabilities decrease and owners' equity increases; assets are unchanged.",
+    "assets decrease and owners' equity decreases.",
+    "working capital increases."
+   ],
+   "answer": 1,
+   "explanation": "Conversion moves value from the liability side to equity — both on the same side of the balance sheet — so assets are untouched.",
+   "why": [
+    "No cash changes hands.",
+    "",
+    "Equity rises.",
+    "Current assets and liabilities are unaffected."
+   ]
+  },
+  {
+   "id": "Q07.007",
+   "concept": "C07.03",
+   "lo": "7.b",
+   "type": "scenario",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    158,
+    163
+   ],
+   "stem": "A corporation uses $8 million of cash to retire $8 million of bonds at par. Which statement is correct?",
+   "options": [
+    "Owners' equity decreases by $8 million.",
+    "Working capital decreases and future cash flow improves because interest payments cease.",
+    "Current liabilities decrease by $8 million.",
+    "Total assets are unchanged."
+   ],
+   "answer": 1,
+   "explanation": "A current asset (cash) retired a long-term liability, so working capital falls; equity is unchanged (redeemed at par); and eliminating interest improves future cash flow.",
+   "why": [
+    "At par, equity is unchanged.",
+    "",
+    "The bonds were long-term, not current, liabilities.",
+    "Cash fell by $8M."
+   ]
+  },
+  {
+   "id": "Q07.008",
+   "concept": "C07.03",
+   "lo": "7.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    158,
+    159
+   ],
+   "stem": "The board declares a cash dividend to be paid next month. At the time of declaration,",
+   "options": [
+    "cash decreases and retained earnings decrease.",
+    "retained earnings decrease and current liabilities increase.",
+    "net worth increases.",
+    "nothing is recorded until payment."
+   ],
+   "answer": 1,
+   "explanation": "Declaration creates a current liability and reduces retained earnings; payment later reduces cash and the liability.",
+   "why": [
+    "Cash falls at payment, not declaration.",
+    "",
+    "Net worth falls.",
+    "The declaration is recorded immediately."
+   ]
+  },
+  {
+   "id": "Q07.009",
+   "concept": "C07.03",
+   "lo": "7.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    159
+   ],
+   "stem": "Which corporate action increases a company's owners' equity?",
+   "options": [
+    "Issuing $5 million of 5% debentures",
+    "Declaring a 2-for-1 stock split",
+    "Issuing $5 million of preferred stock",
+    "Calling outstanding bonds at 102"
+   ],
+   "answer": 2,
+   "explanation": "Issuing stock — common or preferred — raises equity. Debt issuance raises liabilities; a split changes nothing in equity; calling bonds above par reduces equity.",
+   "why": [
+    "Cash and liabilities rise; equity unchanged.",
+    "Only par and share count change.",
+    "",
+    "Paying a premium reduces equity."
+   ]
+  },
+  {
+   "id": "Q07.010",
+   "concept": "C07.04",
+   "lo": "7.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    160
+   ],
+   "stem": "On an income statement, earnings before interest and taxes (EBIT) is best described as",
+   "options": [
+    "revenues minus cost of goods sold.",
+    "revenues minus cost of goods sold and other operating expenses.",
+    "net income plus dividends.",
+    "pre-tax income minus interest."
+   ],
+   "answer": 1,
+   "explanation": "Sales − COGS = gross margin; subtracting other operating costs (rent, utilities) gives net operating profit, or EBIT. Interest then produces pre-tax income.",
+   "why": [
+    "That is gross operating profit (gross margin).",
+    "",
+    "Not a defined measure.",
+    "Interest is subtracted from EBIT to reach pre-tax income, not the reverse."
+   ]
+  },
+  {
+   "id": "Q07.011",
+   "concept": "C07.04",
+   "lo": "7.c",
+   "type": "compare",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    160
+   ],
+   "stem": "Which statement correctly contrasts interest and dividends from the corporation's perspective?",
+   "options": [
+    "Both are deductible operating expenses.",
+    "Interest reduces taxable income; dividends are paid from after-tax income.",
+    "Dividends reduce taxable income; interest is paid from after-tax income.",
+    "Neither affects taxable income."
+   ],
+   "answer": 1,
+   "explanation": "Interest is deductible (and taxed once, to the recipient); dividends come out of net income after taxes and are taxed again to shareholders.",
+   "why": [
+    "Interest is deductible but not an operating expense; dividends are not deductible.",
+    "",
+    "Reversed.",
+    "Interest does reduce taxable income."
+   ]
+  },
+  {
+   "id": "Q07.012",
+   "concept": "C07.04",
+   "lo": "7.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    161
+   ],
+   "stem": "A company that uses accelerated depreciation on new equipment will, in the early years, report",
+   "options": [
+    "higher pre-tax income and higher taxes.",
+    "lower pre-tax income and lower taxes.",
+    "no effect on pre-tax income.",
+    "higher retained earnings."
+   ],
+   "answer": 1,
+   "explanation": "Front-loading depreciation raises early expenses, lowering pre-tax income and taxes now and raising them later.",
+   "why": [
+    "Reversed.",
+    "",
+    "Depreciation is an expense that reduces income.",
+    "Lower net income means less added to retained earnings."
+   ]
+  },
+  {
+   "id": "Q07.013",
+   "concept": "C07.05",
+   "lo": "7.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    161,
+    162
+   ],
+   "stem": "An auditor's report expressing reservations about the accuracy or completeness of a company's financial statements is",
+   "options": [
+    "an unqualified opinion.",
+    "a qualified opinion.",
+    "a GAAP exception.",
+    "a fiscal opinion."
+   ],
+   "answer": 1,
+   "explanation": "A qualified opinion signals reservations; an unqualified opinion is a clean certification.",
+   "why": [
+    "Unqualified means no reservations.",
+    "",
+    "Not a term used.",
+    "Not a term used."
+   ]
+  },
+  {
+   "id": "Q07.014",
+   "concept": "C07.05",
+   "lo": "7.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    162,
+    163
+   ],
+   "stem": "Information about a pending lawsuit against the company and the inventory valuation method it uses would be found in",
+   "options": [
+    "the balance sheet.",
+    "the income statement.",
+    "the footnotes to the financial statements.",
+    "Form 8-K only."
+   ],
+   "answer": 2,
+   "explanation": "Footnotes disclose accounting methods (FIFO/LIFO), pending litigation, extraordinary items, debt details and off-book financing.",
+   "why": [
+    "Litigation is not a balance sheet item.",
+    "Not an income statement item.",
+    "",
+    "Footnotes accompany every set of audited statements."
+   ]
+  },
+  {
+   "id": "Q07.015",
+   "concept": "C07.05",
+   "lo": "7.c",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    162
+   ],
+   "stem": "A contractor completes a job in November and receives payment in January. Under the accrual method of accounting, the revenue is recorded in",
+   "options": [
+    "November, when earned.",
+    "January, when received.",
+    "whichever year has lower taxes.",
+    "neither year until the customer's check clears."
+   ],
+   "answer": 0,
+   "explanation": "Accrual accounting recognizes revenue when earned (booked); the cash method would record it when received in January.",
+   "why": [
+    "",
+    "That is the cash method.",
+    "Timing is not elective.",
+    "Not an accounting method."
+   ]
+  },
+  {
+   "id": "Q07.016",
+   "concept": "C07.06",
+   "lo": "7.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    164
+   ],
+   "stem": "Proceeds from issuing bonds and payments of cash dividends are classified on the statement of cash flows as",
+   "options": [
+    "operating activities.",
+    "investing activities.",
+    "financing activities.",
+    "extraordinary items."
+   ],
+   "answer": 2,
+   "explanation": "Financing activities cover cash to and from creditors and owners: issuing or retiring stock and bonds and paying dividends.",
+   "why": [
+    "Operating covers sales and expenses.",
+    "Investing covers buying and selling assets.",
+    "",
+    "Not a cash flow category."
+   ]
+  },
+  {
+   "id": "Q07.017",
+   "concept": "C07.06",
+   "lo": "7.d",
+   "type": "calc",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    164
+   ],
+   "stem": "A company reports net income of $4 million after deducting $700,000 of depreciation and $300,000 of amortization. Its cash flow is approximately",
+   "options": [
+    "$3 million.",
+    "$4 million.",
+    "$4.7 million.",
+    "$5 million."
+   ],
+   "answer": 3,
+   "explanation": "Non-cash charges are added back: $4M + $0.7M + $0.3M = $5M.",
+   "calc": "4.0 + 0.7 + 0.3 = 5.0",
+   "why": [
+    "Subtracts instead of adds.",
+    "Ignores non-cash charges.",
+    "Omits amortization.",
+    ""
+   ]
+  },
+  {
+   "id": "Q07.018",
+   "concept": "C07.06",
+   "lo": "7.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    164
+   ],
+   "stem": "Interest and dividends received on a corporation's investments are reported in cash flow from",
+   "options": [
+    "investing activities.",
+    "financing activities.",
+    "operating activities.",
+    "sales activities."
+   ],
+   "answer": 2,
+   "explanation": "Counterintuitively, accounting rules place interest and dividends received in operating activities.",
+   "why": [
+    "Investing covers purchases and sales of assets.",
+    "Financing covers transactions with owners and creditors.",
+    "",
+    "No such category."
+   ]
+  },
+  {
+   "id": "Q07.019",
+   "concept": "C07.07",
+   "lo": "7.e",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    165
+   ],
+   "stem": "A domestic issuer must file Form 8-K within four business days of all of the following EXCEPT",
+   "options": [
+    "a merger with another company.",
+    "the resignation of a director over a policy disagreement.",
+    "the relocation of a wholly owned subsidiary.",
+    "a bankruptcy filing."
+   ],
+   "answer": 2,
+   "explanation": "Relocating a subsidiary is not a reportable event; selling it would be. Mergers, contested director resignations and bankruptcies all require an 8-K.",
+   "why": [
+    "Reportable.",
+    "Reportable.",
+    "",
+    "Reportable."
+   ]
+  },
+  {
+   "id": "Q07.020",
+   "concept": "C07.07",
+   "lo": "7.e",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    165,
+    166
+   ],
+   "stem": "An analyst wants a public company's most recent audited financial statements. She should consult",
+   "options": [
+    "Form 10-Q.",
+    "Form 10-K.",
+    "Form 8-K.",
+    "the company's monthly internal statements."
+   ],
+   "answer": 1,
+   "explanation": "The 10-K is the annual filing with audited financials; 10-Qs are quarterly and unaudited; 8-Ks report events.",
+   "why": [
+    "10-Q statements are unaudited.",
+    "",
+    "8-K reports newsworthy events.",
+    "Internal statements are unaudited."
+   ]
+  },
+  {
+   "id": "Q07.021",
+   "concept": "C07.07",
+   "lo": "7.e",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    166
+   ],
+   "stem": "Which statement about Form 10-Q is correct?",
+   "options": [
+    "It is filed after each of the four fiscal quarters.",
+    "It contains audited financial statements.",
+    "It is filed after each of the first three fiscal quarters and contains unaudited statements.",
+    "It is filed only by foreign issuers."
+   ],
+   "answer": 2,
+   "explanation": "No 10-Q is filed for the fourth quarter — the annual 10-K covers it. 10-Q statements are unaudited.",
+   "why": [
+    "Three per year, not four.",
+    "Unaudited.",
+    "",
+    "Domestic issuers file it."
+   ]
+  },
+  {
+   "id": "F07.001",
+   "concept": "C07.01",
+   "type": "flash",
+   "pages": [
+    154
+   ],
+   "front": "Balance sheet equation; three asset classes",
+   "back": "Assets = Liabilities + Owners' equity. Current (≤12 months: cash, receivables, inventory, prepaids), fixed (PP&E at cost less depreciation), other (intangibles, goodwill — amortized)."
+  },
+  {
+   "id": "F07.002",
+   "concept": "C07.02",
+   "type": "flash",
+   "pages": [
+    155,
+    157
+   ],
+   "front": "Working capital; three parts of shareholders' equity; capitalization",
+   "back": "WC = current assets − current liabilities. Equity = capital stock at par + capital in excess of par (paid-in surplus) + retained earnings (− treasury stock). Capitalization = LT debt + equity."
+  },
+  {
+   "id": "F07.003",
+   "concept": "C07.03",
+   "type": "flash",
+   "pages": [
+    158,
+    159
+   ],
+   "front": "Balance sheet effect of: conversion, bond redemption, dividend declaration, stock split",
+   "back": "Conversion: liab ↓ equity ↑ assets same. Redemption: cash ↓ LT debt ↓ WC ↓. Dividend declared: RE ↓ current liab ↑. Split: equity unchanged."
+  },
+  {
+   "id": "F07.004",
+   "concept": "C07.04",
+   "type": "flash",
+   "pages": [
+    160
+   ],
+   "front": "Income statement flow; interest vs. dividends",
+   "back": "Sales − COGS = gross margin; − operating costs = EBIT; − interest = pre-tax income; − tax = net income. Interest deductible (taxed once); dividends after-tax (taxed twice)."
+  },
+  {
+   "id": "F07.005",
+   "concept": "C07.05",
+   "type": "flash",
+   "pages": [
+    161,
+    163
+   ],
+   "front": "Unqualified vs. qualified opinion; where litigation and LIFO/FIFO appear",
+   "back": "Unqualified = clean, no reservations. Qualified = reservations. Litigation, accounting methods, off-book debt → footnotes. Audited statements follow GAAP."
+  },
+  {
+   "id": "F07.006",
+   "concept": "C07.06",
+   "type": "flash",
+   "pages": [
+    164
+   ],
+   "front": "Three cash flow sections and where interest/dividends received go",
+   "back": "Operating (sales, expenses, interest & dividends received), investing (buy/sell assets), financing (stock, bonds, dividends paid). Cash flow ≈ net income + depreciation/amortization."
+  },
+  {
+   "id": "F07.007",
+   "concept": "C07.07",
+   "type": "flash",
+   "pages": [
+    165,
+    166
+   ],
+   "front": "Forms 8-K, 10-K, 10-Q",
+   "back": "8-K: newsworthy events, 4 business days, domestic issuers only. 10-K: annual, audited. 10-Q: quarterly after first 3 quarters, unaudited."
+  }
+ ],
+ "terms": [
+  {
+   "term": "Accrual accounting",
+   "def": "Recognizing revenue and expenses when earned or incurred, not when cash moves.",
+   "pages": [
+    144
+   ]
+  },
+  {
+   "term": "Capital in excess of par",
+   "def": "Amount received above par on issued stock; paid-in surplus / additional paid-in capital.",
+   "pages": [
+    139
+   ]
+  },
+  {
+   "term": "Capitalization",
+   "def": "Long-term debt plus equity.",
+   "pages": [
+    139
+   ]
+  },
+  {
+   "term": "EBIT",
+   "def": "Earnings before interest and taxes — net operating profit.",
+   "pages": [
+    142
+   ]
+  },
+  {
+   "term": "EDGAR",
+   "def": "SEC's online filing database (Electronic Data Gathering, Analysis, and Retrieval).",
+   "pages": [
+    147
+   ]
+  },
+  {
+   "term": "Fiscal year",
+   "def": "A 12-month accounting year ending on a date other than December 31.",
+   "pages": [
+    143
+   ]
+  },
+  {
+   "term": "GAAP",
+   "def": "Generally accepted accounting principles — the standard for audited statements.",
+   "pages": [
+    144
+   ]
+  },
+  {
+   "term": "Retained earnings",
+   "def": "Cumulative profits not paid out as dividends (earned surplus).",
+   "pages": [
+    139
+   ]
+  },
+  {
+   "term": "Treasury stock",
+   "def": "Issued shares reacquired by the company; a negative in equity.",
+   "pages": [
+    139
+   ]
+  },
+  {
+   "term": "Working capital",
+   "def": "Current assets minus current liabilities.",
+   "pages": [
+    137
+   ]
+  }
+ ]
+}

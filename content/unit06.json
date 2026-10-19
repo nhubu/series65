@@ -1,0 +1,1371 @@
+{
+ "unit": 6,
+ "title": "Basic Economic Concepts",
+ "fullTitle": "Basic Economic Concepts",
+ "function": 1,
+ "examQuestions": 6,
+ "pdfPages": [
+  135,
+  152
+ ],
+ "printedPages": [
+  117,
+  134
+ ],
+ "status": "complete",
+ "los": [
+  {
+   "id": "6.a",
+   "text": "Analyze the four stages of the business cycle."
+  },
+  {
+   "id": "6.b",
+   "text": "Identify the three types of yield curves and how they reflect interest rates."
+  },
+  {
+   "id": "6.c",
+   "text": "Identify fundamental economic principles, including the difference between monetary and fiscal policy."
+  },
+  {
+   "id": "6.d",
+   "text": "Differentiate between inflation and deflation and how they are affected by the major economic indicators."
+  }
+ ],
+ "concepts": [
+  {
+   "id": "C06.01",
+   "lo": "6.a",
+   "topic": "Business cycle",
+   "subtopic": "Four stages, GDP, recession vs. depression",
+   "pages": [
+    136,
+    137
+   ],
+   "explanation": "The business cycle is the recurring pattern of expansion and contraction measured by GDP and unemployment. Four stages: trough (bottom), expansion/recovery (rising sales, production, wages), peak (capacity reached, growth can't continue), contraction (decline from the peak). GDP = market value of all final goods and services produced within a country in a period, stated in constant (2012) dollars to remove inflation. A recession is a mild short-term contraction — by the Commerce Department definition, real GDP declining for two or more consecutive quarters; a depression is a decrease for six consecutive quarters. Expansion signs: rising demand, inflation, industrial production, stock markets, property values, GDP; falling unemployment and inventories. Peak: GDP growth slows, hiring slows, inflation rises. Contraction: bankruptcies and defaults rise, hours fall and unemployment rises, spending/construction/investment fall, stocks fall, inflation eases, inventories rise, GDP growth negative. Trough: GDP turns positive, unemployment high but overtime/temps rise, durable-goods and housing spending may pick up, inflation moderate or falling. CPI down but demand up = trough moving to expansion.",
+   "rules": [
+    "Recession = 2+ consecutive quarters of falling real GDP; depression = 6.",
+    "Inventories rise in contraction, fall in expansion.",
+    "Inflation rises into the peak, falls in contraction."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [],
+   "misconceptions": [
+    "Listing 'waves' as a business cycle stage.",
+    "Thinking unemployment falls during a contraction."
+   ],
+   "lessons": [
+    "L06.1"
+   ],
+   "questions": [
+    "Q06.001",
+    "Q06.002",
+    "Q06.003",
+    "F06.001"
+   ]
+  },
+  {
+   "id": "C06.02",
+   "lo": "6.a",
+   "topic": "Business cycle",
+   "subtopic": "Cyclical, countercyclical, growth, defensive industries; sector rotation",
+   "pages": [
+    138,
+    139
+   ],
+   "explanation": "Cyclical industries track the cycle: durable goods (heavy machinery, autos) and raw materials (steel) — demand collapses in recession, best performers in recovery/expansion. Countercyclical industries move opposite (gold mining historically). Growth industries grow faster than the economy because of technology, new products or tastes (social media, bioengineering); companies retain earnings, so little or no dividends; they tend to react later, nearer the peak. Defensive industries are least affected: nondurable consumer goods — food, pharmaceuticals, tobacco, energy; fall less in bear markets, rise less in bull markets, lower risk and return. Sector rotation moves into defensives as the cycle peaks and heads into contraction. Fear a recession → drug companies, not biotech, steel or home builders.",
+   "rules": [
+    "Recovery → cyclicals. Approaching peak/contraction → defensives.",
+    "Defensive = nondurables (food, drugs, tobacco, energy); cyclical = durables and raw materials."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [
+    "An investor fearing recession buys pharmaceutical stocks."
+   ],
+   "prereqs": [
+    "C06.01"
+   ],
+   "misconceptions": [
+    "Calling biotech 'defensive' because it is health-related — it is a growth industry dependent on funding."
+   ],
+   "lessons": [
+    "L06.1"
+   ],
+   "questions": [
+    "Q06.004",
+    "Q06.005",
+    "F06.002"
+   ]
+  },
+  {
+   "id": "C06.03",
+   "lo": "6.b",
+   "topic": "Interest rates and yield curves",
+   "subtopic": "Interest rates; normal, inverted, flat curves",
+   "pages": [
+    139,
+    141
+   ],
+   "explanation": "An interest rate is the cost of borrowing, set by supply and demand for loanable funds, the borrower's credit quality, the term, and current/expected inflation; short-term rates reflect Fed policy, longer rates reflect inflation expectations. The nominal rate is the actual rate paid. When rates rise, older lower-coupon bonds fall in price until their yield matches the market (a 5% bond must drop to about $700 to yield 7.14% when new bonds pay 7%). The yield curve plots yields of one issuer (typically Treasuries from the 91-day bill to the 10- or 30-year) against maturity. Normal (positive, upward-sloping): long rates above short because lenders must be paid for time value of money, inflation's erosion of buying power, more default risk over time, and lost liquidity; occurs in expansions and predicts rising rates. Inverted (negative, downward-sloping): short rates above long, usually after the Fed tightens credit in an overheating economy — short rates spike (they are more Fed-sensitive); predicts rates will fall. Flat: short and long rates equal; no change in rates expected.",
+   "rules": [
+    "Normal = upward (expansion, rates expected to rise). Inverted = downward (Fed tightened, rates expected to fall). Flat = no change expected.",
+    "Yield curve is built from one issuer across maturities — usually Treasuries."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [
+    "C02.02"
+   ],
+   "misconceptions": [
+    "Building a yield curve from different issuers with the same maturity — that is a yield spread, not a curve."
+   ],
+   "lessons": [
+    "L06.2"
+   ],
+   "questions": [
+    "Q06.006",
+    "Q06.007",
+    "Q06.008",
+    "F06.003"
+   ]
+  },
+  {
+   "id": "C06.04",
+   "lo": "6.b",
+   "topic": "Interest rates and yield curves",
+   "subtopic": "Yield (credit) spread as a predictor",
+   "pages": [
+    141,
+    142
+   ],
+   "explanation": "The yield spread (credit spread) is the difference in yield between bonds of the same maturity but different quality — commonly corporates vs. Treasuries. It widens when the economy sours (investors flee to the safety of Treasuries, so a widening corporate–government spread signals an expected recession) and narrows when conditions improve (investors sell governments for higher-yielding corporates, signaling expansion). The spread between the 2-year and 10-year Treasury is another popular sentiment gauge: narrows when investors are optimistic, widens when pessimistic.",
+   "rules": [
+    "Widening corporate–Treasury spread → recession expected. Narrowing → expansion expected."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Yield spread = corporate yield − Treasury yield (same maturity)"
+   ],
+   "examples": [],
+   "prereqs": [
+    "C06.03",
+    "C02.03"
+   ],
+   "misconceptions": [
+    "Reading a widening spread as bullish."
+   ],
+   "lessons": [
+    "L06.2"
+   ],
+   "questions": [
+    "Q06.009",
+    "F06.004"
+   ]
+  },
+  {
+   "id": "C06.05",
+   "lo": "6.c",
+   "topic": "Fiscal and monetary policy",
+   "subtopic": "Who does what; schools of economics",
+   "pages": [
+    143,
+    144
+   ],
+   "explanation": "Fiscal policy is government spending and taxation, set by the president and Congress through the budget (balanced when revenues equal spending; surplus when revenues exceed spending; deficit when spending exceeds revenues). Monetary policy is the central bank's control of money and credit, set by the Federal Reserve Board of Governors: expansionary/accommodative/easy when it increases money and credit, contractionary/restrictive/tight when it reduces them. The Fed has nothing to do with fiscal policy. Schools: Keynesian — government intervention; recover from recession by running deficits (lower taxes, more spending) to stimulate demand and employment. Classical/supply-side — lower taxes and less regulation increase the supply of goods at lower cost; supply creates demand through jobs and wages. Monetarist (Milton Friedman) — the money supply determines prices and activity: too many dollars chasing too few goods = inflation, too few = deflation.",
+   "rules": [
+    "Fiscal = president + Congress (spending, taxes). Monetary = Fed (money supply, credit).",
+    "Keynes: deficits in recession. Supply-side: cut taxes/regulation. Monetarist: money supply."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [],
+   "misconceptions": [
+    "Assigning tax policy to the Fed."
+   ],
+   "lessons": [
+    "L06.3"
+   ],
+   "questions": [
+    "Q06.010",
+    "Q06.011",
+    "Q06.012",
+    "F06.005"
+   ]
+  },
+  {
+   "id": "C06.06",
+   "lo": "6.c",
+   "topic": "Fiscal and monetary policy",
+   "subtopic": "Fed tools; federal funds rate; prime rate",
+   "pages": [
+    144,
+    145
+   ],
+   "explanation": "Three Fed tools: (1) reserve requirements — raising the share of deposits banks must hold at the Fed shrinks lendable money and raises rates (the most drastic tool, rarely used); (2) the discount rate — what the Fed charges member banks to borrow; higher discourages borrowing and shrinks money supply (a managed rate set by the Fed); (3) open-market operations — the FOMC buys and sells Treasuries; buying adds reserves and expands the money supply, selling drains it; the most actively used tool. The federal funds rate — what member banks charge each other for overnight loans of $1 million+ — is a market rate, not set by the Fed, though heavily influenced; it is the most volatile rate and a barometer of short-term rate direction. The prime rate is the best rate large money-center banks charge their most creditworthy corporate borrowers; set by the banks (not the Fed), lowered when the Fed eases, raised when it tightens.",
+   "rules": [
+    "Fed sets the discount rate; banks set prime; the market sets fed funds.",
+    "FOMC buys Treasuries → money supply up, rates down. Sells → money supply down, rates up.",
+    "Most drastic: reserve requirement. Most used: open-market operations."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [
+    "C06.05"
+   ],
+   "misconceptions": [
+    "Describing fed funds as the rate the Fed charges banks — that is the discount rate."
+   ],
+   "lessons": [
+    "L06.3"
+   ],
+   "questions": [
+    "Q06.013",
+    "Q06.014",
+    "Q06.015",
+    "F06.006"
+   ]
+  },
+  {
+   "id": "C06.07",
+   "lo": "6.c",
+   "topic": "International economics",
+   "subtopic": "Balance of payments, balance of trade, dollar strength, top-down vs. bottom-up",
+   "pages": [
+    145,
+    147
+   ],
+   "explanation": "The balance of payments records all of a nation's transactions with other countries: money leaving the U.S. is a debit (imports, U.S. spending/investment/loans/aid abroad, dividends paid to foreigners); money arriving is a credit (exports, foreign spending and investment in the U.S., interest received from abroad). Its largest component is the balance of trade (exports vs. imports): a trade deficit (imports > exports) can devalue the currency over time; a surplus strengthens it. A weak dollar makes U.S. exports more competitive (good for exporters/producers → surplus); a strong dollar makes exports less competitive and imports cheaper (good for importers/consumers → deficit). Investing in foreign securities (e.g., ADRs) hedges a weakening dollar. Analysis styles: top-down starts with the overall economy, narrows to industry, then company; bottom-up starts with the company and broadens.",
+   "rules": [
+    "Debits = money out; credits = money in.",
+    "Weak dollar → exports up → surplus. Strong dollar → imports up → deficit.",
+    "Reducing a payments deficit: fewer imports, more exports, fewer dividends paid abroad — not fewer foreign purchases of U.S. securities."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [
+    "More French perfume imported than bourbon exported → debit to the U.S. trade account."
+   ],
+   "prereqs": [],
+   "misconceptions": [
+    "Thinking a decrease in foreign purchases of U.S. securities shrinks the deficit — it reduces inflows and worsens it."
+   ],
+   "lessons": [
+    "L06.3"
+   ],
+   "questions": [
+    "Q06.016",
+    "Q06.017",
+    "Q06.018",
+    "F06.007"
+   ]
+  },
+  {
+   "id": "C06.08",
+   "lo": "6.d",
+   "topic": "Inflation and deflation",
+   "subtopic": "Causes, effects on bonds, inertia, real income",
+   "pages": [
+    147,
+    148
+   ],
+   "explanation": "Inflation is a general rise in prices (universally: a decrease in the value of the monetary unit), measured by indexes like the CPI. Mild inflation encourages growth; high inflation cuts buying power and demand. Causes: excessive demand (aggregate demand exceeds supply) and monetary expansion (money stock growing faster than the economy). Inflation inertia: inflation lags economic shocks by quarters; the inertial rate persists until a shock changes it — prices rarely fall because firms resist price cuts and workers resist wage cuts. Chain: inflation up → interest rates up → bond prices down, yields up; inflation down → the reverse. Real income rises when income grows faster than inflation. Deflation — a general decline in prices — is rare, occurs in severe recessions with rising unemployment, when demand falls far below supply or the money supply shrinks sharply; investors flee to Treasuries, which hold value or appreciate. A negative GDP generally signals deflation.",
+   "rules": [
+    "Inflation ↑ → rates ↑ → bond prices ↓.",
+    "Causes: excess demand, monetary expansion.",
+    "Deflation safe haven: U.S. government securities."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [],
+   "prereqs": [
+    "C06.01"
+   ],
+   "misconceptions": [
+    "Expecting unemployment to fall in a contraction."
+   ],
+   "lessons": [
+    "L06.4"
+   ],
+   "questions": [
+    "Q06.019",
+    "Q06.020",
+    "Q06.021",
+    "F06.008"
+   ]
+  },
+  {
+   "id": "C06.09",
+   "lo": "6.d",
+   "topic": "Economic indicators",
+   "subtopic": "GDP components, employment, CPI/core CPI; leading, coincident, lagging indicators",
+   "pages": [
+    149,
+    151
+   ],
+   "explanation": "GDP = personal consumption (largest) + government spending + gross private investment + foreign investment + net exports; imports exceeding exports subtract; net exports add. It counts output within U.S. borders regardless of who produces it — a firm's contribution is value added (sales minus imported parts). Employment indicators: average weekly initial unemployment claims and the average manufacturing workweek; ~4% unemployment ≈ full employment. CPI (Bureau of Labor Statistics, monthly) compares a basket of goods with a year earlier — the most used inflation measure; 'core CPI' excludes food and energy for their volatility (a media term). The Conference Board publishes three indicator groups monthly. Leading (predict 4–6 months ahead): money supply, building permits, initial jobless claims, manufacturing workweek, new orders for consumer goods and nondefense capital goods, supplier deliveries, 10-year Treasury minus fed funds spread, stock prices (S&P 500), consumer expectations. Coincident (move with the cycle): nonagricultural employment, personal income less transfers, industrial production, manufacturing and trade sales. Lagging (confirm 4–6 months after): duration of unemployment, consumer credit to income, inventories to sales, prime rate, CPI for services, commercial and industrial loans, labor cost per unit of output. A rising Help Wanted Index points to future wage inflation.",
+   "rules": [
+    "Leading = where we're going; coincident = where we are; lagging = where we've been.",
+    "Stock prices and building permits lead; prime rate and unemployment duration lag; industrial production is coincident."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "GDP contribution = sales − imported inputs (value added)"
+   ],
+   "examples": [
+    "Sales $60M with $16M imported parts → $44M contribution to U.S. GDP."
+   ],
+   "prereqs": [
+    "C06.08"
+   ],
+   "misconceptions": [
+    "Classifying the prime rate or CPI as leading indicators — both lag."
+   ],
+   "lessons": [
+    "L06.4"
+   ],
+   "questions": [
+    "Q06.022",
+    "Q06.023",
+    "Q06.024",
+    "Q06.025",
+    "F06.009"
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "L06.1",
+   "title": "The business cycle and which industries win where",
+   "objective": "Name and characterize the four stages of the business cycle, define recession and depression, and match cyclical, countercyclical, growth and defensive industries to the cycle.",
+   "minutes": 9,
+   "concepts": [
+    "C06.01",
+    "C06.02"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Four stages",
+     "b": "Economic activity — measured by **GDP** and **unemployment** — expands and contracts in a repeating **business cycle** with four stages:\n- **Trough** — the bottom.\n- **Expansion (recovery)** — rising sales, manufacturing, wages.\n- **Peak** — businesses hit productive capacity; growth can't continue.\n- **Contraction** — decline from the peak.\n\n**GDP** is the market value of all final goods and services produced within a country in a period, measured in constant (2012) dollars to strip out inflation.\n\nA **recession** is a mild contraction — officially, real GDP falling for **two or more consecutive quarters**. A **depression**: GDP falling for **six consecutive quarters**."
+    },
+    {
+     "t": "compare",
+     "h": "What each stage looks like",
+     "rows": [
+      [
+       "Stage",
+       "GDP",
+       "Unemployment",
+       "Inflation",
+       "Other tells"
+      ],
+      [
+       "Expansion",
+       "Rising",
+       "Falling (hiring up)",
+       "Rising",
+       "Inventories fall; stocks, property up"
+      ],
+      [
+       "Peak",
+       "Growth slowing",
+       "Low, but hiring slows",
+       "Rising",
+       "Spending and investment growth slow"
+      ],
+      [
+       "Contraction",
+       "Negative growth",
+       "Rising; hours cut",
+       "Falling",
+       "Inventories rise; bankruptcies, defaults; stocks fall"
+      ],
+      [
+       "Trough",
+       "Turns positive",
+       "High; overtime and temps rise",
+       "Moderate/falling",
+       "Durables and housing may pick up"
+      ]
+     ]
+    },
+    {
+     "t": "example",
+     "b": "The CPI is falling but consumer demand is rising. That combination — prices still soft, demand returning — is the move from trough to expansion. As demand keeps rising against fixed supply, prices will climb through the expansion to the peak."
+    },
+    {
+     "t": "check",
+     "q": "Q06.002"
+    },
+    {
+     "t": "teach",
+     "h": "Industries through the cycle",
+     "b": "- **Cyclical** — highly sensitive to the cycle: **durable goods** (heavy machinery, autos) and **raw materials** (steel). Demand dries up in recession; they are the **best performers in recovery**.\n- **Countercyclical** — move against the cycle; **gold mining** is the classic.\n- **Growth** — industries growing faster than the economy thanks to technology, new products or tastes (social media, bioengineering). They retain earnings, so **little or no dividends**; they tend to react **later**, nearer the peak.\n- **Defensive** — least affected: **nondurable consumer goods** — food, pharmaceuticals, tobacco, energy. Fall less in bear markets, rise less in bull markets; lower risk, lower return.\n\n**Sector rotation**: move into defensives when the cycle looks to be peaking.\n\nFear a recession? Buy **drug companies** — not biotech (funding dries up), steel (goes into cars nobody buys) or home builders."
+    },
+    {
+     "t": "check",
+     "q": "Q06.004"
+    }
+   ],
+   "practice": [
+    "Q06.001",
+    "Q06.003",
+    "Q06.005"
+   ]
+  },
+  {
+   "id": "L06.2",
+   "title": "Interest rates, yield curves and yield spreads",
+   "objective": "Explain what sets interest rates, read normal, inverted and flat yield curves and what each predicts, and use the credit spread as an economic signal.",
+   "minutes": 8,
+   "concepts": [
+    "C06.03",
+    "C06.04"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "What sets a rate",
+     "b": "An **interest rate** is the cost of borrowing: supply and demand for loanable funds, the borrower's **credit quality**, the **term**, and **current and expected inflation**. **Short-term rates track Fed policy**; longer rates track inflation expectations. The **nominal rate** is the actual rate paid.\n\nRefresher from Unit 2: when new bonds pay 7%, nobody pays $1,000 for an old 5% bond; it drops to about $700 so that $50 ÷ $700 ≈ 7.14%."
+    },
+    {
+     "t": "teach",
+     "h": "Three yield curves",
+     "b": "A **yield curve** plots the yields of **one issuer** across maturities — usually Treasuries from the **91-day bill** out to the 10- or 30-year.\n\n- **Normal (positive)** — slopes **up**; long rates exceed short. Lenders demand more for **time value of money**, **inflation's erosion of buying power**, more **default risk** over time, and **lost liquidity**. Seen in **expansions**; predicts **rising** rates.\n- **Inverted (negative)** — slopes **down**; short rates exceed long. Happens after the **Fed tightens** credit in an overheating economy — short rates (Fed-sensitive) spike. Signals rates have risen fast and, most analysts say, will **fall**.\n- **Flat** — short and long equal; **no change** in rates expected.\n\nYou must recognize each from its shape."
+    },
+    {
+     "t": "check",
+     "q": "Q06.007"
+    },
+    {
+     "t": "teach",
+     "h": "Yield spread (credit spread)",
+     "b": "Riskier bonds yield more. The **yield spread** is the gap between bonds of the **same maturity but different quality** — classically **corporates vs. Treasuries**.\n- Spread **widening** → investors are fleeing to Treasury safety → **recession expected**.\n- Spread **narrowing** → investors sell governments for higher-yielding corporates → **expansion expected**.\n\nThe **2-year vs. 10-year Treasury** spread is another sentiment gauge: narrows with optimism, widens with pessimism."
+    },
+    {
+     "t": "check",
+     "q": "Q06.009"
+    }
+   ],
+   "practice": [
+    "Q06.006",
+    "Q06.008"
+   ]
+  },
+  {
+   "id": "L06.3",
+   "title": "Fiscal vs. monetary policy, the Fed's tools, and trade",
+   "objective": "Separate fiscal from monetary policy and the schools of economics, list the Fed's three tools and the key rates, and analyze balance of payments, trade and currency effects.",
+   "minutes": 11,
+   "concepts": [
+    "C06.05",
+    "C06.06",
+    "C06.07"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Two policies, two sets of hands",
+     "b": "**Fiscal policy** = government **spending and taxation**, set by the **president and Congress** through the budget. Balanced when revenue = spending; **surplus** when revenue exceeds spending; **deficit** when spending exceeds revenue.\n\n**Monetary policy** = the **Federal Reserve Board's** control of **money and credit**. **Expansionary** (accommodative, easy) when it increases money and credit; **contractionary** (restrictive, tight) when it reduces them. **The Fed has nothing to do with fiscal policy.**\n\nThree schools:\n- **Keynesian** — government intervention; cure recession with **deficits** (lower taxes, more spending) to lift demand and jobs.\n- **Classical / supply-side** — **lower taxes and less regulation** increase supply at lower cost; supply creates demand through jobs and wages.\n- **Monetarist** (Milton Friedman) — the **money supply** drives prices and activity: too many dollars chasing too few goods → inflation; too few → deflation."
+    },
+    {
+     "t": "teach",
+     "h": "The Fed's three tools and three rates",
+     "b": "- **Reserve requirements** — raise the share of deposits banks must park at the Fed → less to lend → money supply shrinks, rates rise. The **most drastic** tool.\n- **Discount rate** — what the Fed **charges member banks** to borrow; raising it discourages borrowing. A **managed** rate set by the Fed.\n- **Open-market operations** — the **FOMC** buys and sells Treasuries. **Buying** pays banks and raises their reserves → money supply **grows**; **selling** drains reserves → money supply **shrinks**. The **most frequently used** tool.\n\nRates to keep straight:\n- **Federal funds rate** — what member banks charge **each other** for overnight loans of $1 million+. A **market** rate (not set by the Fed, though heavily influenced), the **most volatile**, a barometer of short-term rates.\n- **Discount rate** — set by the Fed.\n- **Prime rate** — the best rate big money-center banks charge their most creditworthy corporate customers. **Set by the banks**, not the Fed; falls when the Fed eases, rises when it tightens."
+    },
+    {
+     "t": "check",
+     "q": "Q06.013"
+    },
+    {
+     "t": "teach",
+     "h": "Balance of payments and the dollar",
+     "b": "The **balance of payments** records every transaction with the rest of the world. Money **leaving** the U.S. is a **debit**: imports, U.S. spending, investment, bank loans and aid abroad, dividends paid to foreign investors. Money **arriving** is a **credit**: exports, foreign spending and investment in the U.S., interest received from abroad. Debits exceeding credits = a **deficit**.\n\nIts biggest piece is the **balance of trade** (exports vs. imports). A persistent **trade deficit** (imports > exports) tends to **devalue** the currency; a **surplus** strengthens it.\n\n**Weak dollar** → U.S. exports are cheaper abroad → exports up, imports down → **surplus**; exporters and producers are happy. **Strong dollar** → exports less competitive, imports cheaper → **deficit**; importers and consumers are happy. To protect against a weakening dollar, own **foreign securities** (ADRs are the simplest route).\n\nTo shrink a payments deficit: import less, export more, pay fewer dividends abroad. A drop in **foreign purchases of U.S. securities** does the opposite — it cuts inflows.\n\nTwo analysis styles: **top-down** starts with the economy and narrows to industry then company; **bottom-up** starts with the company and broadens."
+    },
+    {
+     "t": "check",
+     "q": "Q06.016"
+    }
+   ],
+   "practice": [
+    "Q06.010",
+    "Q06.011",
+    "Q06.012",
+    "Q06.014",
+    "Q06.015",
+    "Q06.017",
+    "Q06.018"
+   ]
+  },
+  {
+   "id": "L06.4",
+   "title": "Inflation, deflation and the economic indicators",
+   "objective": "Explain causes and effects of inflation and deflation, compute a firm's GDP contribution, define CPI and core CPI, and sort leading, coincident and lagging indicators.",
+   "minutes": 10,
+   "concepts": [
+    "C06.08",
+    "C06.09"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Inflation and deflation",
+     "b": "**Inflation** is a general rise in prices — universally, 'a decrease in the value of the monetary unit' — measured by the **CPI**. Mild inflation encourages investment; high inflation destroys buying power and demand. Causes: **excessive demand** (demand outruns supply) and **monetary expansion** (money stock growing faster than the economy).\n\n**Inflation inertia**: inflation reacts to shocks with a lag of several quarters, and the inertial rate persists until something changes it — prices rarely fall because firms won't cut prices and workers won't take wage cuts.\n\nThe chain to remember: **inflation up → interest rates up → bond prices down (yields up)**. Inflation down → the reverse. **Real income** rises only when income grows faster than inflation.\n\n**Deflation** — a general price decline — is rare, shows up in severe recessions with rising unemployment, when demand falls far below supply or the money supply shrinks sharply. Investors flee to **Treasuries**, which hold value or appreciate. A negative GDP is generally a sign of deflation."
+    },
+    {
+     "t": "check",
+     "q": "Q06.019"
+    },
+    {
+     "t": "teach",
+     "h": "GDP, employment, CPI",
+     "b": "**GDP** = personal consumption (**largest**) + government spending + gross private investment + foreign investment + **net exports**. Imports exceeding exports subtract; net exports add. GDP counts output **within U.S. borders** regardless of who produces it, so a firm's contribution is its **value added** — sales minus imported inputs. ($60M sales using $16M of Singapore parts → $44M.)\n\n**Employment**: watch average weekly **initial unemployment claims** and the average **manufacturing workweek**; about **4%** unemployment ≈ full employment.\n\n**CPI**: the Bureau of Labor Statistics' monthly comparison of a basket of goods with a year earlier — the standard inflation measure. **Core CPI** (a media term) strips out **food and energy** for their volatility."
+    },
+    {
+     "t": "teach",
+     "h": "Leading, coincident, lagging",
+     "b": "The **Conference Board** publishes three groups monthly: where we're **going**, where we **are**, where we've **been**.\n\n**Leading** (turn 4–6 months ahead): money supply; **building permits**; initial jobless claims; manufacturing workweek; new orders for consumer goods and nondefense capital goods; supplier deliveries; the **10-year Treasury minus fed funds** spread; **stock prices (S&P 500)**; consumer expectations.\n\n**Coincident**: nonagricultural employment; personal income less transfers; **industrial production**; manufacturing and trade sales.\n\n**Lagging** (confirm 4–6 months later): **duration of unemployment**; consumer credit to income; inventories to sales; the **prime rate**; **CPI for services**; commercial and industrial loans; labor cost per unit of output.\n\nA rising **Help Wanted Index** means employers are hiring → competition for workers → future **wage inflation**."
+    },
+    {
+     "t": "check",
+     "q": "Q06.023"
+    }
+   ],
+   "practice": [
+    "Q06.020",
+    "Q06.021",
+    "Q06.022",
+    "Q06.024",
+    "Q06.025"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q06.001",
+   "concept": "C06.01",
+   "lo": "6.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    136
+   ],
+   "stem": "Under the Commerce Department definition, the economy is in a recession when real GDP declines for at least",
+   "options": [
+    "one quarter.",
+    "two consecutive quarters.",
+    "four consecutive quarters.",
+    "six consecutive quarters."
+   ],
+   "answer": 1,
+   "explanation": "A recession is two or more consecutive quarters of declining real GDP; six consecutive quarters is a depression.",
+   "why": [
+    "One quarter does not meet the definition.",
+    "",
+    "Not the stated threshold.",
+    "Six quarters defines a depression."
+   ]
+  },
+  {
+   "id": "Q06.002",
+   "concept": "C06.01",
+   "lo": "6.a",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    137
+   ],
+   "stem": "Economic data show rising inventories, increasing bankruptcies and bond defaults, falling stock prices and a decreasing inflation rate. The economy is most likely in",
+   "options": [
+    "expansion.",
+    "a peak.",
+    "contraction.",
+    "a trough."
+   ],
+   "answer": 2,
+   "explanation": "Rising inventories (slackening demand), defaults, falling markets and easing inflation characterize the contraction phase.",
+   "why": [
+    "Expansion features falling inventories and rising markets.",
+    "Peaks show slowing growth with rising inflation.",
+    "",
+    "At the trough GDP growth turns positive."
+   ]
+  },
+  {
+   "id": "Q06.003",
+   "concept": "C06.01",
+   "lo": "6.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    137
+   ],
+   "stem": "The expansion phase of the business cycle is typically characterized by all of the following EXCEPT",
+   "options": [
+    "rising industrial production.",
+    "a declining unemployment rate.",
+    "rising inventories.",
+    "an increasing rate of inflation."
+   ],
+   "answer": 2,
+   "explanation": "In an expansion inventories fall as demand outpaces production; rising inventories signal contraction.",
+   "why": [
+    "Production rises in expansions.",
+    "Hiring accelerates.",
+    "",
+    "Growing demand pushes prices up."
+   ]
+  },
+  {
+   "id": "Q06.004",
+   "concept": "C06.02",
+   "lo": "6.a",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    138
+   ],
+   "stem": "An adviser believes the economy is about to peak and enter a contraction. Using sector rotation, she would most likely move client assets into",
+   "options": [
+    "automobile manufacturers.",
+    "steel producers.",
+    "food and pharmaceutical companies.",
+    "social media companies."
+   ],
+   "answer": 2,
+   "explanation": "Defensive industries — nondurable consumer goods such as food, drugs, tobacco and energy — hold up best in a downturn.",
+   "why": [
+    "Autos are cyclical durables.",
+    "Steel is a cyclical raw material.",
+    "",
+    "Social media is a growth industry."
+   ]
+  },
+  {
+   "id": "Q06.005",
+   "concept": "C06.02",
+   "lo": "6.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    138,
+    139
+   ],
+   "stem": "Which type of industry tends to perform best during the recovery (expansion) stage of the business cycle?",
+   "options": [
+    "Defensive",
+    "Cyclical",
+    "Countercyclical",
+    "Utilities"
+   ],
+   "answer": 1,
+   "explanation": "Cyclical industries (durables, raw materials) track the cycle and lead in recoveries; defensives are stable throughout; countercyclicals move the opposite way.",
+   "why": [
+    "Defensives advance less in expansions.",
+    "",
+    "Countercyclicals (e.g., gold mining) tend to fall as the economy heats up.",
+    "Utilities are generally defensive."
+   ]
+  },
+  {
+   "id": "Q06.006",
+   "concept": "C06.03",
+   "lo": "6.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    140
+   ],
+   "stem": "Long-term interest rates normally exceed short-term rates because lenders must be compensated for all of the following EXCEPT",
+   "options": [
+    "the time value of money.",
+    "reduced purchasing power due to inflation.",
+    "greater default risk over longer periods.",
+    "Federal Reserve purchases of long-term bonds."
+   ],
+   "answer": 3,
+   "explanation": "The normal upward slope reflects time value, inflation, default risk over time and lost liquidity; Fed activity mainly influences short-term rates.",
+   "why": [
+    "A stated reason.",
+    "A stated reason.",
+    "A stated reason.",
+    ""
+   ]
+  },
+  {
+   "id": "Q06.007",
+   "concept": "C06.03",
+   "lo": "6.b",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    141
+   ],
+   "stem": "An analyst's plot of Treasury yields shows the 1-year rate at 5.2%, the 10-year at 4.4% and the 30-year at 4.1%. This yield curve is",
+   "options": [
+    "normal, suggesting economic expansion.",
+    "flat, suggesting no change in rates.",
+    "inverted, typically following Fed tightening in an overheating economy.",
+    "positive, suggesting rates will rise."
+   ],
+   "answer": 2,
+   "explanation": "Short rates above long rates is an inverted (negative) curve, usually the product of a sharp rise in short rates from Fed tightening; most analysts expect rates to fall afterward.",
+   "why": [
+    "A normal curve slopes upward.",
+    "A flat curve has equal rates across maturities.",
+    "",
+    "Positive is another name for normal."
+   ]
+  },
+  {
+   "id": "Q06.008",
+   "concept": "C06.03",
+   "lo": "6.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    141,
+    142
+   ],
+   "stem": "A yield curve is properly constructed by plotting",
+   "options": [
+    "yields of bonds from many issuers with the same maturity.",
+    "yields of a single issuer's bonds across a range of maturities.",
+    "the difference between corporate and Treasury yields over time.",
+    "the federal funds rate against the prime rate."
+   ],
+   "answer": 1,
+   "explanation": "A yield curve shows one issuer — usually Treasuries from the 91-day bill outward — across maturities. Comparing issuers at one maturity measures a yield spread.",
+   "why": [
+    "That describes a yield spread.",
+    "",
+    "That is the credit spread.",
+    "Not a yield curve."
+   ]
+  },
+  {
+   "id": "Q06.009",
+   "concept": "C06.04",
+   "lo": "6.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    141,
+    142
+   ],
+   "stem": "The yield spread between corporate bonds and Treasury bonds of the same maturity has been widening steadily. Most analysts would interpret this as a sign that",
+   "options": [
+    "an economic expansion is expected.",
+    "a recession is expected.",
+    "the Fed is easing credit.",
+    "inflation is about to fall sharply."
+   ],
+   "answer": 1,
+   "explanation": "A widening credit spread shows investors fleeing to Treasury safety and demanding more to hold corporates — a recession signal. Narrowing spreads signal expansion.",
+   "why": [
+    "Expansion is signaled by narrowing spreads.",
+    "",
+    "Fed policy is not directly indicated by the credit spread.",
+    "The spread measures credit sentiment, not inflation."
+   ]
+  },
+  {
+   "id": "Q06.010",
+   "concept": "C06.05",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    143
+   ],
+   "stem": "Fiscal policy in the United States is determined by",
+   "options": [
+    "the Federal Reserve Board.",
+    "the president and Congress.",
+    "the Federal Open Market Committee.",
+    "the Treasury Department alone."
+   ],
+   "answer": 1,
+   "explanation": "Fiscal policy — spending and taxation — is set through the budget process by the president and Congress. The Fed controls monetary policy only.",
+   "why": [
+    "The Fed sets monetary policy.",
+    "",
+    "The FOMC conducts open-market operations.",
+    "The Treasury executes but does not set fiscal policy."
+   ]
+  },
+  {
+   "id": "Q06.011",
+   "concept": "C06.05",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    143,
+    144
+   ],
+   "stem": "An economist argues that the government should run a deficit — cutting taxes and increasing spending — to pull the economy out of recession. This view is most consistent with",
+   "options": [
+    "monetarist theory.",
+    "Keynesian economics.",
+    "supply-side economics.",
+    "classical economics."
+   ],
+   "answer": 1,
+   "explanation": "Keynes prescribed government deficits to stimulate demand and employment during recessions.",
+   "why": [
+    "Monetarists focus on the money supply.",
+    "",
+    "Supply-siders favor lower taxes and less regulation to boost supply, not deficit spending.",
+    "Classical economics is the supply-side school."
+   ]
+  },
+  {
+   "id": "Q06.012",
+   "concept": "C06.05",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    144
+   ],
+   "stem": "'Too many dollars chasing too few goods leads to inflation' summarizes the view of",
+   "options": [
+    "Keynesians.",
+    "monetarists.",
+    "supply-siders.",
+    "the Conference Board."
+   ],
+   "answer": 1,
+   "explanation": "Monetarists such as Milton Friedman hold that the money supply determines price levels and economic activity.",
+   "why": [
+    "Keynesians emphasize government spending and demand.",
+    "",
+    "Supply-siders emphasize taxes and regulation.",
+    "The Conference Board publishes indicators."
+   ]
+  },
+  {
+   "id": "Q06.013",
+   "concept": "C06.06",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    144,
+    145
+   ],
+   "stem": "Which statement about key U.S. interest rates is NOT true?",
+   "options": [
+    "The discount rate is the rate the Fed charges member banks for loans.",
+    "The federal funds rate is the rate the Fed charges member banks for overnight loans.",
+    "The prime rate is set by large commercial banks for their most creditworthy corporate customers.",
+    "The federal funds rate is a market rate and the most volatile of these rates."
+   ],
+   "answer": 1,
+   "explanation": "The federal funds rate is what member banks charge each other for overnight loans of $1 million or more — a market rate, not a Fed-charged rate.",
+   "why": [
+    "True.",
+    "",
+    "True — banks, not the Fed, set prime.",
+    "True."
+   ]
+  },
+  {
+   "id": "Q06.014",
+   "concept": "C06.06",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    144
+   ],
+   "stem": "If the FOMC sells Treasury securities in the open market, the most likely result is",
+   "options": [
+    "an increase in bank reserves and lower interest rates.",
+    "a decrease in the money supply and higher interest rates.",
+    "an increase in the money supply.",
+    "a reduction in the reserve requirement."
+   ],
+   "answer": 1,
+   "explanation": "Selling Treasuries pulls money out of bank reserves, shrinking the money supply and pushing rates up; buying does the opposite.",
+   "why": [
+    "Buying, not selling, adds reserves.",
+    "",
+    "Sales reduce the money supply.",
+    "Reserve requirements are a separate tool."
+   ]
+  },
+  {
+   "id": "Q06.015",
+   "concept": "C06.06",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    145
+   ],
+   "stem": "The Federal Reserve's most frequently used tool of monetary policy is",
+   "options": [
+    "changing the reserve requirement.",
+    "changing the discount rate.",
+    "open-market operations.",
+    "setting the prime rate."
+   ],
+   "answer": 2,
+   "explanation": "The FOMC's buying and selling of Treasuries is the most active tool; the reserve requirement is the most drastic; the Fed does not set prime.",
+   "why": [
+    "The most drastic and least used tool.",
+    "Used, but less often than open-market operations.",
+    "",
+    "Banks set the prime rate."
+   ]
+  },
+  {
+   "id": "Q06.016",
+   "concept": "C06.07",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    145,
+    151
+   ],
+   "stem": "Each of the following would reduce a U.S. balance of payments deficit EXCEPT",
+   "options": [
+    "an increase in U.S. exports.",
+    "a decrease in U.S. imports.",
+    "a decrease in purchases of U.S. securities by foreign investors.",
+    "a decrease in dividends paid by U.S. companies to foreign investors."
+   ],
+   "answer": 2,
+   "explanation": "Foreign purchases of U.S. securities are inflows (credits); fewer of them worsen the deficit. More exports, fewer imports and fewer dividends sent abroad all reduce it.",
+   "why": [
+    "Exports are credits.",
+    "Imports are debits; fewer helps.",
+    "",
+    "Dividends paid abroad are debits; fewer helps."
+   ]
+  },
+  {
+   "id": "Q06.017",
+   "concept": "C06.07",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    146,
+    147
+   ],
+   "stem": "A weakening U.S. dollar would most likely",
+   "options": [
+    "make U.S. exports more competitive and favor domestic producers.",
+    "make imports cheaper for U.S. consumers.",
+    "increase the U.S. trade deficit.",
+    "hurt U.S. companies that sell abroad."
+   ],
+   "answer": 0,
+   "explanation": "A weak dollar lowers the foreign price of U.S. goods, boosting exports and moving the trade balance toward surplus — good for exporters and producers.",
+   "why": [
+    "",
+    "A weak dollar makes imports more expensive.",
+    "Exports rise, imports fall — the deficit shrinks.",
+    "Exporters benefit from a weak dollar."
+   ]
+  },
+  {
+   "id": "Q06.018",
+   "concept": "C06.07",
+   "lo": "6.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    147
+   ],
+   "stem": "An analyst who begins by evaluating the overall economy, then narrows to promising industries, and finally selects specific companies is using",
+   "options": [
+    "bottom-up analysis.",
+    "top-down analysis.",
+    "technical analysis.",
+    "sector rotation."
+   ],
+   "answer": 1,
+   "explanation": "Top-down analysis starts broad and narrows to the company; bottom-up starts with the company and widens.",
+   "why": [
+    "Bottom-up starts with the company.",
+    "",
+    "Technical analysis studies price and volume patterns.",
+    "Sector rotation shifts among industries with the cycle."
+   ]
+  },
+  {
+   "id": "Q06.019",
+   "concept": "C06.08",
+   "lo": "6.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    148
+   ],
+   "stem": "If the rate of inflation rises, the most likely sequence of effects is",
+   "options": [
+    "interest rates fall, bond prices rise, bond yields fall.",
+    "interest rates rise, bond prices fall, bond yields rise.",
+    "interest rates rise, bond prices rise, bond yields fall.",
+    "interest rates fall, bond prices fall, bond yields rise."
+   ],
+   "answer": 1,
+   "explanation": "Higher inflation drives rates up; existing bond prices fall and their yields rise. Falling inflation reverses the chain.",
+   "why": [
+    "That is the falling-inflation sequence.",
+    "",
+    "Prices and rates move inversely.",
+    "Inconsistent."
+   ]
+  },
+  {
+   "id": "Q06.020",
+   "concept": "C06.08",
+   "lo": "6.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    147,
+    148
+   ],
+   "stem": "The two principal causes of inflation identified in economic theory are",
+   "options": [
+    "rising unemployment and falling GDP.",
+    "excessive demand and monetary expansion.",
+    "trade surpluses and a strong dollar.",
+    "high reserve requirements and a high discount rate."
+   ],
+   "answer": 1,
+   "explanation": "Inflation results when aggregate demand exceeds supply and when the money stock grows faster than the economy.",
+   "why": [
+    "Those accompany contraction and deflation.",
+    "",
+    "Trade balances do not directly cause inflation.",
+    "Those are contractionary Fed tools."
+   ]
+  },
+  {
+   "id": "Q06.021",
+   "concept": "C06.08",
+   "lo": "6.d",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    148
+   ],
+   "stem": "During a period of deflation accompanying a severe recession, which asset class would investors most likely favor as a safe haven?",
+   "options": [
+    "Commodities",
+    "Real estate",
+    "U.S. Treasury securities",
+    "Common stocks"
+   ],
+   "answer": 2,
+   "explanation": "In deflation, Treasuries hold their value and may appreciate as rates fall, while stocks, real estate and commodities tend to decline.",
+   "why": [
+    "Commodity prices fall in deflation.",
+    "Property values fall.",
+    "",
+    "Stocks decline in severe recessions."
+   ]
+  },
+  {
+   "id": "Q06.022",
+   "concept": "C06.09",
+   "lo": "6.d",
+   "type": "calc",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    149
+   ],
+   "stem": "A U.S. manufacturer reports sales of $90 million, wages of $40 million, imported components of $25 million and net income of $15 million. Its contribution to U.S. GDP is",
+   "options": [
+    "$15 million.",
+    "$40 million.",
+    "$65 million.",
+    "$90 million."
+   ],
+   "answer": 2,
+   "explanation": "GDP counts value added within U.S. borders: sales minus imported inputs = $90M − $25M = $65M.",
+   "calc": "90 − 25 = 65",
+   "why": [
+    "Net income is not output.",
+    "Wages alone understate value added.",
+    "",
+    "Includes $25M produced abroad."
+   ]
+  },
+  {
+   "id": "Q06.023",
+   "concept": "C06.09",
+   "lo": "6.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    150,
+    151
+   ],
+   "stem": "Which of the following is a LAGGING economic indicator?",
+   "options": [
+    "Building permits",
+    "Stock prices",
+    "Average prime rate",
+    "Index of consumer expectations"
+   ],
+   "answer": 2,
+   "explanation": "The prime rate changes after the economy has turned, confirming the trend. Permits, stock prices and consumer expectations lead.",
+   "why": [
+    "Leading.",
+    "Leading.",
+    "",
+    "Leading."
+   ]
+  },
+  {
+   "id": "Q06.024",
+   "concept": "C06.09",
+   "lo": "6.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    150
+   ],
+   "stem": "'Core' inflation differs from headline CPI in that it",
+   "options": [
+    "excludes housing costs.",
+    "excludes food and energy prices because of their volatility.",
+    "is computed by the Federal Reserve rather than the BLS.",
+    "measures producer rather than consumer prices."
+   ],
+   "answer": 1,
+   "explanation": "Core CPI strips out food and energy, whose short-term swings distort the trend; it is a media term, not an official BLS designation.",
+   "why": [
+    "Housing remains in core CPI.",
+    "",
+    "The BLS publishes the CPI.",
+    "Core CPI is still a consumer measure."
+   ]
+  },
+  {
+   "id": "Q06.025",
+   "concept": "C06.09",
+   "lo": "6.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    149
+   ],
+   "stem": "By far the largest component of U.S. gross domestic product is",
+   "options": [
+    "government spending.",
+    "gross private investment.",
+    "personal consumption.",
+    "net exports."
+   ],
+   "answer": 2,
+   "explanation": "Personal consumption dominates GDP; government spending, investment, foreign investment and net exports make up the rest.",
+   "why": [
+    "Significant but smaller than consumption.",
+    "Smaller than consumption.",
+    "",
+    "Net exports are a small (often negative) component."
+   ]
+  },
+  {
+   "id": "F06.001",
+   "concept": "C06.01",
+   "type": "flash",
+   "pages": [
+    136,
+    137
+   ],
+   "front": "Four stages of the business cycle; recession vs. depression",
+   "back": "Trough → expansion → peak → contraction. Recession: ≥2 consecutive quarters of falling real GDP. Depression: 6 quarters."
+  },
+  {
+   "id": "F06.002",
+   "concept": "C06.02",
+   "type": "flash",
+   "pages": [
+    138
+   ],
+   "front": "Defensive vs. cyclical industries (examples)",
+   "back": "Defensive: food, pharmaceuticals, tobacco, energy (nondurables). Cyclical: autos, heavy machinery, steel (durables/raw materials). Countercyclical: gold mining."
+  },
+  {
+   "id": "F06.003",
+   "concept": "C06.03",
+   "type": "flash",
+   "pages": [
+    140,
+    141
+   ],
+   "front": "Normal, inverted, flat yield curves — when and what they predict",
+   "back": "Normal (up): expansion, rates to rise. Inverted (down): after Fed tightening, rates to fall. Flat: no change expected."
+  },
+  {
+   "id": "F06.004",
+   "concept": "C06.04",
+   "type": "flash",
+   "pages": [
+    141,
+    142
+   ],
+   "front": "Corporate–Treasury yield spread widening means…",
+   "back": "Recession expected (flight to safety). Narrowing → expansion expected."
+  },
+  {
+   "id": "F06.005",
+   "concept": "C06.05",
+   "type": "flash",
+   "pages": [
+    143
+   ],
+   "front": "Fiscal vs. monetary policy: who and what",
+   "back": "Fiscal: president + Congress; spending and taxation. Monetary: Federal Reserve; money supply and credit."
+  },
+  {
+   "id": "F06.006",
+   "concept": "C06.06",
+   "type": "flash",
+   "pages": [
+    144,
+    145
+   ],
+   "front": "Fed tools (most drastic / most used) and who sets discount, fed funds, prime",
+   "back": "Reserve requirement (most drastic), discount rate, open-market operations (most used). Discount: Fed. Fed funds: market (bank-to-bank overnight). Prime: banks."
+  },
+  {
+   "id": "F06.007",
+   "concept": "C06.07",
+   "type": "flash",
+   "pages": [
+    146,
+    147
+   ],
+   "front": "Weak dollar vs. strong dollar effects on trade",
+   "back": "Weak: exports up, imports down → surplus (producers win). Strong: exports down, imports up → deficit (consumers win)."
+  },
+  {
+   "id": "F06.008",
+   "concept": "C06.08",
+   "type": "flash",
+   "pages": [
+    148
+   ],
+   "front": "Inflation chain and causes",
+   "back": "Inflation ↑ → rates ↑ → bond prices ↓, yields ↑. Causes: excessive demand, monetary expansion. Deflation safe haven: Treasuries."
+  },
+  {
+   "id": "F06.009",
+   "concept": "C06.09",
+   "type": "flash",
+   "pages": [
+    150,
+    151
+   ],
+   "front": "Name three leading, two coincident, two lagging indicators",
+   "back": "Leading: building permits, stock prices, money supply, initial jobless claims. Coincident: industrial production, nonag employment. Lagging: prime rate, duration of unemployment, CPI for services."
+  }
+ ],
+ "terms": [
+  {
+   "term": "Balance of payments",
+   "def": "Record of all transactions with other countries; debits = money out, credits = money in.",
+   "pages": [
+    127
+   ]
+  },
+  {
+   "term": "Core CPI",
+   "def": "CPI excluding food and energy (media term).",
+   "pages": [
+    132
+   ]
+  },
+  {
+   "term": "Discount rate",
+   "def": "Rate the Fed charges member banks; a managed rate set by the Fed.",
+   "pages": [
+    126
+   ]
+  },
+  {
+   "term": "Federal funds rate",
+   "def": "Market rate banks charge each other for overnight loans of $1M+; most volatile.",
+   "pages": [
+    126
+   ]
+  },
+  {
+   "term": "Fiscal policy",
+   "def": "Government spending and taxation; president and Congress.",
+   "pages": [
+    125
+   ]
+  },
+  {
+   "term": "Inflation inertia",
+   "def": "Inflation lags economic shocks by quarters and persists until a shock changes it.",
+   "pages": [
+    129
+   ]
+  },
+  {
+   "term": "Monetary policy",
+   "def": "Central bank control of money and credit; the Fed.",
+   "pages": [
+    125
+   ]
+  },
+  {
+   "term": "Prime rate",
+   "def": "Best rate large banks charge top corporate borrowers; set by banks, not the Fed.",
+   "pages": [
+    126
+   ]
+  },
+  {
+   "term": "Yield spread",
+   "def": "Yield difference between bonds of equal maturity but different quality; widens before recessions.",
+   "pages": [
+    123
+   ]
+  }
+ ]
+}
