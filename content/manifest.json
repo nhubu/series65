@@ -1,0 +1,18 @@
+{
+ "version": "10914da471",
+ "units": [
+  {
+   "unit": 1,
+   "file": "unit01.json",
+   "title": "Equity Securities",
+   "status": "complete",
+   "function": 2,
+   "examQuestions": 7,
+   "lessons": 4,
+   "concepts": 13,
+   "questions": 31,
+   "flashcards": 13,
+   "minutes": 37
+  }
+ ]
+}

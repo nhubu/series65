@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Series 65 Coach</title>
+<meta name="description" content="Personal Series 65 study app: lessons, spaced review, practice exams, progress tracking.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="S65 Coach">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15171c" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+:root{
+  --bg:#f6f3ec; --card:#ffffff; --ink:#1d1f24; --muted:#6b6f7a; --line:#e4e0d6;
+  --accent:#1f6f5b; --accent-ink:#ffffff; --accent-soft:#dff0e8;
+  --warn:#b7791f; --warn-soft:#fbf0d9; --bad:#b4433a; --bad-soft:#fae3e0; --good:#2f8f5b; --good-soft:#dff3e6;
+  --xp:#c9872b; --radius:16px; --tap:48px; --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.05);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#15171c; --card:#1f2229; --ink:#ecebe6; --muted:#9a9ea8; --line:#2d313a;
+  --accent:#4fb08f; --accent-ink:#0f1a16; --accent-soft:#1d3a30;
+  --warn:#e2a846; --warn-soft:#3a2e14; --bad:#e07067; --bad-soft:#3e1f1c; --good:#5fc48a; --good-soft:#1c3a28;
+  --xp:#e3a44f; --shadow:0 1px 2px rgba(0,0,0,.4);
+}}
+:root[data-theme="dark"]{
+  --bg:#15171c; --card:#1f2229; --ink:#ecebe6; --muted:#9a9ea8; --line:#2d313a;
+  --accent:#4fb08f; --accent-ink:#0f1a16; --accent-soft:#1d3a30;
+  --warn:#e2a846; --warn-soft:#3a2e14; --bad:#e07067; --bad-soft:#3e1f1c; --good:#5fc48a; --good-soft:#1c3a28;
+  --xp:#e3a44f; --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-text-size-adjust:100%}
+body{padding-bottom:calc(72px + env(safe-area-inset-bottom));min-height:100vh}
+#app{max-width:720px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);padding:calc(10px + env(safe-area-inset-top)) 0 8px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+header.top h1{font-size:20px;margin:0;font-weight:700;letter-spacing:-.01em}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:13px;color:var(--muted);font-weight:600}
+.pill b{color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin:12px 0;box-shadow:var(--shadow)}
+.card h2{font-size:17px;margin:0 0 8px;font-weight:700}
+.card h3{font-size:15px;margin:14px 0 6px;font-weight:700}
+.muted{color:var(--muted);font-size:14px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.grow{flex:1}
+button,.btn{font:inherit;font-weight:600;border:0;border-radius:12px;min-height:var(--tap);padding:10px 16px;background:var(--accent);color:var(--accent-ink);cursor:pointer;width:100%;font-size:16px}
+button.secondary,.btn.secondary{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+button.ghost{background:transparent;color:var(--accent);border:0;min-height:40px;padding:6px 10px;width:auto}
+button.small{min-height:40px;padding:6px 12px;font-size:14px;width:auto}
+button:disabled{opacity:.5}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat div{background:var(--bg);border-radius:12px;padding:10px;text-align:center}
+.stat b{display:block;font-size:22px}
+.stat span{font-size:12px;color:var(--muted)}
+.bar{height:10px;background:var(--line);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:10}
+nav.tabs button{background:none;color:var(--muted);width:auto;min-width:56px;padding:4px 6px;min-height:52px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;border-radius:10px}
+nav.tabs button svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav.tabs button.active{color:var(--accent)}
+.path{display:flex;flex-direction:column;gap:10px}
+.unit{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow)}
+.unit .n{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+.unit.locked .n{background:var(--line);color:var(--muted)}
+.unit h3{margin:0 0 2px;font-size:16px}
+.lesson-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.lesson{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);min-height:var(--tap);cursor:pointer}
+.lesson .dot{width:14px;height:14px;border-radius:50%;border:2px solid var(--line);flex:none}
+.lesson.done .dot{background:var(--good);border-color:var(--good)}
+.lesson.started .dot{border-color:var(--warn);background:var(--warn-soft)}
+.tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--line);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.tag.ns{background:var(--line)} .tag.intro{background:var(--warn-soft);color:var(--warn)} .tag.prac{background:var(--accent-soft);color:var(--accent)} .tag.mast{background:var(--good-soft);color:var(--good)}
+.tag.partial{background:var(--warn-soft);color:var(--warn)} .tag.notstarted{background:var(--bad-soft);color:var(--bad)}
+.teach h3{margin:4px 0 6px;font-size:17px}
+.teach p{margin:0 0 10px}
+.teach ul{margin:0 0 10px;padding-left:20px}
+.teach li{margin:3px 0}
+.block{margin:12px 0}
+.example{background:var(--accent-soft);border-left:4px solid var(--accent);padding:10px 12px;border-radius:0 12px 12px 0}
+.example .lbl,.alert .lbl{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:4px}
+.alert{background:var(--warn-soft);border-left:4px solid var(--warn);padding:10px 12px;border-radius:0 12px 12px 0}
+.alert .lbl{color:var(--warn)}
+table.cmp{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--bg)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.q .stem{font-size:17px;font-weight:600;margin:0 0 12px;white-space:pre-line}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:12px;font-weight:500;min-height:var(--tap)}
+.opt .l{font-weight:800;color:var(--muted);flex:none;width:22px}
+.opt.sel{border-color:var(--accent)}
+.opt.correct{border-color:var(--good);background:var(--good-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{opacity:1}
+.feedback{margin-top:12px;padding:12px;border-radius:12px;background:var(--bg)}
+.feedback.good{background:var(--good-soft)} .feedback.bad{background:var(--bad-soft)}
+.feedback .why{margin-top:8px;font-size:14px;color:var(--muted)}
+.feedback .why div{margin:3px 0}
+.src{font-size:12px;color:var(--muted);margin-top:8px}
+.progress-top{display:flex;align-items:center;gap:10px;margin:8px 0 12px}
+.progress-top .bar{flex:1}
+.flash{min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:18px;padding:20px;background:var(--bg);border-radius:12px;cursor:pointer;white-space:pre-line}
+.btnrow{display:flex;gap:8px;margin-top:10px}
+.btnrow button{flex:1}
+.list{display:flex;flex-direction:column;gap:8px}
+.item{background:var(--bg);border-radius:12px;padding:10px 12px}
+input[type=date],input[type=number],input[type=search],select,textarea{font:inherit;width:100%;min-height:var(--tap);border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--card);color:var(--ink)}
+textarea{min-height:100px}
+label.f{display:block;font-size:13px;color:var(--muted);font-weight:600;margin:10px 0 4px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;z-index:20;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90vw;text-align:center}
+.toast.show{opacity:1}
+.xp-pop{color:var(--xp);font-weight:800}
+.timer{font-variant-numeric:tabular-nums;font-weight:700}
+.timer.low{color:var(--bad)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kv{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line);font-size:15px}
+.kv:last-child{border-bottom:0}
+.hidden{display:none}
+.center{text-align:center}
+.big{font-size:28px;font-weight:800}
+a{color:var(--accent)}
+.plan-day{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.plan-day .d{width:58px;flex:none;font-weight:700}
+.plan-day.today{background:var(--accent-soft);margin:0 -16px;padding:8px 16px;border-radius:8px}
+.mast-row{display:flex;align-items:center;gap:8px;font-size:14px;padding:6px 0}
+.mast-row .bar{flex:1}
+@media (min-width:700px){ body{font-size:18px} #app{padding:0 24px} }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<nav class="tabs" id="tabs"></nav>
+<div class="toast" id="toast"></div>
+<script>
+/* ==================== Series 65 Coach — single-file app ==================== */
+'use strict';
+const APP_VERSION = '0.3.0';
+const FUNCTIONS = {1:'Economic Factors & Business Information',2:'Investment Vehicle Characteristics',3:'Client Recommendations & Strategies',4:'Laws, Regulations & Ethics'};
+const FUNCTION_Q = {1:20,2:32,3:39,4:39};
+const EXAM_DEFAULT = '2026-11-16';
+const $ = (s,el=document)=>el.querySelector(s);
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const todayKey = (d=new Date()) => { const z=new Date(d.getTime()-d.getTimezoneOffset()*60000); return z.toISOString().slice(0,10); };
+const dayDiff = (a,b) => Math.round((new Date(b+'T00:00')-new Date(a+'T00:00'))/86400000);
+const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+const fmt = s => { // minimal markdown: **bold**, lines starting "- " → bullets, blank line → paragraph
+  const paras = String(s).split(/\n\s*\n/); let out='';
+  for (const p of paras){ const lines=p.split('\n'); let html='', inList=false;
+    for (const ln of lines){ const b = esc(ln).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>');
+      if (/^\s*- /.test(ln)){ if(!inList){html+='<ul>';inList=true;} html+='<li>'+b.replace(/^\s*- /,'')+'</li>'; }
+      else { if(inList){html+='</ul>';inList=false;} html+= (html&&!html.endsWith('</ul>')?'<br>':'')+b; } }
+    if(inList) html+='</ul>'; out += html.startsWith('<ul>')?html:'<p>'+html+'</p>'; }
+  return out.replace(/<p><\/p>/g,'');
+};
+
+/* ---------- content ---------- */
+const C = { units:[], concepts:{}, lessons:{}, questions:{}, unitOf:{}, manifest:null, terms:[] };
+async function loadContent(){
+  const m = await (await fetch('content/manifest.json',{cache:'no-cache'})).json();
+  C.manifest = m;
+  for (const um of m.units){
+    const u = await (await fetch('content/'+um.file)).json();
+    C.units.push(u);
+    for (const c of u.concepts){ C.concepts[c.id]=c; C.unitOf[c.id]=u.unit; }
+    for (const l of u.lessons){ C.lessons[l.id]=l; C.unitOf[l.id]=u.unit; l.unit=u.unit; }
+    for (const q of u.questions){ C.questions[q.id]=q; C.unitOf[q.id]=u.unit; q.unit=u.unit; q.function=u.function; }
+    for (const t of (u.terms||[])) C.terms.push({...t, unit:u.unit});
+  }
+  C.units.sort((a,b)=>a.unit-b.unit);
+}
+const allUnitsMeta = () => C.manifest.units;
+
+/* ---------- state ---------- */
+const KEY='s65state';
+let S = null;
+function defaultState(){ return { v:1, createdAt:Date.now(), examDate:EXAM_DEFAULT, dailyMinutes:150, planStart:todayKey(), xp:0, streak:{count:0,last:null},
+  lessons:{}, concepts:{}, questions:{}, mistakes:[], exams:[], log:{}, diagnosticDone:false, lastBackup:null, theme:'auto' }; }
+function load(){ try{ const raw=localStorage.getItem(KEY); S = raw? Object.assign(defaultState(), JSON.parse(raw)) : defaultState(); }catch(e){ S=defaultState(); } }
+let saveTimer=null;
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){ toast('Could not save progress — storage blocked?'); } }
+function logToday(field, n=1){ const k=todayKey(); S.log[k]=S.log[k]||{xp:0,lessons:0,reviews:0,questions:0,correct:0,minutes:0}; S.log[k][field]=(S.log[k][field]||0)+n; }
+function addXP(n, reason){ S.xp+=n; logToday('xp',n); bumpStreak(); save(); toast(`+${n} XP${reason?' · '+reason:''}`); }
+function bumpStreak(){ const t=todayKey(); if(S.streak.last===t) return; const y=S.streak.last; if(y && dayDiff(y,t)===1) S.streak.count++; else S.streak.count=1; S.streak.last=t; }
+function streakAlive(){ if(!S.streak.last) return 0; const d=dayDiff(S.streak.last,todayKey()); return d<=1? S.streak.count : 0; }
+
+/* ---------- concept state & spaced repetition (SM-2 style, concept level) ---------- */
+function cs(id){ return S.concepts[id] || (S.concepts[id]={status:'not-studied',ease:2.5,interval:0,due:null,reps:0,lapses:0,hist:[],introducedAt:null}); }
+function conceptStatus(id){ return S.concepts[id]?.status || 'not-studied'; }
+function introduce(id){ const c=cs(id); if(c.status==='not-studied'){ c.status='introduced'; c.introducedAt=Date.now(); c.due=addDays(todayKey(),1); c.interval=1; } }
+function addDays(k,n){ const d=new Date(k+'T00:00'); d.setDate(d.getDate()+n); return todayKey(d); }
+function gradeConcept(id, correct, qid, delayed){
+  const c=cs(id); if(c.status==='not-studied') introduce(id);
+  c.hist.push({t:Date.now(),ok:correct?1:0,q:qid}); if(c.hist.length>30) c.hist=c.hist.slice(-30);
+  if(correct){ c.reps++; if(c.reps===1) c.interval=1; else if(c.reps===2) c.interval=3; else c.interval=Math.round(c.interval*c.ease); c.ease=Math.min(3.0,c.ease+0.05); }
+  else { c.lapses++; c.reps=0; c.interval=1; c.ease=Math.max(1.3,c.ease-0.2); }
+  c.interval=Math.min(c.interval,21); c.due=addDays(todayKey(), correct? c.interval : 1);
+  // status machine
+  const recent=c.hist.slice(-5); const acc=recent.reduce((a,h)=>a+h.ok,0)/recent.length;
+  const distinctCorrectQ=new Set(c.hist.filter(h=>h.ok).map(h=>h.q)).size;
+  const delayedCorrect=c.hist.some(h=>h.ok && c.introducedAt && (h.t-c.introducedAt)>2*86400000);
+  if(!correct){ if(c.status==='mastered') c.status='practiced'; }
+  else { if(c.status==='introduced') c.status='practiced';
+         if(c.status==='practiced' && c.reps>=3 && distinctCorrectQ>=2 && delayedCorrect && acc>=0.8) c.status='mastered'; }
+}
+function dueConcepts(){ const t=todayKey(); return Object.keys(S.concepts).filter(id=>C.concepts[id] && S.concepts[id].status!=='not-studied' && S.concepts[id].due && S.concepts[id].due<=t); }
+function qstate(id){ return S.questions[id] || (S.questions[id]={seen:0,correct:0,last:null,lastOk:null}); }
+function recordAnswer(q, correct, delayed){
+  const qs=qstate(q.id); qs.seen++; if(correct) qs.correct++; qs.last=Date.now(); qs.lastOk=correct?1:0;
+  logToday('questions'); if(correct) logToday('correct');
+  if(q.concept) gradeConcept(q.concept, correct, q.id, delayed);
+  if(!correct){ const m=S.mistakes.find(x=>x.q===q.id && !x.resolved); if(m){m.count++; m.ts=Date.now();} else S.mistakes.push({q:q.id,ts:Date.now(),count:1,resolved:false,fixes:0}); }
+  else { const m=S.mistakes.find(x=>x.q===q.id && !x.resolved); if(m){ m.fixes++; if(m.fixes>=2) m.resolved=true; } }
+}
+function pickQuestionForConcept(cid, exclude=new Set()){
+  const c=C.concepts[cid]; if(!c) return null;
+  const pool=(c.questions||[]).map(id=>C.questions[id]).filter(q=>q && q.type!=='flash' && !exclude.has(q.id));
+  if(!pool.length) return null;
+  pool.sort((a,b)=>{ const sa=qstate(a.id), sb=qstate(b.id); return (sa.seen-sb.seen) || ((sa.last||0)-(sb.last||0)); });
+  const unseen=pool.filter(q=>qstate(q.id).seen===0); return unseen.length? unseen[Math.floor(Math.random()*unseen.length)] : pool[0];
+}
+
+/* ---------- plan ---------- */
+function lessonMinutes(l){ return (l.minutes||8) + Math.round((l.practice||[]).length*0.9); }
+function studiedUnits(){ return new Set(Object.keys(S.lessons).map(id=>C.unitOf[id])); }
+function examDaysLeft(){ return dayDiff(todayKey(), S.examDate); }
+function buildPlan(){
+  // Dynamic plan: distribute remaining (not completed) lessons evenly across remaining first-pass days.
+  // First pass ends 7 days before the exam (final review window), never fewer than 2 days from today.
+  const days=examDaysLeft(); const allLessons=C.units.flatMap(u=>u.lessons);
+  const remaining=allLessons.filter(l=>!S.lessons[l.id]?.done);
+  const finalWindow = days>14? 7 : days>7? 4 : Math.max(1,Math.floor(days/2));
+  const firstPassDays=Math.max(1, days-finalWindow);
+  const newMin=remaining.reduce((a,l)=>a+lessonMinutes(l),0);
+  const perDay=Math.ceil(remaining.length/firstPassDays);
+  const minPerDayNew=Math.round(newMin/firstPassDays);
+  // today's slice
+  const todays=remaining.slice(0,perDay);
+  const reviewBudget=Math.max(20, S.dailyMinutes - minPerDayNew - 20);
+  const fits = minPerDayNew + 30 <= S.dailyMinutes; // 30 min minimum for review + practice
+  return {days, finalWindow, firstPassDays, remaining, perDay, minPerDayNew, todays, reviewBudget, fits, newMin,
+    daysList: (()=>{ const out=[]; let idx=0; for(let d=0; d<days; d++){ const key=addDays(todayKey(),d); const isFinal=d>=firstPassDays; const ls= isFinal? [] : remaining.slice(idx, idx+perDay); idx+=ls.length; out.push({key,d,ls,isFinal}); } return out; })() };
+}
+
+/* ---------- views ---------- */
+let view='today', viewArg=null; let session=null; // active study session
+const T=$('#app');
+function go(v,arg){ view=v; viewArg=arg; session=null; window.scrollTo(0,0); render(); }
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('show'),1800); }
+const ICONS={ today:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>', path:'<svg viewBox="0 0 24 24"><path d="M4 18c4 0 4-6 8-6s4 6 8 6M4 6c4 0 4 6 8 6"/><circle cx="4" cy="18" r="1.5"/><circle cx="20" cy="6" r="1.5"/></svg>', practice:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>', review:'<svg viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5"/></svg>', more:'<svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>' };
+function renderTabs(){ const tabs=[['today','Today'],['path','Path'],['practice','Practice'],['review','Review'],['more','More']];
+  $('#tabs').innerHTML=tabs.map(([k,l])=>`<button class="${view===k||(view.startsWith(k))?'active':''}" data-v="${k}">${ICONS[k]}<span>${l}</span></button>`).join('');
+  $('#tabs').querySelectorAll('button').forEach(b=>b.onclick=()=>{ if(session && !confirm('Leave this session? Progress on answered questions is already saved.')) return; go(b.dataset.v); }); }
+function header(title, right=''){ return `<header class="top"><h1>${esc(title)}</h1><div class="row" style="gap:6px">${right}</div></header>`; }
+function xpPill(){ return `<span class="pill">🔥 <b>${streakAlive()}</b></span><span class="pill">★ <b>${S.xp}</b> XP</span>`; }
+
+function render(){ renderTabs(); const fn={today:vToday,path:vPath,unit:vUnit,lesson:vLesson,practice:vPractice,review:vReview,more:vMore,exam:vExam,examresult:vExamResult,reference:vReference,mistakes:vMistakes,plan:vPlan,stats:vStats,backup:vBackup,flash:vFlash,session:vSession}[view]||vToday; T.innerHTML=fn(); bind(); }
+function bind(){ T.querySelectorAll('[data-go]').forEach(el=>el.onclick=()=>go(el.dataset.go, el.dataset.arg)); T.querySelectorAll('[data-act]').forEach(el=>el.onclick=(e)=>ACT[el.dataset.act](el,e)); }
+
+/* --- Today --- */
+function coverage(){ const units=allUnitsMeta(); const complete=units.filter(u=>u.status==='complete').length; const concepts=Object.keys(C.concepts); const st={ns:0,intro:0,prac:0,mast:0}; for(const id of concepts){ const s=conceptStatus(id); st[{'not-studied':'ns',introduced:'intro',practiced:'prac',mastered:'mast'}[s]]++; } return {unitsLoaded:units.length, complete, concepts:concepts.length, ...st}; }
+function vToday(){
+  const p=buildPlan(); const due=dueConcepts(); const cov=coverage(); const day=dayDiff(S.planStart,todayKey())+1;
+  const lg=S.log[todayKey()]||{}; const lessonsToday=p.todays;
+  const unseenAcc=(()=>{ let s=0,c=0; for(const id in S.questions){ const q=S.questions[id]; if(q.seen>=1){ s++; if(q.firstOk) c++; } } return s? Math.round(100*c/s):null; })();
+  return header('Today', xpPill()) + `
+  <div class="card"><div class="row"><div class="grow"><div class="muted">Exam ${S.examDate===EXAM_DEFAULT?'(target, not scheduled)':''}</div><div class="big">${p.days} days</div></div><div class="grow"><div class="muted">Plan day</div><div class="big">${day} / ${p.days+day-1}</div></div><div class="grow"><div class="muted">Today so far</div><div class="big">${lg.questions||0}<span class="muted" style="font-size:14px"> q · ${lg.lessons||0} lessons</span></div></div></div>
+   ${!p.fits? `<div class="alert" style="margin-top:10px"><span class="lbl">Workload check</span>Remaining lessons need ≈${p.minPerDayNew} min/day of new material over ${p.firstPassDays} days, leaving under 30 min for review. Add study time, push the exam date, or accept thinner review.</div>`:''}
+  </div>
+  ${!S.diagnosticDone? `<div class="card"><h2>Start with a diagnostic</h2><p class="muted">20 mixed questions from the units loaded so far. It sets your baseline and tells the plan where you're weak. No penalty — guess freely.</p><button data-act="startDiagnostic">Take the diagnostic (≈15 min)</button></div>`:''}
+  <div class="card"><h2>New lessons today <span class="muted">(${lessonsToday.length} · ≈${lessonsToday.reduce((a,l)=>a+lessonMinutes(l),0)} min)</span></h2>
+   ${lessonsToday.length? `<div class="lesson-list">${lessonsToday.map(l=>lessonRow(l)).join('')}</div>` : `<p class="muted">All loaded lessons are complete. ${cov.complete<24?'More units are being added — check for updates in More.':'Focus on review and practice exams.'}</p>`}
+   ${p.remaining.length? `<p class="muted" style="margin:10px 0 0">${p.remaining.length} lessons left · ${p.perDay}/day keeps you on pace to finish the first pass ${p.firstPassDays} days from now, leaving ${p.finalWindow} days of final review.</p>`:''}
+  </div>
+  <div class="card"><h2>Due for review <span class="muted">(${due.length} concepts)</span></h2>
+   <p class="muted">Spaced review re-tests concepts right before you'd forget them. Target ≈${p.reviewBudget} min on review + mixed practice today.</p>
+   <div class="btnrow"><button data-act="startReview" ${due.length?'':'disabled'}>Review due (${due.length})</button><button class="secondary" data-act="startMixed">Mixed practice (15)</button></div>
+  </div>
+  <div class="card"><h2>Evidence, not vibes</h2>
+   <div class="stat"><div><b>${cov.mast}</b><span>mastered</span></div><div><b>${cov.prac}</b><span>practiced</span></div><div><b>${cov.intro}</b><span>introduced</span></div></div>
+   <div class="mast-row"><span style="width:110px">Concepts</span><div class="bar"><i style="width:${cov.concepts? Math.round(100*(cov.mast)/cov.concepts):0}%"></i></div><span>${cov.mast}/${cov.concepts}</span></div>
+   <div class="mast-row"><span style="width:110px">Curriculum</span><div class="bar"><i style="width:${Math.round(100*cov.complete/24)}%"></i></div><span>${cov.complete}/24 units</span></div>
+   <div class="muted" style="margin-top:6px">First-attempt accuracy on unseen questions: <b>${unseenAcc==null?'—':unseenAcc+'%'}</b> · Practice exams taken: <b>${S.exams.length}</b>${S.exams.length?` · last ${S.exams[S.exams.length-1].pct}%`:''}</div>
+   <button class="ghost" data-go="stats">See weak topics →</button>
+  </div>`;
+}
+function lessonRow(l){ const st=S.lessons[l.id]; const u=C.units.find(x=>x.unit===l.unit); return `<div class="lesson ${st?.done?'done':st?'started':''}" data-go="lesson" data-arg="${l.id}"><span class="dot"></span><div class="grow"><div><b>${esc(l.id.replace('L','').replace(/^0/,''))}</b> ${esc(l.title)}</div><div class="muted">Unit ${l.unit} · ${esc(u.title)} · ${lessonMinutes(l)} min</div></div><span class="muted">›</span></div>`; }
+
+/* --- Path --- */
+function vPath(){
+  const metas=allUnitsMeta(); const byNum={}; for(const u of C.units) byNum[u.unit]=u;
+  const all=[]; for(let n=1;n<=24;n++){ const m=metas.find(x=>x.unit===n); all.push({n, m, u:byNum[n]}); }
+  const groups=[[2,'Investment vehicles',[1,2,3,4,5,24]],[1,'Economics & analysis',[6,7,19,20]],[4,'Laws, regulations & ethics',[8,9,10,11,12,13,14]],[3,'Clients, taxes, retirement & portfolios',[15,16,17,18,21,22,23]]];
+  const unitNames={1:'Equity Securities',2:'Fixed-Income (Debt) Securities',3:'Pooled Investments',4:'Derivative Securities',5:'Alternative Investments',6:'Basic Economic Concepts',7:'Financial Reporting',8:'Regulation of Securities & Issuers',9:'Regulation of Investment Advisers',10:'Regulation of IARs',11:'Regulation of Broker-Dealers & Agents',12:'Remedies & Administrative Provisions',13:'Communications with Customers',14:'Ethical Practices & Obligations',15:'Tax Considerations',16:'Types of Clients',17:'Client Profile',18:'Retirement Plans, ERISA & Education Funding',19:'Types of Investment Risks',20:'Analytical Methods',21:'Portfolio Management',22:'Performance Measures',23:'Trading Securities',24:'Insurance-Based Products'};
+  const examQ={1:7,2:5,3:6,4:5,5:4,6:6,7:4,8:2,9:6,10:4,11:4,12:2,13:10,14:11,15:2,16:6,17:7,18:7,19:6,20:7,21:9,22:4,23:4,24:2};
+  let html=header('Learning path', xpPill())+`<p class="muted">Grouped by exam function (weight in parentheses). Units in book order inside each group. Tap a unit for its lessons.</p>`;
+  for(const [fn,name,nums] of groups){ html+=`<h3 style="margin:16px 0 8px">${esc(name)} <span class="muted">(${FUNCTION_Q[fn]} of 130 questions)</span></h3><div class="path">`;
+    for(const n of nums){ const it=all[n-1]; const u=it.u; const done=u? u.lessons.filter(l=>S.lessons[l.id]?.done).length:0; const tot=u?u.lessons.length:0; const status=it.m?.status||'not-started';
+      const mastered=u? u.concepts.filter(c=>conceptStatus(c.id)==='mastered').length:0;
+      html+=`<div class="unit ${u?'':'locked'}" ${u?`data-go="unit" data-arg="${n}"`:''}><div class="n">${n}</div><div class="grow"><h3>${esc(unitNames[n])}</h3><div class="muted">≈${examQ[n]} exam questions${u?` · ${done}/${tot} lessons · ${mastered}/${u.concepts.length} mastered`:''}</div>${u?`<div class="bar" style="margin-top:6px"><i style="width:${tot?Math.round(100*done/tot):0}%"></i></div>`:''}</div><span class="tag ${status==='complete'?'':status==='partial'?'partial':'notstarted'}">${status==='complete'?'ready':status==='partial'?'partial':'coming'}</span></div>`; }
+    html+='</div>'; }
+  return html;
+}
+function vUnit(){ const u=C.units.find(x=>x.unit==viewArg); if(!u) return vPath();
+  return header(`Unit ${u.unit}`, `<button class="ghost" data-go="path">‹ Path</button>`)+`<div class="card"><h2>${esc(u.fullTitle||u.title)}</h2><div class="muted">Function ${u.function}: ${FUNCTIONS[u.function]} · ≈${u.examQuestions} exam questions · book pp. ${u.printedPages[0]}–${u.printedPages[1]}</div>
+  ${u.status!=='complete'?`<div class="alert" style="margin-top:8px"><span class="lbl">Partial</span>This unit's curriculum is still being written. What's here is reviewed; coverage is incomplete.</div>`:''}
+  <h3>Learning objectives</h3><ul class="muted" style="padding-left:18px;font-size:14px">${u.los.map(l=>`<li><b>${l.id}</b> ${esc(l.text)}</li>`).join('')}</ul></div>
+  <div class="card"><h2>Lessons</h2><div class="lesson-list">${u.lessons.map(l=>lessonRow(l)).join('')}</div>
+  <div class="btnrow"><button class="secondary" data-act="unitPractice" data-unit="${u.unit}">Practice this unit (15 q)</button><button class="secondary" data-go="flash" data-arg="${u.unit}">Flashcards</button></div></div>
+  <div class="card"><h2>Concept mastery</h2>${u.concepts.map(c=>`<div class="mast-row"><span class="tag ${({'not-studied':'ns',introduced:'intro',practiced:'prac',mastered:'mast'})[conceptStatus(c.id)]}">${conceptStatus(c.id).replace('not-studied','new')}</span><span class="grow">${esc(c.subtopic||c.topic)}</span><span class="muted" style="font-size:12px">p.${c.pages.map(p=>p-18).join(',')}</span></div>`).join('')}</div>`; }
+
+/* --- Lesson --- */
+function vLesson(){ const l=C.lessons[viewArg]; if(!l) return vPath(); const u=C.units.find(x=>x.unit===l.unit);
+  if(!session || session.kind!=='lesson' || session.lesson!==l.id){ session={kind:'lesson',lesson:l.id,step:0,answers:{},startedAt:Date.now()}; S.lessons[l.id]=S.lessons[l.id]||{started:Date.now()}; save(); }
+  const blocks=l.blocks; const total=blocks.length+1; const i=session.step;
+  let body='';
+  if(i<blocks.length){ const b=blocks[i];
+    if(b.t==='teach') body=`<div class="teach">${b.h?`<h3>${esc(b.h)}</h3>`:''}${fmt(b.b)}</div>`;
+    else if(b.t==='example') body=`<div class="example"><span class="lbl">Example</span>${fmt(b.b)}</div>`;
+    else if(b.t==='alert') body=`<div class="alert"><span class="lbl">${esc(b.h||'Watch out')}</span>${fmt(b.b)}</div>`;
+    else if(b.t==='compare') body=`${b.h?`<h3 style="margin:4px 0 8px">${esc(b.h)}</h3>`:''}<div class="tablewrap"><table class="cmp">${b.rows.map((r,ri)=>`<tr>${r.map(c=>ri===0?`<th>${esc(c)}</th>`:`<td>${fmt(c).replace(/^<p>|<\/p>$/g,'')}</td>`).join('')}</tr>`).join('')}</table></div>`;
+    else if(b.t==='check'){ const q=C.questions[b.q]; body=`<div class="muted" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em">Quick check</div>`+renderQuestion(q, session.answers[b.q]); }
+    const isCheck=blocks[i].t==='check'; const answered=!isCheck || session.answers[blocks[i].q]!=null;
+    body+=`<div class="btnrow">${i>0?`<button class="secondary" data-act="lessonPrev">Back</button>`:''}<button data-act="lessonNext" ${answered?'':'disabled'}>${i===blocks.length-1?'Practice set →':'Continue'}</button></div>`;
+  } else { // practice set
+    if(!session.practice){ session.practice=shuffle(l.practice||[]); session.pi=0; }
+    if(session.pi<session.practice.length){ const q=C.questions[session.practice[session.pi]]; body=`<div class="muted" style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em">Practice ${session.pi+1} of ${session.practice.length}</div>`+renderQuestion(q, session.answers[q.id])+`<div class="btnrow"><button data-act="practiceNext" ${session.answers[q.id]!=null?'':'disabled'}>${session.pi===session.practice.length-1?'Finish lesson':'Next'}</button></div>`; }
+    else { const res=finishLesson(l); body=`<div class="center"><div class="big">Lesson complete</div><p>Practice score: <b>${res.correct}/${res.total}</b> · <span class="xp-pop">+${res.xp} XP</span></p><p class="muted">Concepts in this lesson are now <b>introduced</b>; they'll come due for spaced review starting tomorrow. Mastery is earned later by answering different questions correctly after a delay.</p>${res.correct<res.total?`<p class="muted">Missed questions are in your Mistakes notebook.</p>`:''}</div><div class="btnrow"><button class="secondary" data-go="unit" data-arg="${l.unit}">Unit ${l.unit}</button><button data-go="today">Today</button></div>`; }
+  }
+  return header(l.id.replace('L','Lesson ').replace(/^Lesson 0/,'Lesson '), `<button class="ghost" data-go="unit" data-arg="${l.unit}">✕</button>`)+`<div class="progress-top"><div class="bar"><i style="width:${Math.round(100*Math.min(i,blocks.length)/total)}%"></i></div><span class="muted" style="font-size:13px">${esc(u.title)}</span></div><div class="card"><h2 style="font-size:19px">${esc(l.title)}</h2>${i===0?`<p class="muted"><b>You'll learn to:</b> ${esc(l.objective)}</p>`:''}${body}</div>`;
+}
+function finishLesson(l){ const st=S.lessons[l.id]; if(st.done) return st.result;
+  let correct=0,total=0; for(const qid of l.practice||[]){ total++; if(session.answers[qid]?.ok) correct++; }
+  for(const cid of l.concepts) introduce(cid);
+  const xp=20+correct*5; st.done=Date.now(); st.result={correct,total,xp}; logToday('lessons'); logToday('minutes', lessonMinutes(l)); S.xp+=xp; logToday('xp',xp); bumpStreak(); save(); return st.result; }
+
+/* --- Question rendering (shared) --- */
+function renderQuestion(q, ans){
+  if(!q) return '<p>Missing question.</p>';
+  if(!session.order) session.order={}; if(!session.order[q.id]) session.order[q.id]=shuffle([0,1,2,3]);
+  const order=session.order[q.id]; const letters='ABCD';
+  const opts=order.map((oi,k)=>{ let cls='opt'; if(ans){ if(oi===q.answer) cls+=' correct'; else if(oi===ans.chosen) cls+=' wrong'; } return `<button class="${cls}" data-act="answer" data-q="${q.id}" data-oi="${oi}" ${ans?'disabled':''}><span class="l">${letters[k]}</span><span>${esc(q.options[oi])}</span></button>`; }).join('');
+  let fb=''; if(ans){ const why=q.why||[]; const whyHtml=order.filter(oi=>oi!==q.answer && why[oi]).map(oi=>`<div><b>${letters[order.indexOf(oi)]}</b> — ${esc(why[oi])}</div>`).join('');
+    fb=`<div class="feedback ${ans.ok?'good':'bad'}"><b>${ans.ok?'Correct.':'Not quite — the answer is '+letters[order.indexOf(q.answer)]+'.'}</b> ${esc(q.explanation)}${q.calc?`<div class="muted" style="margin-top:6px;font-family:ui-monospace,Menlo,monospace;font-size:13px">${esc(q.calc)}</div>`:''}${whyHtml?`<div class="why"><b>Why the others are wrong:</b>${whyHtml}</div>`:''}<div class="src">${q.pages?`Source: LEM pp. ${q.pages.map(p=>p-18).join('–')}`:''}${q.source&&q.source!=='pdf'?` · ${esc(q.source)}`:''} · ${esc(q.concept)} · difficulty ${q.diff}/3</div></div>`; }
+  return `<div class="q"><p class="stem">${esc(q.stem)}</p><div class="opts">${opts}</div>${fb}</div>`;
+}
+function answerQ(qid, oi){ const q=C.questions[qid]; const ok=oi===q.answer; const qs=qstate(qid); const firstTime=qs.seen===0;
+  const delayed = S.concepts[q.concept]?.introducedAt ? (Date.now()-S.concepts[q.concept].introducedAt)>2*86400000 : false;
+  session.answers[qid]={chosen:oi,ok}; recordAnswer(q, ok, delayed); if(firstTime) qs.firstOk=ok;
+  if(session.kind!=='exam'){ if(ok){ S.xp+=5; logToday('xp',5); bumpStreak(); } } save(); render(); }
+
+/* --- Sessions: review / mixed / unit practice / diagnostic --- */
+function startSession(kind, qids, title){ session={kind:'session',mode:kind,title,qs:qids,i:0,answers:{},startedAt:Date.now()}; view='session'; render(); }
+function vSession(){ const s=session; if(!s) return vToday();
+  if(s.i<s.qs.length){ const q=C.questions[s.qs[s.i]]; const ans=s.answers[q.id];
+    return header(s.title, `<button class="ghost" data-act="endSession">End</button>`)+`<div class="progress-top"><div class="bar"><i style="width:${Math.round(100*s.i/s.qs.length)}%"></i></div><span class="muted" style="font-size:13px">${s.i+1}/${s.qs.length}</span></div><div class="card">${renderQuestion(q,ans)}<div class="btnrow"><button data-act="sessionNext" ${ans?'':'disabled'}>${s.i===s.qs.length-1?'Finish':'Next'}</button></div></div>`; }
+  const correct=Object.values(s.answers).filter(a=>a.ok).length; const total=s.qs.length; if(!s.closed){ s.closed=true; const xp=Math.round(correct*3+ (s.mode==='review'? total*2:0)); S.xp+=xp; logToday('xp',xp); logToday('reviews', s.mode==='review'?1:0); logToday('minutes', Math.round((Date.now()-s.startedAt)/60000)); if(s.mode==='diagnostic'){ S.diagnosticDone=true; S.exams.push({ts:Date.now(),kind:'diagnostic',n:total,correct,pct:Math.round(100*correct/total),byFunction:byFunction(s),byUnit:byUnit(s)}); } bumpStreak(); save(); s.xp=xp; }
+  const bf=byFunction(s);
+  return header(s.title)+`<div class="card center"><div class="big">${correct}/${total}</div><p>${Math.round(100*correct/total)}% · <span class="xp-pop">+${s.xp} XP</span></p>${Object.keys(bf).length>1?`<div style="text-align:left">${Object.entries(bf).map(([f,v])=>`<div class="mast-row"><span style="width:160px;font-size:13px">${esc(FUNCTIONS[f])}</span><div class="bar"><i style="width:${Math.round(100*v.c/v.n)}%"></i></div><span>${v.c}/${v.n}</span></div>`).join('')}</div>`:''}${s.mode==='diagnostic'?`<p class="muted">Baseline recorded. Weak functions get extra weight in mixed practice. Note: only the units loaded so far were sampled.</p>`:''}<div class="btnrow"><button class="secondary" data-go="mistakes">Mistakes</button><button data-go="today">Today</button></div></div>`; }
+function byFunction(s){ const o={}; for(const id of s.qs){ const q=C.questions[id]; const f=q.function; o[f]=o[f]||{n:0,c:0}; o[f].n++; if(s.answers[id]?.ok) o[f].c++; } return o; }
+function byUnit(s){ const o={}; for(const id of s.qs){ const q=C.questions[id]; o[q.unit]=o[q.unit]||{n:0,c:0}; o[q.unit].n++; if(s.answers[id]?.ok) o[q.unit].c++; } return o; }
+function weakWeights(){ // per-unit weight from recent accuracy (lower accuracy → higher weight)
+  const w={}; for(const u of C.units){ let n=0,c=0; for(const q of u.questions){ const qs=S.questions[q.id]; if(qs&&qs.seen){ n+=qs.seen; c+=qs.correct; } } w[u.unit]= n? 1.5-(c/n) : 1.0; } return w; }
+function mixedSet(n, unitsFilter=null, unseenFirst=true){ const sw=studiedUnits(); const ww=weakWeights();
+  let pool=Object.values(C.questions).filter(q=>q.type!=='flash' && (unitsFilter? unitsFilter.has(q.unit) : (sw.has(q.unit)||sw.size===0)));
+  if(!pool.length) pool=Object.values(C.questions).filter(q=>q.type!=='flash');
+  const scored=pool.map(q=>{ const qs=S.questions[q.id]; const seen=qs?qs.seen:0; const lastAgo=qs&&qs.last? (Date.now()-qs.last)/86400000 : 99; return {q, score: (unseenFirst&&seen===0?3:0) + Math.min(lastAgo,10)/5 + (ww[q.unit]||1) + Math.random()}; });
+  scored.sort((a,b)=>b.score-a.score); return scored.slice(0,n).map(x=>x.q.id); }
+
+/* --- Practice tab --- */
+function vPractice(){ const sw=studiedUnits(); const nq=Object.values(C.questions).filter(q=>q.type!=='flash'&&q.exam).length;
+  return header('Practice', xpPill())+`
+  <div class="card"><h2>Timed practice exams</h2><p class="muted">Exam-style single-best-answer questions weighted like the real test (20/32/39/39 by function), drawn from units loaded so far (${nq} exam-style questions available). Timer runs like Prometric: ${Math.round(180/130*60)} s per question average. No hearts, no penalties — just data.</p>
+   <div class="grid2"><button data-act="startExam" data-n="30">Short · 30 q · 42 min</button><button data-act="startExam" data-n="65">Half · 65 q · 90 min</button></div>
+   <div style="margin-top:8px"><button data-act="startExam" data-n="130" class="secondary">Full · 130 q · 180 min</button></div>
+   <label class="f"><input type="checkbox" id="examStudiedOnly" ${S.examStudiedOnly!==false?'checked':''} data-act="toggleStudiedOnly"> Only units I've studied (${sw.size} units)</label></div>
+  <div class="card"><h2>Drills</h2><div class="btnrow"><button class="secondary" data-act="startMixed">Mixed practice · 15</button><button class="secondary" data-act="startCalc">Calculations · 10</button></div>
+   <div class="btnrow"><button class="secondary" data-go="flash" data-arg="all">Flashcards (all studied)</button><button class="secondary" data-act="startDiagnostic">${S.diagnosticDone?'Re-take diagnostic':'Diagnostic · 20'}</button></div></div>
+  <div class="card"><h2>Exam history</h2>${S.exams.length? `<div class="list">${S.exams.slice().reverse().map(e=>`<div class="item"><b>${e.pct}%</b> · ${e.correct}/${e.n} · ${esc(e.kind)} · ${new Date(e.ts).toLocaleDateString()}${e.timeSec?` · ${Math.round(e.timeSec/60)} min`:''}</div>`).join('')}</div>`:'<p class="muted">No exams yet.</p>'}</div>`; }
+
+/* --- Exam mode --- */
+function examSet(n, studiedOnly){ const sw=studiedUnits(); const pool=Object.values(C.questions).filter(q=>q.type!=='flash'&&q.exam&&(!studiedOnly||sw.has(q.unit)||sw.size===0));
+  const out=[]; const byF={1:[],2:[],3:[],4:[]}; for(const q of pool) byF[q.function].push(q);
+  for(const f of [1,2,3,4]){ const want=Math.round(n*FUNCTION_Q[f]/130); const list=byF[f].map(q=>({q,s:(S.questions[q.id]?.seen||0)+Math.random()})).sort((a,b)=>a.s-b.s).slice(0,want).map(x=>x.q.id); out.push(...list); }
+  // top up if some functions lack questions
+  if(out.length<n){ const have=new Set(out); for(const q of shuffle(pool)){ if(out.length>=n) break; if(!have.has(q.id)){ out.push(q.id); have.add(q.id);} } }
+  return shuffle(out); }
+function vExam(){ const s=session; if(!s||s.kind!=='exam') return vPractice();
+  const left=Math.max(0, s.endsAt-Date.now()); const mm=Math.floor(left/60000), ss=Math.floor(left%60000/1000);
+  if(left<=0 && !s.submitted) return finishExam();
+  const q=C.questions[s.qs[s.i]]; const chosen=s.answers[q.id];
+  if(!session.order) session.order={}; if(!session.order[q.id]) session.order[q.id]=shuffle([0,1,2,3]); const order=session.order[q.id];
+  return header(`Q ${s.i+1}/${s.qs.length}`, `<span class="pill timer ${left<300000?'low':''}" id="timer">${mm}:${String(ss).padStart(2,'0')}</span><button class="ghost" data-act="submitExam">Submit</button>`)+
+  `<div class="card"><div class="q"><p class="stem">${esc(q.stem)}</p><div class="opts">${order.map((oi,k)=>`<button class="opt ${chosen===oi?'sel':''}" data-act="examPick" data-oi="${oi}"><span class="l">${'ABCD'[k]}</span><span>${esc(q.options[oi])}</span></button>`).join('')}</div></div>
+   <div class="btnrow"><button class="secondary" data-act="examPrev" ${s.i===0?'disabled':''}>Prev</button><button class="secondary small" data-act="examFlag">${s.flags.has(q.id)?'🚩 Flagged':'Flag'}</button><button data-act="examNext" ${s.i===s.qs.length-1?'disabled':''}>Next</button></div>
+   <p class="muted" style="margin:10px 0 0">Answered ${Object.keys(s.answers).length}/${s.qs.length} · flagged ${s.flags.size}</p></div>`; }
+function finishExam(){ const s=session; s.submitted=true; let correct=0; for(const id of s.qs){ const q=C.questions[id]; const ok=s.answers[id]===q.answer; if(ok) correct++; recordAnswer(q, ok, true); if(s.answers[id]!=null && (S.questions[id].seen===1)) S.questions[id].firstOk=ok; }
+  const timeSec=Math.round((Date.now()-s.startedAt)/1000); const res={ts:Date.now(),kind:`${s.qs.length}-question exam`,n:s.qs.length,correct,pct:Math.round(100*correct/s.qs.length),timeSec,byFunction:{},byUnit:{}};
+  for(const id of s.qs){ const q=C.questions[id]; const ok=s.answers[id]===q.answer; const f=res.byFunction[q.function]=res.byFunction[q.function]||{n:0,c:0}; f.n++; if(ok) f.c++; const u=res.byUnit[q.unit]=res.byUnit[q.unit]||{n:0,c:0}; u.n++; if(ok) u.c++; }
+  S.exams.push(res); const xp=correct*2; S.xp+=xp; logToday('xp',xp); logToday('minutes',Math.round(timeSec/60)); bumpStreak(); save(); session={kind:'examresult',res,qs:s.qs,answers:s.answers,order:s.order}; view='examresult'; return vExamResult(); }
+function vExamResult(){ const s=session; const r=s.res; const passLine=Math.round(r.n*92/130);
+  return header('Exam result')+`<div class="card center"><div class="big">${r.pct}%</div><p><b>${r.correct}/${r.n}</b> correct in ${Math.round(r.timeSec/60)} min · pace ${(r.timeSec/r.n).toFixed(0)} s/q (exam allows ${Math.round(180*60/130)})</p><p class="muted">Real-exam pass line is 92/130 (70.8%) — ${r.correct>=passLine?'you were above it on this set':'this set was below it'}. One practice score is not a pass prediction; look at the pattern across several.</p></div>
+  <div class="card"><h2>By function</h2>${Object.entries(r.byFunction).map(([f,v])=>`<div class="mast-row"><span style="width:170px;font-size:13px">${esc(FUNCTIONS[f])}</span><div class="bar"><i style="width:${Math.round(100*v.c/v.n)}%"></i></div><span>${v.c}/${v.n}</span></div>`).join('')}
+  <h3>By unit</h3>${Object.entries(r.byUnit).sort((a,b)=>(a[1].c/a[1].n)-(b[1].c/b[1].n)).map(([u,v])=>`<div class="mast-row"><span style="width:170px;font-size:13px">Unit ${u} · ${esc((C.units.find(x=>x.unit==u)||{}).title||'')}</span><div class="bar"><i style="width:${Math.round(100*v.c/v.n)}%"></i></div><span>${v.c}/${v.n}</span></div>`).join('')}</div>
+  <div class="card"><h2>Review answers</h2><div class="list">${s.qs.map((id,i)=>{ const q=C.questions[id]; const ok=s.answers[id]===q.answer; return `<div class="item" data-act="examReviewQ" data-i="${i}" style="cursor:pointer">${ok?'✅':s.answers[id]==null?'⬜':'❌'} <b>${i+1}.</b> ${esc(q.stem.slice(0,90))}…</div>`; }).join('')}</div><div id="examReviewBox"></div></div>
+  <div class="btnrow"><button class="secondary" data-go="mistakes">Mistakes notebook</button><button data-go="practice">Done</button></div>`; }
+
+/* --- Review tab --- */
+function vReview(){ const due=dueConcepts(); const t=todayKey(); const upcoming=Object.entries(S.concepts).filter(([id,c])=>C.concepts[id]&&c.due&&c.due>t).length; const m=S.mistakes.filter(x=>!x.resolved).length;
+  return header('Review', xpPill())+`<div class="card"><h2>Spaced review</h2><p class="muted"><b>${due.length}</b> concepts due today · ${upcoming} scheduled later. Each review serves a question you haven't seen for that concept when possible; a miss resets the interval to 1 day.</p><button data-act="startReview" ${due.length?'':'disabled'}>Review due (${Math.min(due.length,25)})</button></div>
+  <div class="card"><h2>Mistakes notebook</h2><p class="muted"><b>${m}</b> open mistakes. A mistake closes after you answer the question correctly twice.</p><div class="btnrow"><button class="secondary" data-go="mistakes">Open notebook</button><button class="secondary" data-act="retryMistakes" ${m?'':'disabled'}>Retry 10</button></div></div>
+  <div class="card"><h2>Reference</h2><p class="muted">Search every concept, rule, exception and term — with book page numbers.</p><button class="secondary" data-go="reference">Open reference</button></div>`; }
+function vMistakes(){ const open=S.mistakes.filter(x=>!x.resolved).sort((a,b)=>b.ts-a.ts); const byU={}; for(const m of open){ const q=C.questions[m.q]; if(!q) continue; (byU[q.unit]=byU[q.unit]||[]).push(m); }
+  return header('Mistakes', `<button class="ghost" data-go="review">‹ Review</button>`)+(open.length?Object.entries(byU).map(([u,ms])=>`<div class="card"><h2>Unit ${u} · ${esc((C.units.find(x=>x.unit==u)||{}).title||'')} <span class="muted">(${ms.length})</span></h2><div class="list">${ms.map(m=>{const q=C.questions[m.q]; const c=C.concepts[q.concept]; return `<div class="item"><div>${esc(q.stem.slice(0,140))}${q.stem.length>140?'…':''}</div><div class="muted" style="font-size:13px;margin-top:4px">${esc(c?.subtopic||'')} · missed ${m.count}× · LEM p.${(q.pages||[]).map(p=>p-18).join('–')} · fixes ${m.fixes}/2</div><div class="row" style="margin-top:6px"><button class="small secondary" data-act="retryOne" data-q="${q.id}">Retry</button><button class="small ghost" data-act="showConcept" data-c="${q.concept}">Concept</button></div></div>`;}).join('')}</div></div>`).join(''):'<div class="card"><p class="muted">No open mistakes. Nice.</p></div>')+`<div class="card"><h2>Resolved</h2><p class="muted">${S.mistakes.filter(x=>x.resolved).length} resolved.</p></div>`; }
+function vReference(){ const qv=(viewArg||'').toLowerCase(); const hits=[]; if(qv.length>=2){ for(const c of Object.values(C.concepts)){ const hay=[c.topic,c.subtopic,c.explanation,...(c.rules||[]),...(c.exceptions||[]),...(c.formulas||[])].join(' ').toLowerCase(); if(hay.includes(qv)) hits.push({type:'concept',c}); } for(const t of C.terms){ if((t.term+' '+t.def).toLowerCase().includes(qv)) hits.push({type:'term',t}); } }
+  return header('Reference', `<button class="ghost" data-go="review">‹</button>`)+`<input type="search" id="refq" placeholder="Search concepts, rules, terms…" value="${esc(viewArg||'')}" autocomplete="off"><p class="muted" style="margin:6px 0">Page numbers are the book's printed pages (LEM 12th ed.). Explanations are original study notes, not book text.</p>
+  ${qv.length<2? `<div class="card"><h2>Browse by unit</h2><div class="list">${C.units.map(u=>`<div class="item" data-act="refUnit" data-u="${u.unit}" style="cursor:pointer"><b>Unit ${u.unit}</b> ${esc(u.title)} · ${u.concepts.length} concepts, ${(u.terms||[]).length} terms</div>`).join('')}</div></div>` : hits.length? hits.slice(0,40).map(h=>h.type==='concept'?conceptCard(h.c):`<div class="card"><b>${esc(h.t.term)}</b> <span class="muted">· Unit ${h.t.unit} · p.${h.t.pages.join(',')}</span><div>${esc(h.t.def)}</div></div>`).join('') : '<div class="card"><p class="muted">No matches.</p></div>'}`; }
+function conceptCard(c){ const st=conceptStatus(c.id); return `<div class="card"><div class="row"><h2 class="grow" style="margin:0">${esc(c.subtopic||c.topic)}</h2><span class="tag ${({'not-studied':'ns',introduced:'intro',practiced:'prac',mastered:'mast'})[st]}">${st.replace('not-studied','new')}</span></div><div class="muted" style="font-size:13px">${esc(c.topic)} · LO ${c.lo} · LEM p.${c.pages.map(p=>p-18).join('–')} · ${c.id}</div><p style="margin:8px 0">${esc(c.explanation)}</p>${c.rules?.length?`<b>Rules</b><ul>${c.rules.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:''}${c.exceptions?.length?`<b>Exceptions</b><ul>${c.exceptions.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:''}${c.formulas?.length?`<b>Formulas</b><ul>${c.formulas.map(r=>`<li><code>${esc(r)}</code></li>`).join('')}</ul>`:''}${c.misconceptions?.length?`<b>Common mistakes</b><ul>${c.misconceptions.map(r=>`<li>${esc(r)}</li>`).join('')}</ul>`:''}<div class="muted" style="font-size:13px">Taught in ${c.lessons.join(', ')} · ${c.questions.filter(q=>q.startsWith('Q')).length} questions</div></div>`; }
+
+/* --- Flashcards --- */
+function vFlash(){ if(!session||session.kind!=='flash'){ const u=viewArg; const sw=studiedUnits(); let cards=Object.values(C.questions).filter(q=>q.type==='flash' && (u==='all'? (sw.has(q.unit)||sw.size===0) : q.unit==u)); session={kind:'flash',cards:shuffle(cards.map(c=>c.id)),i:0,flipped:false,got:0}; }
+  const s=session; if(!s.cards.length) return header('Flashcards')+'<div class="card"><p class="muted">No flashcards yet for this selection.</p><button data-go="path">Back</button></div>';
+  if(s.i>=s.cards.length) return header('Flashcards')+`<div class="card center"><div class="big">${s.got}/${s.cards.length}</div><p class="muted">Self-rated. Flashcards don't count toward mastery — scored questions do.</p><button data-go="path">Done</button></div>`;
+  const c=C.questions[s.cards[s.i]];
+  return header('Flashcards', `<button class="ghost" data-go="path">✕</button>`)+`<div class="progress-top"><div class="bar"><i style="width:${Math.round(100*s.i/s.cards.length)}%"></i></div><span class="muted" style="font-size:13px">${s.i+1}/${s.cards.length}</span></div><div class="card"><div class="flash" data-act="flip">${esc(s.flipped?c.back:c.front)}</div><p class="muted center" style="margin:8px 0 0">${s.flipped?`LEM p.${(c.pages||[]).map(p=>p-18).join('–')}`:'Tap to reveal'}</p>${s.flipped?`<div class="btnrow"><button class="secondary" data-act="flashRate" data-ok="0">Missed it</button><button data-act="flashRate" data-ok="1">Got it</button></div>`:''}</div>`; }
+
+/* --- More / Plan / Stats / Backup --- */
+function vMore(){ return header('More', xpPill())+`<div class="card"><div class="list">
+  <div class="item" data-go="plan" style="cursor:pointer"><b>28-day plan</b><div class="muted">Day-by-day schedule, adjusts when you miss a day</div></div>
+  <div class="item" data-go="stats" style="cursor:pointer"><b>Progress & weak topics</b><div class="muted">Coverage, accuracy, mastery by unit</div></div>
+  <div class="item" data-go="backup" style="cursor:pointer"><b>Backup & restore</b><div class="muted">Export your progress to a file; restore on any device</div></div>
+  <div class="item" data-go="reference" style="cursor:pointer"><b>Reference</b><div class="muted">Searchable concepts and terms</div></div></div></div>
+  <div class="card"><h2>Settings</h2><label class="f">Exam date</label><input type="date" id="examDate" value="${S.examDate}" data-act="setExamDate"><label class="f">Minutes per day</label><input type="number" id="dailyMin" value="${S.dailyMinutes}" min="30" max="600" step="10" data-act="setDaily"><label class="f">Appearance</label><select id="theme" data-act="setTheme"><option value="auto" ${S.theme==='auto'?'selected':''}>Automatic</option><option value="light" ${S.theme==='light'?'selected':''}>Light</option><option value="dark" ${S.theme==='dark'?'selected':''}>Dark</option></select></div>
+  <div class="card"><h2>Curriculum status</h2><p class="muted">Content version <b>${C.manifest.version}</b> · app ${APP_VERSION}. Units loaded: ${allUnitsMeta().length}/24 (${allUnitsMeta().filter(u=>u.status==='complete').length} complete).</p><div class="list">${allUnitsMeta().map(u=>`<div class="item"><b>Unit ${u.unit}</b> ${esc(u.title)} <span class="tag ${u.status==='complete'?'':u.status}">${u.status}</span><div class="muted" style="font-size:13px">${u.lessons} lessons · ${u.concepts} concepts · ${u.questions} questions · ${u.flashcards} cards</div></div>`).join('')}</div><div class="btnrow"><button class="secondary" data-act="checkUpdate">Check for updates</button></div></div>
+  <div class="card"><h2>About</h2><p class="muted" style="font-size:13px">Original study notes and practice questions written from the Kaplan Series 65 LEM (12th ed.), for personal use. Practice questions are not actual exam questions. Exam facts verified against NASAA (Oct 2026): 130 scored + 10 pretest questions, 180 minutes, pass = 92 correct. Last backup: ${S.lastBackup? new Date(S.lastBackup).toLocaleString():'never'}.</p><button class="ghost" data-act="resetAll" style="color:var(--bad)">Reset all progress</button></div>`; }
+function vPlan(){ const p=buildPlan(); const start=S.planStart;
+  return header('Plan', `<button class="ghost" data-go="more">‹</button>`)+`<div class="card"><h2>How the plan works</h2><p class="muted">Remaining lessons are spread evenly over the days before a ${p.finalWindow}-day final-review window. Miss a day and tomorrow's load grows slightly rather than anything being dropped. Each day also includes spaced review (what's due), mixed practice, and — in the final window — timed exams.</p>
+  <div class="stat"><div><b>${p.remaining.length}</b><span>lessons left</span></div><div><b>${p.perDay}</b><span>per day</span></div><div><b>${p.minPerDayNew}</b><span>min new/day</span></div></div>
+  ${!p.fits?`<div class="alert" style="margin-top:10px"><span class="lbl">Doesn't fit</span>New material alone needs ${p.minPerDayNew} min/day. Options: raise daily minutes, move the exam, or accept less review. Nothing is dropped silently.</div>`:`<p class="muted" style="margin-top:8px">Fits your ${S.dailyMinutes} min/day with ≈${p.reviewBudget} min for review and practice.</p>`}</div>
+  <div class="card"><h2>Day by day</h2>${p.daysList.map(d=>`<div class="plan-day ${d.d===0?'today':''}"><span class="d">${d.d===0?'Today':new Date(d.key+'T00:00').toLocaleDateString(undefined,{month:'short',day:'numeric'})}</span><span class="grow">${d.isFinal? (d.d===p.days-1?'<b>Exam day</b> — light review only':'Final review: timed exam or mixed drill + weak-topic review') : d.ls.length? d.ls.map(l=>esc(l.id.replace('L','').replace(/^0/,''))+' '+esc(l.title.slice(0,38))).join('<br>') : 'Review + practice only'}${d.d<p.firstPassDays?'<div class="muted">+ due reviews</div>':''}</span></div>`).join('')}</div>`; }
+function vStats(){ const rows=C.units.map(u=>{ let n=0,c=0; for(const q of u.questions){ const qs=S.questions[q.id]; if(qs&&qs.seen){n+=qs.seen;c+=qs.correct;} } const m=u.concepts.filter(x=>conceptStatus(x.id)==='mastered').length; return {u,n,c,m}; });
+  const weak=rows.filter(r=>r.n>=5).sort((a,b)=>(a.c/a.n)-(b.c/b.n)).slice(0,5);
+  return header('Progress', `<button class="ghost" data-go="more">‹</button>`)+`<div class="card"><h2>Weakest units (≥5 answers)</h2>${weak.length? weak.map(r=>`<div class="mast-row"><span style="width:170px;font-size:13px">U${r.u.unit} ${esc(r.u.title)}</span><div class="bar"><i style="width:${Math.round(100*r.c/r.n)}%"></i></div><span>${Math.round(100*r.c/r.n)}%</span></div>`).join(''):'<p class="muted">Answer more questions to surface weak areas.</p>'}</div>
+  <div class="card"><h2>All units</h2>${rows.map(r=>`<div class="kv"><span>U${r.u.unit} ${esc(r.u.title)}</span><span class="muted">${r.n?Math.round(100*r.c/r.n)+'% ('+r.n+')':'—'} · ${r.m}/${r.u.concepts.length} mastered</span></div>`).join('')}</div>
+  <div class="card"><h2>Last 14 days</h2>${Array.from({length:14},(_,i)=>addDays(todayKey(),-13+i)).map(k=>{const l=S.log[k]||{}; return `<div class="kv"><span>${k.slice(5)}</span><span class="muted">${l.lessons||0} lessons · ${l.questions||0} q · ${l.questions?Math.round(100*(l.correct||0)/l.questions)+'%':'—'} · ${l.xp||0} XP</span></div>`;}).join('')}</div>`; }
+function vBackup(){ return header('Backup', `<button class="ghost" data-go="more">‹</button>`)+`<div class="card"><h2>Export</h2><p class="muted">Saves a small file (your progress only). On iPhone, choose <b>Save to Files</b> in the share sheet (iCloud Drive keeps it synced). Do this weekly, and before deleting the app or updating iOS.</p><button data-act="exportBackup">Export backup file</button><button class="secondary" style="margin-top:8px" data-act="copyBackup">Copy backup as text</button></div>
+  <div class="card"><h2>Restore</h2><p class="muted">Pick a backup file, or paste backup text. This replaces the progress on this device.</p><input type="file" id="restoreFile" accept=".json,application/json" style="margin:8px 0"><textarea id="restoreText" placeholder="…or paste backup text here"></textarea><button class="secondary" style="margin-top:8px" data-act="restoreBackup">Restore</button></div>`; }
+
+/* ---------- actions ---------- */
+const ACT={
+  answer(el){ answerQ(el.dataset.q, +el.dataset.oi); },
+  lessonNext(){ session.step++; render(); }, lessonPrev(){ session.step=Math.max(0,session.step-1); render(); },
+  practiceNext(){ session.pi++; render(); },
+  startReview(){ const due=shuffle(dueConcepts()).slice(0,25); const qs=[]; const used=new Set(); for(const cid of due){ const q=pickQuestionForConcept(cid, used); if(q){ qs.push(q.id); used.add(q.id);} } if(!qs.length){ toast('Nothing due'); return; } startSession('review', qs, 'Spaced review'); },
+  startMixed(){ startSession('mixed', mixedSet(15), 'Mixed practice'); },
+  startCalc(){ const sw=studiedUnits(); let pool=Object.values(C.questions).filter(q=>q.type==='calc'&&(sw.has(q.unit)||sw.size===0)); if(!pool.length) pool=Object.values(C.questions).filter(q=>q.type==='calc'); if(!pool.length){toast('No calculation questions loaded yet');return;} startSession('calc', shuffle(pool.map(q=>q.id)).slice(0,10), 'Calculations'); },
+  startDiagnostic(){ const qs=mixedSet(20, new Set(C.units.map(u=>u.unit)), true); startSession('diagnostic', qs, 'Diagnostic'); },
+  unitPractice(el){ const u=+el.dataset.unit; startSession('unit', mixedSet(15, new Set([u])), `Unit ${u} practice`); },
+  retryMistakes(){ const open=S.mistakes.filter(x=>!x.resolved).sort((a,b)=>b.ts-a.ts).slice(0,10).map(m=>m.q).filter(q=>C.questions[q]); if(!open.length){toast('No open mistakes');return;} startSession('mistakes', shuffle(open), 'Mistake retry'); },
+  retryOne(el){ startSession('mistakes',[el.dataset.q],'Mistake retry'); },
+  showConcept(el){ go('reference', C.concepts[el.dataset.c]?.subtopic||''); },
+  refUnit(el){ const u=C.units.find(x=>x.unit==el.dataset.u); T.innerHTML=header(`Unit ${u.unit} reference`, `<button class="ghost" data-go="reference">‹</button>`)+u.concepts.map(conceptCard).join('')+`<div class="card"><h2>Terms</h2>${(u.terms||[]).map(t=>`<div class="kv" style="flex-direction:column;align-items:flex-start"><b>${esc(t.term)}</b><span class="muted">${esc(t.def)} (p.${t.pages.join(',')})</span></div>`).join('')}</div>`; bind(); },
+  sessionNext(){ session.i++; render(); },
+  endSession(){ if(Object.keys(session.answers).length===0){ go('today'); return; } session.qs=session.qs.slice(0, session.i+(session.answers[session.qs[session.i]]?1:0)); session.i=session.qs.length; render(); },
+  toggleStudiedOnly(el){ S.examStudiedOnly=el.checked; save(); },
+  startExam(el){ const n=+el.dataset.n; const qs=examSet(n, S.examStudiedOnly!==false); if(qs.length<Math.min(n,10)){ toast('Not enough exam questions loaded yet'); return; } if(qs.length<n) toast(`Only ${qs.length} available — exam shortened`); const mins=Math.round(qs.length*180/130); session={kind:'exam',qs,i:0,answers:{},flags:new Set(),startedAt:Date.now(),endsAt:Date.now()+mins*60000,order:{}}; view='exam'; render(); clearInterval(window._examT); window._examT=setInterval(()=>{ if(view!=='exam'||!session||session.kind!=='exam'){clearInterval(window._examT);return;} const left=session.endsAt-Date.now(); const t=$('#timer'); if(t){ t.textContent=`${Math.floor(left/60000)}:${String(Math.floor(left%60000/1000)).padStart(2,'0')}`; if(left<300000) t.classList.add('low'); } if(left<=0){ clearInterval(window._examT); render(); } },1000); },
+  examPick(el){ const q=C.questions[session.qs[session.i]]; session.answers[q.id]=+el.dataset.oi; render(); },
+  examPrev(){ session.i--; render(); }, examNext(){ session.i++; render(); },
+  examFlag(){ const id=session.qs[session.i]; if(session.flags.has(id)) session.flags.delete(id); else session.flags.add(id); render(); },
+  submitExam(){ const un=session.qs.length-Object.keys(session.answers).length; if(!confirm(`Submit now? ${un} unanswered${session.flags.size?`, ${session.flags.size} flagged`:''}.`)) return; clearInterval(window._examT); T.innerHTML=finishExam(); bind(); },
+  examReviewQ(el){ const i=+el.dataset.i; const q=C.questions[session.qs[i]]; const chosen=session.answers[q.id]; const box=$('#examReviewBox'); const fake={order:session.order}; const saved=session; session=Object.assign({},saved,{answers:{[q.id]:{chosen,ok:chosen===q.answer}}}); box.innerHTML=`<div style="margin-top:10px">${renderQuestion(q, chosen==null?{chosen:-1,ok:false}:{chosen,ok:chosen===q.answer})}</div>`; session=saved; box.scrollIntoView({behavior:'smooth'}); },
+  flip(){ session.flipped=!session.flipped; render(); }, flashRate(el){ if(+el.dataset.ok) session.got++; session.i++; session.flipped=false; render(); },
+  setExamDate(el){ if(el.value){ S.examDate=el.value; save(); toast('Exam date set'); } }, setDaily(el){ const v=+el.value; if(v>=30){ S.dailyMinutes=v; save(); } },
+  setTheme(el){ S.theme=el.value; save(); applyTheme(); },
+  exportBackup(){ const data=JSON.stringify({app:'s65coach',version:APP_VERSION,exportedAt:new Date().toISOString(),state:S}); const name=`series65-backup-${todayKey()}.json`; S.lastBackup=Date.now(); save();
+    const file=new File([data],name,{type:'application/json'}); if(navigator.canShare && navigator.canShare({files:[file]})){ navigator.share({files:[file],title:'Series 65 backup'}).catch(()=>{}); return; }
+    const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([data],{type:'application/json'})); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();},2000); toast('Backup created'); },
+  copyBackup(){ const data=JSON.stringify({app:'s65coach',version:APP_VERSION,exportedAt:new Date().toISOString(),state:S}); navigator.clipboard?.writeText(data).then(()=>toast('Copied — paste into Notes to keep it')).catch(()=>{ const ta=document.createElement('textarea'); ta.value=data; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); toast('Copied'); }); S.lastBackup=Date.now(); save(); },
+  async restoreBackup(){ let txt=$('#restoreText').value.trim(); const f=$('#restoreFile').files[0]; if(f) txt=await f.text(); if(!txt){ toast('Choose a file or paste text'); return; } try{ const obj=JSON.parse(txt); const st=obj.state||obj; if(!st.lessons||!st.concepts) throw new Error('not a backup'); if(!confirm('Replace progress on this device with the backup?')) return; S=Object.assign(defaultState(), st); save(); toast('Restored'); go('today'); }catch(e){ toast('That is not a valid backup file'); } },
+  resetAll(){ if(confirm('Erase ALL progress on this device? Export a backup first if unsure.')){ S=defaultState(); save(); go('today'); } },
+  async checkUpdate(){ try{ const m=await (await fetch('content/manifest.json',{cache:'no-cache'})).json(); if(m.version!==C.manifest.version){ toast('New content found — reloading'); const r=await navigator.serviceWorker?.getRegistration(); if(r) await r.update(); setTimeout(()=>location.reload(),800); } else toast('You have the latest content'); }catch(e){ toast('Offline — try again when connected'); } }
+};
+function applyTheme(){ document.documentElement.dataset.theme = S.theme==='auto'? '' : S.theme; if(S.theme==='auto') document.documentElement.removeAttribute('data-theme'); }
+document.addEventListener('input', e=>{ if(e.target.id==='refq'){ viewArg=e.target.value; const pos=e.target.selectionStart; render(); const el=$('#refq'); el.focus(); el.setSelectionRange(pos,pos); } });
+
+/* ---------- boot ---------- */
+(async function(){ load(); applyTheme(); T.innerHTML='<p class="muted center" style="margin-top:40vh">Loading…</p>';
+  try{ await loadContent(); }catch(e){ T.innerHTML=`<div class="card"><h2>Couldn't load content</h2><p class="muted">${esc(e.message)}. If you're offline, open the app once while connected so it can store the lessons.</p></div>`; return; }
+  if(!S.planStart) S.planStart=todayKey();
+  render();
+  if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').then(r=>{ r.addEventListener('updatefound',()=>{ const w=r.installing; w&&w.addEventListener('statechange',()=>{ if(w.state==='installed'&&navigator.serviceWorker.controller) toast('Update ready — reopen the app to use it'); }); }); }).catch(()=>{}); }
+})();
+</script>
+</body>
+</html>
