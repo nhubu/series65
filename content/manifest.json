@@ -1,5 +1,5 @@
 {
- "version": "3eabdbe28e",
+ "version": "4bc51d3748",
  "units": [
   {
    "unit": 1,
@@ -26,6 +26,32 @@
    "questions": 52,
    "flashcards": 20,
    "minutes": 83
+  },
+  {
+   "unit": 3,
+   "file": "unit03.json",
+   "title": "Pooled Investments",
+   "status": "complete",
+   "function": 2,
+   "examQuestions": 6,
+   "lessons": 6,
+   "concepts": 13,
+   "questions": 35,
+   "flashcards": 13,
+   "minutes": 56
+  },
+  {
+   "unit": 4,
+   "file": "unit04.json",
+   "title": "Derivative Securities",
+   "status": "complete",
+   "function": 2,
+   "examQuestions": 5,
+   "lessons": 4,
+   "concepts": 7,
+   "questions": 21,
+   "flashcards": 7,
+   "minutes": 37
   }
  ]
 }

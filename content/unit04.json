@@ -1,0 +1,1270 @@
+{
+ "unit": 4,
+ "title": "Derivative Securities",
+ "fullTitle": "Types and Characteristics of Derivative Securities",
+ "function": 2,
+ "examQuestions": 5,
+ "pdfPages": [
+  103,
+  120
+ ],
+ "printedPages": [
+  85,
+  102
+ ],
+ "status": "complete",
+ "los": [
+  {
+   "id": "4.a",
+   "text": "Recognize the common characteristics of all derivatives."
+  },
+  {
+   "id": "4.b",
+   "text": "Identify the difference between a put option and a call option and their strategies."
+  },
+  {
+   "id": "4.c",
+   "text": "Contrast calls, rights, and warrants."
+  },
+  {
+   "id": "4.d",
+   "text": "Describe the difference between futures and forwards contracts."
+  },
+  {
+   "id": "4.e",
+   "text": "Identify the costs, benefits, and risks of derivative securities."
+  }
+ ],
+ "concepts": [
+  {
+   "id": "C04.01",
+   "lo": "4.a",
+   "topic": "Derivatives basics",
+   "subtopic": "Definition, standardized terms, price drivers",
+   "pages": [
+    103,
+    104
+   ],
+   "explanation": "A derivative derives its value from an underlying asset — a stock, index, interest rate, currency (securities derivatives such as options) or a physical commodity (nonsecurities derivatives such as forwards and futures). An option is a contract fixing a price and time frame to buy or sell the underlying; one party gets the right, the other takes the obligation. The exam covers standardized exchange-traded options (CBOE, Nasdaq) issued and guaranteed by the Options Clearing Corporation (OCC). Three standardized terms: the underlying (100 shares per equity contract), the expiration date, and the exercise (strike) price — standardization is what makes secondary trading possible. Profit and loss are NOT standardized. The two biggest influences on a derivative's price: movement of the underlying and time to expiration (more time = more time value).",
+   "rules": [
+    "Standardized: 100 shares, expiration, strike. Not standardized: profit/loss.",
+    "Issuer/guarantor of listed options: the OCC.",
+    "A derivative is a derivative because its value comes from an underlying asset — not because of its exercise style."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Shares on exercise = contracts × 100"
+   ],
+   "examples": [
+    "Exercising 10 ABC Jul 50 calls moves 1,000 shares."
+   ],
+   "prereqs": [],
+   "misconceptions": [
+    "Answering 'it can only be exercised at expiration' when asked why a European option is a derivative."
+   ],
+   "lessons": [
+    "L04.1"
+   ],
+   "questions": [
+    "Q04.001",
+    "Q04.002",
+    "F04.001"
+   ]
+  },
+  {
+   "id": "C04.02",
+   "lo": "4.b",
+   "topic": "Options",
+   "subtopic": "Calls vs. puts; rights vs. obligations; premiums; open/close; exercise styles; terms",
+   "pages": [
+    105,
+    107
+   ],
+   "explanation": "A call gives the holder the right to buy 100 shares at the strike before expiration; the call writer is obligated to sell. A put gives the right to sell; the put writer is obligated to buy. Only owners (long) have rights and can exercise; sellers (short/writers) have obligations. The premium is quoted per share ($3 = $300 per contract). Four basic positions: buy call, sell call, buy put, sell put. A long position closes by selling the option, exercising, or letting it expire; the usual close is the opposite transaction (buy call ↔ sell call). American-style options exercise any time up to expiration (A = Anytime); European-style only at/just before expiration (E = Expiration). Terms run from one week (weeklys) to up to three years (LEAPS); standard options go up to nine months. Option holders receive no dividends and have no vote. Greeks (delta, gamma, theta, vega) exist but are unlikely to be tested.",
+   "rules": [
+    "Buyer = long = rights; seller = writer = obligations.",
+    "Call: right to buy / obligation to sell. Put: right to sell / obligation to buy.",
+    "Close an open position with the opposite transaction."
+   ],
+   "exceptions": [
+    "The book treats 'exercised on the expiration date' and 'last trading day before expiration' as equally correct for European style."
+   ],
+   "formulas": [
+    "Premium cost = quoted premium × 100"
+   ],
+   "examples": [
+    "Right to sell 100 MNO at 60 from July to October = long put."
+   ],
+   "prereqs": [
+    "C04.01"
+   ],
+   "misconceptions": [
+    "Saying a put owner is obligated to buy — the owner has the right to sell."
+   ],
+   "lessons": [
+    "L04.1"
+   ],
+   "questions": [
+    "Q04.003",
+    "Q04.004",
+    "Q04.005",
+    "F04.002"
+   ]
+  },
+  {
+   "id": "C04.03",
+   "lo": "4.b",
+   "topic": "Options",
+   "subtopic": "Bullish and bearish strategies; max gain/loss; covered vs. naked calls; straddles",
+   "pages": [
+    107,
+    110
+   ],
+   "explanation": "'Call up, put down.' Bullish: buy calls (max loss = premium; max gain unlimited) or write puts (keep the premium if the stock stays flat or rises; loss limited because a stock can't fall below zero). Bearish: buy puts (max loss = premium; profit as the stock falls — a put is the limited-risk alternative to selling short) or write calls (income if the stock is flat or falls). A call is exercised whenever the stock is above the strike at expiration. A covered call writer owns the stock — limited risk, delivers shares already held; a naked (uncovered) call writer does not own the stock — unlimited risk, the riskiest options strategy. A straddle = a put and a call on the same stock, same strike, same expiration: buyers profit from big moves either way (volatility); sellers profit if the market is stable. An employer with outstanding employee stock options could buy calls to hedge the risk of having to deliver shares at a low price.",
+   "rules": [
+    "Long call: max loss premium, max gain unlimited.",
+    "Long put: max loss premium, max gain strike − premium (stock to zero).",
+    "Short naked call: unlimited loss. Short put: loss limited to strike − premium.",
+    "Buy a straddle for volatility; sell a straddle for stability."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Long put profit = (strike − stock price) − premium"
+   ],
+   "examples": [
+    "Buy an ABCD 75 put for $3; stock drops to $65: buy at 65, put at 75, profit $10 − $3 = $7/share = $700 on $300."
+   ],
+   "prereqs": [
+    "C04.02"
+   ],
+   "misconceptions": [
+    "Thinking a put buyer speculates on a rise — puts are for declines.",
+    "Treating a covered call as unlimited risk."
+   ],
+   "lessons": [
+    "L04.2"
+   ],
+   "questions": [
+    "Q04.006",
+    "Q04.007",
+    "Q04.008",
+    "Q04.009",
+    "F04.003"
+   ]
+  },
+  {
+   "id": "C04.04",
+   "lo": "4.c",
+   "topic": "Rights and warrants",
+   "subtopic": "Rights vs. warrants vs. calls",
+   "pages": [
+    110,
+    111
+   ],
+   "explanation": "Rights and warrants are derivatives (value comes from the common) that resemble calls — the option, not the obligation, to buy stock at a set price for a set time. Stock (preemptive) rights are given, not sold, to existing common stockholders so they can keep their proportionate ownership when new shares are issued; exercise price is below the current market; life is short (45–60 days or less); they can be sold or exercised, or left to expire. Warrants have an exercise price above the current market, no link to existing ownership, long lives (up to 10 years), usually come attached to a bond issue or stock offering as a sweetener (allowing a lower coupon), are detachable and trade like any security, carry no vote or dividend, and are viewed as very long-term calls. Key difference from listed calls: options originate on the exchange and exercise delivers existing shares from an assigned writer; rights and warrants originate with the issuer, so exercise creates new shares.",
+   "rules": [
+    "Rights: given to holders, below market, short-term, proportional.",
+    "Warrants: above market, long-term, sweetener, detachable.",
+    "Listed calls originate on the exchange; rights/warrants with the issuer."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Rights received keep ownership %: own 1% → rights to 1% of the new issue"
+   ],
+   "examples": [
+    "Steve owns 100 of 10,000 shares (1%); DEF issues 5,000 new shares → Steve gets rights to 50."
+   ],
+   "prereqs": [
+    "C01.04",
+    "C04.02"
+   ],
+   "misconceptions": [
+    "Saying rights are offered with debentures as a sweetener — that is warrants."
+   ],
+   "lessons": [
+    "L04.2"
+   ],
+   "questions": [
+    "Q04.010",
+    "Q04.011",
+    "Q04.012",
+    "F04.004"
+   ]
+  },
+  {
+   "id": "C04.05",
+   "lo": "4.d",
+   "topic": "Futures and forwards",
+   "subtopic": "Forward contracts",
+   "pages": [
+    112,
+    114
+   ],
+   "explanation": "A forward is a direct, nonstandardized commitment between one buyer and one seller to exchange a commodity at a future date — the seller must deliver, the buyer must take delivery. Developed for producers and users (medieval grain trade) to secure a buyer/seller and lock in price: the farmer knows what he will receive (giving up gains if prices rise). Five components: quantity, quality, time of delivery, place of delivery, price. Not exchange-traded, not easily transferred — illiquid, no secondary market — and each party bears the other's credit risk (counterparty risk). The forward price is fixed at initiation even as the spot price moves. Producers hedge a falling price by selling forwards (or futures).",
+   "rules": [
+    "Forward = customized, bilateral, illiquid, counterparty risk, used by hedgers/producers.",
+    "Forward price does not change after initiation; the contract's value does."
+   ],
+   "exceptions": [],
+   "formulas": [],
+   "examples": [
+    "Long forward at $105 when spot is $102; spot rises to $110 → the forward price is still $105."
+   ],
+   "prereqs": [
+    "C04.01"
+   ],
+   "misconceptions": [
+    "Thinking the forward price adjusts to the spot price."
+   ],
+   "lessons": [
+    "L04.3"
+   ],
+   "questions": [
+    "Q04.013",
+    "Q04.014",
+    "F04.005"
+   ]
+  },
+  {
+   "id": "C04.06",
+   "lo": "4.d",
+   "topic": "Futures and forwards",
+   "subtopic": "Futures contracts, clearinghouse, regulation",
+   "pages": [
+    113,
+    114
+   ],
+   "explanation": "Futures are exchange-traded, standardized contracts (quantity, quality/grade, delivery price, delivery time, approved location). Buyers go long (must take delivery if exercised), sellers go short (must deliver — a seller who doesn't own the commodity faces unlimited loss, like a naked call). Gains and losses are marked to market daily at the settlement price and settled before the next open. The clearinghouse is counterparty to every trade (buyer to all sellers, seller to all buyers), eliminating counterparty risk and making it easy to offset: close with the opposite trade in the same commodity, delivery month and exchange — about 98% of futures are offset before delivery. Highly leveraged, highly liquid, actively traded. At expiration, settlement above the delivery price → longs profit; below → shorts profit. Futures are mostly used by speculators; forwards by producers. Futures and forwards are not securities: regulated by the CFTC, not the SEC.",
+   "rules": [
+    "Futures: standardized, exchange-traded, clearinghouse-guaranteed, liquid, regulated (CFTC), marked to market daily.",
+    "Offset = opposite trade, same commodity, same month, same exchange."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Futures P/L = (settlement − purchase price) × quantity for a long"
+   ],
+   "examples": [
+    "Buy 1,000-bushel wheat futures at $0.80; settles at $0.70 → $0.10 × 1,000 = $100 loss."
+   ],
+   "prereqs": [
+    "C04.05"
+   ],
+   "misconceptions": [
+    "Assuming the SEC regulates futures — it is the CFTC."
+   ],
+   "lessons": [
+    "L04.3"
+   ],
+   "questions": [
+    "Q04.015",
+    "Q04.016",
+    "Q04.017",
+    "F04.006"
+   ]
+  },
+  {
+   "id": "C04.07",
+   "lo": "4.e",
+   "topic": "Costs, benefits, risks",
+   "subtopic": "Leverage, hedging, income, time decay, taxation",
+   "pages": [
+    115,
+    118
+   ],
+   "explanation": "Costs: a buyer pays only the premium plus commissions (options generally can't be bought on margin, so no interest); a writer receives the premium (naked writing has a margin requirement). Benefits: leverage — control a large position with little money, unlimited upside on a long call, but the entire premium can be lost; reduced risk when used properly — the covered call improves the outcome if the stock falls or stays flat and still wins if it rises modestly (the premium raises the effective sale price), losing only if the stock rallies past strike + premium; buying puts is a limited-loss alternative to short selling; hedging (premium received absorbs the first points of a decline). Risks: naked call writing has unlimited loss (infinity minus the premium is still infinity); time decay — option value shrinks as expiration nears, so 'waiting for it to come back' doesn't work; taxation — most option profits are short-term capital gains taxed as ordinary income. Purposes of buying derivatives: hedging, profit, speculation — never income (only selling generates income). The writer does not control exercise; the holder does.",
+   "rules": [
+    "Buying a derivative never produces income; writing does.",
+    "Option gains are generally short-term.",
+    "Covered call: income + partial hedge; gives up upside above strike + premium."
+   ],
+   "exceptions": [],
+   "formulas": [
+    "Covered call breakeven = stock cost − premium",
+    "Covered call max sale proceeds = strike + premium"
+   ],
+   "examples": [
+    "Stock at $58 vs. 55 call at $6: stock to $70 → stock investor +20.7%, option +150%; stock to $48 → option worth nothing.",
+    "Meredith buys ABC at 50, writes a 50 call for 4: breakeven 46; above 54 she would have done better unhedged."
+   ],
+   "prereqs": [
+    "C04.03"
+   ],
+   "misconceptions": [
+    "Claiming the writer decides whether an option is exercised."
+   ],
+   "lessons": [
+    "L04.4"
+   ],
+   "questions": [
+    "Q04.018",
+    "Q04.019",
+    "Q04.020",
+    "Q04.021",
+    "F04.007"
+   ]
+  }
+ ],
+ "lessons": [
+  {
+   "id": "L04.1",
+   "title": "What a derivative is, and the anatomy of an option",
+   "objective": "Define a derivative, list the three standardized terms of listed options, and distinguish calls from puts, rights from obligations, and American from European exercise.",
+   "minutes": 9,
+   "concepts": [
+    "C04.01",
+    "C04.02"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Derivatives derive",
+     "b": "A **derivative** gets its value from an **underlying asset** — a stock, an index, an interest rate, a currency (securities derivatives like **options**), or a commodity such as wheat (nonsecurities derivatives like **forwards and futures**). They are used to **hedge** (protect) or **speculate**.\n\nThe exam deals with **standardized, exchange-traded options** (CBOE, Nasdaq), issued and guaranteed by the **Options Clearing Corporation (OCC)**. Three things are standardized:\n- the **underlying** — every equity contract is for **100 shares**;\n- the **expiration date**;\n- the **strike (exercise) price**.\n\nThat standardization is what makes secondary trading possible. **Profit and loss are not standardized** — they can be unlimited.\n\nThe two biggest price drivers: **movement of the underlying** and **time to expiration** (more time, more time value). And if a question asks why a European option is a derivative, the answer is 'its value comes from an underlying asset' — not anything about when it can be exercised."
+    },
+    {
+     "t": "check",
+     "q": "Q04.002"
+    },
+    {
+     "t": "teach",
+     "h": "Calls and puts; rights and obligations",
+     "b": "- **Call**: the holder has the **right to buy** 100 shares at the strike before expiration; the writer is **obligated to sell**.\n- **Put**: the holder has the **right to sell**; the writer is **obligated to buy**.\n\n**Buyers are long and have rights. Sellers (writers, grantors) are short and have obligations.** Only owners can exercise.\n\nThe price of an option is its **premium**, quoted per share: a premium of 3 costs **$300** per contract. Option holders get **no dividends and no vote**."
+    },
+    {
+     "t": "teach",
+     "h": "Opening, closing, exercising",
+     "b": "Four basic positions: buy call, sell call, buy put, sell put. A long position ends by **selling the option, exercising, or letting it expire**; the simplest close is the **opposite transaction** (opened by buying a call → close by selling a call).\n\nExercising a call = buying the stock at the strike (long a 50 call, stock at 60 → buy $60 stock for $50). Exercising a put = selling at the strike (long a 45 put, stock at 35 → buy at 35, put it at 45).\n\n**American style = Anytime** up to expiration. **European style = Expiration** (the exam accepts 'on the expiration date' or 'the last trading day before it').\n\nLengths: **weeklys** (one week) to **LEAPS** (up to three years); standard options max nine months. All of them are derivatives."
+    },
+    {
+     "t": "check",
+     "q": "Q04.004"
+    }
+   ],
+   "practice": [
+    "Q04.001",
+    "Q04.003",
+    "Q04.005"
+   ]
+  },
+  {
+   "id": "L04.2",
+   "title": "Bulls, bears, straddles — and rights vs. warrants",
+   "objective": "Match each option position to its market outlook and risk profile, explain covered vs. naked calls and straddles, and contrast rights, warrants and listed calls.",
+   "minutes": 10,
+   "concepts": [
+    "C04.03",
+    "C04.04"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Call up, put down",
+     "b": "**Bulls** think the price will rise; **bears** think it will fall. The mnemonic: you **buy a call** because you expect (or fear) a price going **up**; you **buy a put** because you expect (or fear) a price going **down**."
+    },
+    {
+     "t": "compare",
+     "h": "The four positions",
+     "rows": [
+      [
+       "",
+       "Long (buyer, holder)",
+       "Short (writer, grantor)"
+      ],
+      [
+       "Calls",
+       "Right to buy — bullish",
+       "Obligation to sell — bearish/neutral"
+      ],
+      [
+       "Puts",
+       "Right to sell — bearish",
+       "Obligation to buy — bullish/neutral"
+      ]
+     ]
+    },
+    {
+     "t": "teach",
+     "h": "Each position's risk",
+     "b": "- **Buy a call** — small outlay controls a big position. Max loss: the **premium**. Max gain: **unlimited**.\n- **Write a call** — collect the premium; profit if the stock is flat or falls. It will be exercised whenever the stock is above the strike at expiration. **Covered** (you own the shares): limited risk — you just deliver what you hold. **Naked/uncovered** (you don't): **unlimited risk** — you must buy at any price to deliver. Naked call writing is the **riskiest** options strategy.\n- **Buy a put** — profit as the stock falls; max loss the premium. The limited-risk alternative to **selling short**.\n- **Write a put** — collect the premium; keep it if the stock stays above the strike. Loss is **limited** because a stock can't fall below zero.\n\n**Straddle** = a put **and** a call, same stock, same strike, same expiration. **Buy** a straddle when you expect a big move but don't know which way (profit from **volatility**); **sell** one when you expect a **stable** market (both expire)."
+    },
+    {
+     "t": "example",
+     "b": "ABCD trades at $75; you expect a 10-point drop on earnings. Buy an ABCD 75 put for $3. The stock falls to $65: buy 100 shares at $65, exercise the put to sell at $75. Profit $10 − $3 = $7 per share, $700 on a $300 investment."
+    },
+    {
+     "t": "check",
+     "q": "Q04.007"
+    },
+    {
+     "t": "teach",
+     "h": "Rights and warrants: issuer-born cousins of the call",
+     "b": "Both are derivatives (value comes from the common) and both give the **option, not the obligation,** to buy stock at a set price for a set time — like calls. But:\n\n**Stock (preemptive) rights**\n- **Given**, not sold, to existing common stockholders when new shares are issued, so they keep their **proportionate ownership** (own 1% → rights to 1% of the new issue).\n- Exercise price **below** current market (the incentive).\n- **Short-lived**: 45–60 days or less.\n- Can be exercised, **sold** in the secondary market, or left to expire.\n\n**Warrants**\n- Exercise price **above** current market — attractive because the life is **long** (up to 10 years) and leverage is high.\n- No relationship to existing ownership. Usually **attached to a bond or stock offering as a sweetener** (lets the issuer pay a lower coupon); detachable and traded like any security.\n- No vote, no dividends — think of them as **very long-term calls**.\n\n**The big structural difference**: listed options originate on the **exchange** and exercise delivers **existing shares** from an assigned writer; rights and warrants originate with the **issuer**, so exercise creates **new shares**."
+    },
+    {
+     "t": "compare",
+     "h": "Rights vs. warrants vs. calls",
+     "rows": [
+      [
+       "",
+       "Rights",
+       "Warrants",
+       "Listed calls"
+      ],
+      [
+       "Who issues",
+       "Issuer, to existing holders",
+       "Issuer, as a sweetener",
+       "Exchange / OCC"
+      ],
+      [
+       "Exercise price vs. market",
+       "Below",
+       "Above",
+       "Varies"
+      ],
+      [
+       "Life",
+       "≤ 45–60 days",
+       "Years (up to ~10)",
+       "Up to 9 months (LEAPS 3 yrs)"
+      ],
+      [
+       "Exercise delivers",
+       "New shares",
+       "New shares",
+       "Existing shares"
+      ]
+     ]
+    },
+    {
+     "t": "check",
+     "q": "Q04.011"
+    }
+   ],
+   "practice": [
+    "Q04.006",
+    "Q04.008",
+    "Q04.009",
+    "Q04.010",
+    "Q04.012"
+   ]
+  },
+  {
+   "id": "L04.3",
+   "title": "Forwards and futures",
+   "objective": "Describe a forward contract and its five terms, contrast futures (standardized, exchange-traded, clearinghouse-guaranteed, CFTC-regulated), compute a simple futures gain or loss, and explain offsetting.",
+   "minutes": 9,
+   "concepts": [
+    "C04.05",
+    "C04.06"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Forwards: a private deal",
+     "b": "A **forward contract** is a direct commitment between **one buyer and one seller** to exchange a commodity on a future date: the seller **must deliver**, the buyer **must take delivery**. Born in medieval grain markets so producers could lock in a price and be sure of a buyer — the farmer knows exactly what he'll get (and gives up the upside if prices soar).\n\nFive components: **quantity, quality, time of delivery, place of delivery, price**.\n\nBecause the terms are **customized** and the contract is bilateral, forwards are **illiquid** (no secondary market) and each side bears **counterparty risk** — the other party might not perform. The **forward price is fixed at initiation**; the spot price can move all it likes. A long forward at $105 with spot at $102 still has a $105 forward price when spot hits $110.\n\nA farmer hedging a possible price drop before harvest **sells** forwards (or futures)."
+    },
+    {
+     "t": "teach",
+     "h": "Futures: standardized and guaranteed",
+     "b": "**Futures** are **exchange-traded** with standardized **quantity, quality/grade, delivery price, delivery time, and approved location**. A buyer goes **long** (takes delivery if exercised); a seller goes **short** (delivers — and a short who doesn't own the commodity has **unlimited** loss, like a naked call).\n\nPositions are **marked to market daily** at the settlement price; gains credited, losses debited, settled before the next open. The **clearinghouse** is counterparty to everyone — buyer to all sellers, seller to all buyers — which **eliminates counterparty risk** and makes **offsetting** easy: close with the **opposite trade in the same commodity, same delivery month, same exchange**. About **98%** of futures are offset before delivery. Futures are **highly leveraged** and **highly liquid**.\n\nAt expiration: settlement price **above** the delivery price → **longs win**; below → **shorts win**. Speculators use futures; producers use forwards.\n\nNeither is a security, so the **SEC has no jurisdiction** — the **CFTC** regulates futures and forwards."
+    },
+    {
+     "t": "compare",
+     "h": "Forwards vs. futures",
+     "rows": [
+      [
+       "Forwards",
+       "Futures"
+      ],
+      [
+       "Customized terms",
+       "Standardized contracts"
+      ],
+      [
+       "Not exchange-traded",
+       "Exchange-traded"
+      ],
+      [
+       "Used by hedgers/producers",
+       "Used by speculators"
+      ],
+      [
+       "Counterparty risk",
+       "Clearinghouse guarantees payment"
+      ],
+      [
+       "Illiquid, not actively traded",
+       "Liquid, actively traded"
+      ],
+      [
+       "Not regulated",
+       "Regulated (CFTC)"
+      ],
+      [
+       "Specific grade, custom amount, custom delivery",
+       "Range of grades, uniform amount, standard dates"
+      ]
+     ]
+    },
+    {
+     "t": "example",
+     "b": "A speculator buys a 1,000-bushel wheat futures contract at 80¢. It settles at 70¢. Loss: 10¢ × 1,000 = $100. He was long the contract, not long wheat; the seller is the one obligated to deliver."
+    },
+    {
+     "t": "check",
+     "q": "Q04.016"
+    }
+   ],
+   "practice": [
+    "Q04.013",
+    "Q04.014",
+    "Q04.015",
+    "Q04.017"
+   ]
+  },
+  {
+   "id": "L04.4",
+   "title": "Why use derivatives — and what can go wrong",
+   "objective": "Explain the costs, leverage, hedging and income uses of options, the covered-call outcomes, naked-call risk, time decay and short-term tax treatment.",
+   "minutes": 9,
+   "concepts": [
+    "C04.07"
+   ],
+   "blocks": [
+    {
+     "t": "teach",
+     "h": "Costs",
+     "b": "There's no cost to open an options account (though the paperwork is heavier — Unit 16). A **buyer** pays the **premium plus commissions** — options generally can't be bought on margin, so no interest. A **writer** collects the premium less commissions; **naked** writing carries a margin requirement (beyond the exam). Carrying costs for futures and forwards aren't tested."
+    },
+    {
+     "t": "teach",
+     "h": "Leverage cuts both ways",
+     "b": "An option costs far less than the stock, so a little money controls a lot. RST at $58: buy 100 shares for $5,800, or buy an RST 55 call for $6 ($600). Stock to $70 → the stock investor makes 20.7%; the call is worth at least $15, a **150%** gain. Stock to $48 at expiration → the stock investor has a modest loss; the call is worth **nothing** — the whole $600 is gone. (If RST had gone bankrupt, the stockholder loses $5,800; the option buyer only $600.)"
+    },
+    {
+     "t": "teach",
+     "h": "Less risk: the covered call",
+     "b": "After you buy a stock, three things can happen: it rises, stays flat, or falls — and two of the three are bad (flat still costs you the risk-free rate). **Writing a call against stock you own** improves the flat and down cases and still wins on a modest rise.\n\nMeredith buys ABC at $50 and writes a 50 call for 4 ($400):\n- Stock to $47 → the call expires; she's still **$100 ahead** thanks to the premium. Her breakeven is **$46**, and she is always $400 better off than an unhedged holder.\n- Stock flat → call expires; she keeps the shares and the $400.\n- Stock to $53 → called away at $50, but $50 + $4 = **$54** effective sale price.\n- Only above **$54** would she have done better without the call. That's the trade-off."
+    },
+    {
+     "t": "teach",
+     "h": "The other risks",
+     "b": "- **Puts vs. short selling** — a short sale needs a margin deposit, borrowed stock, and has unlimited loss; a long put risks only the premium.\n- **Naked call = unlimited loss.** Manny writes an ABC 50 call for 3 without owning ABC. If ABC rockets, he must buy at the market to deliver for $5,000 + $300. Infinity minus $5,300 is still infinity.\n- **Hedging** — the premium received absorbs the first points of a decline (more in Unit 21).\n- **Time decay** — an option loses value as expiration approaches; you cannot 'hold it until it comes back'.\n- **Taxation** — option profits are usually **short-term capital gains**, taxed as ordinary income.\n\nPurposes of **buying** a derivative: hedging, profit, speculation — **never income**. Only **selling** generates income. And the **holder**, not the writer, controls whether an option is exercised."
+    },
+    {
+     "t": "check",
+     "q": "Q04.019"
+    }
+   ],
+   "practice": [
+    "Q04.018",
+    "Q04.020",
+    "Q04.021"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "Q04.001",
+   "concept": "C04.01",
+   "lo": "4.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    103,
+    107
+   ],
+   "stem": "A European-style stock option is classified as a derivative because",
+   "options": [
+    "it may be exercised only at expiration.",
+    "its value is based on the value of an underlying asset.",
+    "it is guaranteed by the Options Clearing Corporation.",
+    "its premium is quoted per share."
+   ],
+   "answer": 1,
+   "explanation": "All derivatives — options, forwards, futures, rights, warrants — derive their value from an underlying asset. Exercise style, guarantor and quoting conventions do not define a derivative.",
+   "why": [
+    "True of European style, but irrelevant to what makes it a derivative.",
+    "",
+    "The OCC guarantees listed options; that is not the definition.",
+    "Quoting convention has nothing to do with the classification."
+   ]
+  },
+  {
+   "id": "Q04.002",
+   "concept": "C04.01",
+   "lo": "4.a",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    104
+   ],
+   "stem": "Which of the following is NOT standardized in a listed equity option contract?",
+   "options": [
+    "The number of shares covered",
+    "The expiration date",
+    "The maximum potential profit",
+    "The strike price"
+   ],
+   "answer": 2,
+   "explanation": "Contract size (100 shares), expiration and strike are standardized by the exchange/OCC; profit and loss depend on the market and can be unlimited.",
+   "why": [
+    "100 shares per contract is standard.",
+    "Expiration dates are uniform for each month.",
+    "",
+    "Strikes are set at standard intervals."
+   ]
+  },
+  {
+   "id": "Q04.003",
+   "concept": "C04.02",
+   "lo": "4.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    105
+   ],
+   "stem": "An investor who is obligated to buy 100 shares of KLM at $40 if the contract is exercised has",
+   "options": [
+    "bought a call.",
+    "sold a call.",
+    "bought a put.",
+    "sold a put."
+   ],
+   "answer": 3,
+   "explanation": "The put writer (seller) takes on the obligation to buy the stock at the strike price if the put holder exercises.",
+   "why": [
+    "A call buyer has the right to buy.",
+    "A call writer is obligated to sell.",
+    "A put buyer has the right to sell.",
+    ""
+   ]
+  },
+  {
+   "id": "Q04.004",
+   "concept": "C04.02",
+   "lo": "4.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    106,
+    107
+   ],
+   "stem": "Which statement about exercise style is correct?",
+   "options": [
+    "American-style options may be exercised only on the expiration date.",
+    "European-style options may be exercised at any time before expiration.",
+    "American-style options may be exercised at any time up to expiration; European-style only at expiration.",
+    "Only the writer may decide when an option is exercised."
+   ],
+   "answer": 2,
+   "explanation": "A for American = Anytime; E for European = Expiration. The holder, not the writer, decides on exercise.",
+   "why": [
+    "Reversed.",
+    "Reversed.",
+    "",
+    "Only the holder (owner) can exercise."
+   ]
+  },
+  {
+   "id": "Q04.005",
+   "concept": "C04.02",
+   "lo": "4.b",
+   "type": "calc",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    104,
+    105
+   ],
+   "stem": "A customer buys 5 XYZ Oct 40 calls at a premium of 2.50. The total cost of the position, excluding commissions, is",
+   "options": [
+    "$12.50",
+    "$125",
+    "$1,250",
+    "$20,000"
+   ],
+   "answer": 2,
+   "explanation": "Premiums are per share and each contract is 100 shares: 2.50 × 100 × 5 = $1,250.",
+   "calc": "2.50 × 100 × 5 = $1,250",
+   "why": [
+    "Ignores the 100-share multiplier and contract count.",
+    "Ignores the number of contracts.",
+    "",
+    "That is the exercise value (40 × 500), not the cost of the options."
+   ]
+  },
+  {
+   "id": "Q04.006",
+   "concept": "C04.03",
+   "lo": "4.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    107,
+    108
+   ],
+   "stem": "An investor who expects a stock's price to decline, but wants to risk no more than a known amount, would most likely",
+   "options": [
+    "buy a call.",
+    "write a naked call.",
+    "buy a put.",
+    "write a put."
+   ],
+   "answer": 2,
+   "explanation": "Buying a put profits from a decline with loss limited to the premium — the limited-risk alternative to selling short.",
+   "why": [
+    "A long call is bullish.",
+    "Naked call writing is bearish but carries unlimited risk.",
+    "",
+    "A put writer profits if the stock rises or stays flat."
+   ]
+  },
+  {
+   "id": "Q04.007",
+   "concept": "C04.03",
+   "lo": "4.b",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    109
+   ],
+   "stem": "Which option position carries the greatest potential loss?",
+   "options": [
+    "Long call",
+    "Long put",
+    "Short covered call",
+    "Short uncovered call"
+   ],
+   "answer": 3,
+   "explanation": "A naked call writer must deliver stock he does not own; because there is no ceiling on a stock's price, the potential loss is unlimited.",
+   "why": [
+    "Loss limited to the premium.",
+    "Loss limited to the premium.",
+    "The writer already owns the shares to deliver.",
+    ""
+   ]
+  },
+  {
+   "id": "Q04.008",
+   "concept": "C04.03",
+   "lo": "4.b",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    110
+   ],
+   "stem": "A client is convinced that a pending court ruling will move DEF's stock sharply but has no idea in which direction. The most appropriate strategy is to",
+   "options": [
+    "buy a straddle.",
+    "sell a straddle.",
+    "write a covered call.",
+    "buy a call only."
+   ],
+   "answer": 0,
+   "explanation": "A long straddle (buy a put and a call, same strike and expiration) profits from a large move in either direction.",
+   "why": [
+    "",
+    "Selling a straddle profits from stability.",
+    "A covered call profits from a flat or modestly rising market.",
+    "A call alone profits only from a rise."
+   ]
+  },
+  {
+   "id": "Q04.009",
+   "concept": "C04.03",
+   "lo": "4.b",
+   "type": "calc",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    109
+   ],
+   "stem": "An investor buys an MNO 60 put for a premium of 4 when MNO trades at $62. At expiration MNO is $51 and the investor exercises after buying stock in the market. The profit is",
+   "options": [
+    "$500",
+    "$700",
+    "$900",
+    "$1,100"
+   ],
+   "answer": 0,
+   "explanation": "Buy at $51, put at $60: $9 per share gain minus the $4 premium = $5 × 100 = $500.",
+   "calc": "(60 − 51) − 4 = 5 per share × 100 = $500",
+   "why": [
+    "",
+    "Ignores part of the premium.",
+    "Ignores the premium.",
+    "Uses the $62 starting price instead of the strike."
+   ]
+  },
+  {
+   "id": "Q04.010",
+   "concept": "C04.04",
+   "lo": "4.c",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    110,
+    111
+   ],
+   "stem": "Which of the following is characteristic of a warrant rather than a stock right?",
+   "options": [
+    "It is distributed to existing shareholders to prevent dilution.",
+    "Its exercise price is above the current market price when issued.",
+    "It expires within 45 to 60 days.",
+    "Its exercise price is below the current market price."
+   ],
+   "answer": 1,
+   "explanation": "Warrants are issued with an exercise price above the market and a long life, often attached to bonds as a sweetener. Rights go to existing holders, are priced below market, and are short-lived.",
+   "why": [
+    "That describes rights.",
+    "",
+    "That is the life of a right; warrants last years.",
+    "Rights are priced below market."
+   ]
+  },
+  {
+   "id": "Q04.011",
+   "concept": "C04.04",
+   "lo": "4.c",
+   "type": "calc",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    110
+   ],
+   "stem": "A shareholder owns 400 of a company's 20,000 outstanding common shares. The company announces a rights offering of 4,000 new shares. To maintain proportionate ownership the shareholder would receive rights to purchase",
+   "options": [
+    "40 shares.",
+    "80 shares.",
+    "400 shares.",
+    "800 shares."
+   ],
+   "answer": 1,
+   "explanation": "400 ÷ 20,000 = 2% ownership; 2% of 4,000 new shares = 80 shares.",
+   "calc": "400/20,000 = 2%; 2% × 4,000 = 80",
+   "why": [
+    "That would be 1%.",
+    "",
+    "That would be the shareholder's entire current holding.",
+    "That would be 20%."
+   ]
+  },
+  {
+   "id": "Q04.012",
+   "concept": "C04.04",
+   "lo": "4.c",
+   "type": "compare",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    111
+   ],
+   "stem": "A key difference between a listed call option and a warrant is that",
+   "options": [
+    "only the call option is a derivative.",
+    "exercise of a warrant results in new shares issued by the company, while exercise of a call delivers existing shares.",
+    "warrants are issued by the exchange and calls by the issuer.",
+    "a warrant's life is shorter than a call's."
+   ],
+   "answer": 1,
+   "explanation": "Warrants originate with the issuer, so exercise creates new shares; listed calls originate on the exchange and the assigned writer delivers existing shares. Both are derivatives; warrants live far longer.",
+   "why": [
+    "Both derive value from the common stock.",
+    "",
+    "Reversed.",
+    "Warrants can last up to 10 years; calls at most 9 months (LEAPS 3 years)."
+   ]
+  },
+  {
+   "id": "Q04.013",
+   "concept": "C04.05",
+   "lo": "4.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    112,
+    114
+   ],
+   "stem": "A wheat farmer who wants to protect against a price decline before harvest should",
+   "options": [
+    "buy forward contracts on wheat.",
+    "sell forward or futures contracts on wheat.",
+    "buy call options on wheat futures.",
+    "wait and sell in the spot market at harvest."
+   ],
+   "answer": 1,
+   "explanation": "A producer hedges a falling price by selling forwards (most typical) or futures, locking in a sale price while giving up gains if prices rise.",
+   "why": [
+    "Buying would add to price exposure.",
+    "",
+    "Calls profit from rising prices — the wrong direction for a seller's hedge.",
+    "That leaves the price risk unhedged."
+   ]
+  },
+  {
+   "id": "Q04.014",
+   "concept": "C04.05",
+   "lo": "4.d",
+   "type": "scenario",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    112,
+    115
+   ],
+   "stem": "An investor enters a long forward contract on copper at a forward price of $4.10 when the spot price is $4.00. Two months later the spot price is $4.30. The forward price of the existing contract is now",
+   "options": [
+    "$4.00",
+    "$4.10",
+    "$4.20",
+    "$4.30"
+   ],
+   "answer": 1,
+   "explanation": "A forward's price is agreed at initiation and does not change; the contract's value changes with the spot price, but not its terms — like a call's strike price.",
+   "why": [
+    "That was the original spot price.",
+    "",
+    "No averaging occurs.",
+    "The spot price moved; the contract price did not."
+   ]
+  },
+  {
+   "id": "Q04.015",
+   "concept": "C04.06",
+   "lo": "4.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    113,
+    114
+   ],
+   "stem": "Which statement correctly contrasts futures and forward contracts?",
+   "options": [
+    "Futures are customized; forwards are standardized.",
+    "Futures carry counterparty risk; forwards are guaranteed by a clearinghouse.",
+    "Futures trade on exchanges and are regulated; forwards are private, illiquid agreements.",
+    "Forwards are used primarily by speculators; futures by producers."
+   ],
+   "answer": 2,
+   "explanation": "Futures are standardized, exchange-traded, clearinghouse-guaranteed, liquid and CFTC-regulated; forwards are customized bilateral contracts with counterparty risk, used mainly by hedgers.",
+   "why": [
+    "Reversed.",
+    "Reversed — the clearinghouse backs futures.",
+    "",
+    "Reversed."
+   ]
+  },
+  {
+   "id": "Q04.016",
+   "concept": "C04.06",
+   "lo": "4.d",
+   "type": "calc",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    113,
+    115
+   ],
+   "stem": "A speculator sells one 5,000-bushel corn futures contract at $4.50 per bushel. At expiration the settlement price is $4.20. The speculator",
+   "options": [
+    "has a $1,500 gain.",
+    "has a $1,500 loss.",
+    "must take delivery of the corn.",
+    "has a $150 gain."
+   ],
+   "answer": 0,
+   "explanation": "A short profits when the settlement price is below the contract price: $0.30 × 5,000 = $1,500 gain.",
+   "calc": "(4.50 − 4.20) × 5,000 = $1,500",
+   "why": [
+    "",
+    "The short gains when prices fall.",
+    "The buyer (long) takes delivery; the seller delivers.",
+    "Off by a factor of 10."
+   ]
+  },
+  {
+   "id": "Q04.017",
+   "concept": "C04.06",
+   "lo": "4.d",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    114
+   ],
+   "stem": "Futures and forward contracts are regulated by",
+   "options": [
+    "the SEC.",
+    "the CFTC.",
+    "FINRA.",
+    "the OCC."
+   ],
+   "answer": 1,
+   "explanation": "Because they are not securities, futures and forwards fall outside SEC jurisdiction; the Commodity Futures Trading Commission regulates them.",
+   "why": [
+    "The SEC regulates securities.",
+    "",
+    "FINRA is the SRO for broker-dealers.",
+    "The OCC issues and guarantees listed options."
+   ]
+  },
+  {
+   "id": "Q04.018",
+   "concept": "C04.07",
+   "lo": "4.e",
+   "type": "mcq",
+   "exam": true,
+   "diff": 1,
+   "pages": [
+    118
+   ],
+   "stem": "Purchasing derivatives may serve all of the following purposes EXCEPT",
+   "options": [
+    "hedging.",
+    "speculation.",
+    "generating income.",
+    "profit."
+   ],
+   "answer": 2,
+   "explanation": "Buying an option, forward or future never produces income — only selling (writing) does.",
+   "why": [
+    "Buying puts or calls can hedge a position.",
+    "Derivatives are commonly bought to speculate.",
+    "",
+    "Profit is a goal of buying derivatives."
+   ]
+  },
+  {
+   "id": "Q04.019",
+   "concept": "C04.07",
+   "lo": "4.e",
+   "type": "calc",
+   "exam": true,
+   "diff": 3,
+   "pages": [
+    116
+   ],
+   "stem": "An investor buys 100 shares of RTO at $42 and writes an RTO 45 call for a premium of 3. If RTO is $40 at expiration, the investor's position shows",
+   "options": [
+    "a $200 loss.",
+    "a $100 gain.",
+    "a $300 gain.",
+    "a $500 loss."
+   ],
+   "answer": 1,
+   "explanation": "Stock loss $2 × 100 = $200, offset by the $300 premium kept when the call expires: net $100 gain (breakeven is $39).",
+   "calc": "(40 − 42) × 100 = −$200; + $300 premium = +$100",
+   "why": [
+    "Ignores the premium received.",
+    "",
+    "Ignores the stock's decline.",
+    "Not consistent with the figures."
+   ]
+  },
+  {
+   "id": "Q04.020",
+   "concept": "C04.07",
+   "lo": "4.e",
+   "type": "mcq",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    117
+   ],
+   "stem": "An adviser recommends that a client write covered calls for income. The client should understand that",
+   "options": [
+    "the income is generally tax-free.",
+    "the premium income is generally taxed as a short-term capital gain.",
+    "the client, as writer, decides whether the option is exercised.",
+    "the strategy has unlimited risk."
+   ],
+   "answer": 1,
+   "explanation": "Option profits are generally short-term gains taxed at ordinary rates; the holder controls exercise; covered writing has limited risk (the shares are owned).",
+   "why": [
+    "Option income is taxable.",
+    "",
+    "Only the holder can exercise.",
+    "Covered calls are limited-risk; naked calls are unlimited."
+   ]
+  },
+  {
+   "id": "Q04.021",
+   "concept": "C04.07",
+   "lo": "4.e",
+   "type": "scenario",
+   "exam": true,
+   "diff": 2,
+   "pages": [
+    117
+   ],
+   "stem": "An investor bought a 3-month call that is now near expiration with the stock still below the strike. The investor says he will 'hold it until the stock comes back.' The adviser should explain",
+   "options": [
+    "time decay — the option will lose value and expire worthless if the stock does not rise in time.",
+    "that the option can be rolled into the stock at no cost.",
+    "that the OCC will extend the expiration on request.",
+    "that the premium will be refunded at expiration."
+   ],
+   "answer": 0,
+   "explanation": "Unlike stock, an option expires; as expiration nears its value decays and an out-of-the-money option becomes worthless.",
+   "why": [
+    "",
+    "There is no free conversion into stock.",
+    "Expiration dates are fixed.",
+    "Premiums are never refunded."
+   ]
+  },
+  {
+   "id": "F04.001",
+   "concept": "C04.01",
+   "type": "flash",
+   "pages": [
+    104
+   ],
+   "front": "Three standardized terms of a listed option; who issues/guarantees them",
+   "back": "Underlying (100 shares), expiration date, strike price. Issued and guaranteed by the Options Clearing Corporation (OCC)."
+  },
+  {
+   "id": "F04.002",
+   "concept": "C04.02",
+   "type": "flash",
+   "pages": [
+    105,
+    107
+   ],
+   "front": "Call vs. put: rights and obligations; American vs. European",
+   "back": "Call: right to buy / writer must sell. Put: right to sell / writer must buy. American = Anytime; European = Expiration."
+  },
+  {
+   "id": "F04.003",
+   "concept": "C04.03",
+   "type": "flash",
+   "pages": [
+    108,
+    110
+   ],
+   "front": "Max loss / max gain: long call, long put, naked call, short put. Straddle use.",
+   "back": "Long call: premium / unlimited. Long put: premium / strike − premium. Naked call: unlimited loss. Short put: limited (stock to zero). Buy straddle = volatility; sell straddle = stability."
+  },
+  {
+   "id": "F04.004",
+   "concept": "C04.04",
+   "type": "flash",
+   "pages": [
+    110,
+    111
+   ],
+   "front": "Rights vs. warrants: price vs. market, life, who gets them",
+   "back": "Rights: below market, ≤45–60 days, given to existing holders proportionally. Warrants: above market, up to 10 years, sweetener on bond/stock issues, detachable."
+  },
+  {
+   "id": "F04.005",
+   "concept": "C04.05",
+   "type": "flash",
+   "pages": [
+    112
+   ],
+   "front": "Five components of a forward; two big drawbacks",
+   "back": "Quantity, quality, time of delivery, place, price. Drawbacks: illiquid (no secondary market) and counterparty risk."
+  },
+  {
+   "id": "F04.006",
+   "concept": "C04.06",
+   "type": "flash",
+   "pages": [
+    113,
+    114
+   ],
+   "front": "Futures: who regulates, who guarantees, how to offset",
+   "back": "CFTC regulates (not the SEC). Clearinghouse is counterparty to all. Offset with the opposite trade — same commodity, month, exchange. ~98% offset before delivery."
+  },
+  {
+   "id": "F04.007",
+   "concept": "C04.07",
+   "type": "flash",
+   "pages": [
+    116,
+    117
+   ],
+   "front": "Covered call: breakeven and point where unhedged would have been better; tax on option gains",
+   "back": "Breakeven = cost − premium; writing beats not writing until stock > strike + premium. Gains usually short-term (ordinary income). Buying derivatives never produces income."
+  }
+ ],
+ "terms": [
+  {
+   "term": "Covered call",
+   "def": "Writing a call against stock already owned; income plus partial hedge; limited risk.",
+   "pages": [
+    91,
+    98
+   ]
+  },
+  {
+   "term": "Counterparty risk",
+   "def": "Risk that the other party to a forward contract fails to perform; eliminated in futures by the clearinghouse.",
+   "pages": [
+    94,
+    96
+   ]
+  },
+  {
+   "term": "LEAPS",
+   "def": "Long-Term Equity Anticipation Securities — options with expirations up to three years.",
+   "pages": [
+    89
+   ]
+  },
+  {
+   "term": "Naked (uncovered) call",
+   "def": "Writing a call without owning the stock; unlimited potential loss — the riskiest option strategy.",
+   "pages": [
+    91
+   ]
+  },
+  {
+   "term": "Options Clearing Corporation (OCC)",
+   "def": "Issuer and guarantor of listed options.",
+   "pages": [
+    86
+   ]
+  },
+  {
+   "term": "Premium",
+   "def": "The price of an option, quoted per share; × 100 per contract.",
+   "pages": [
+    87
+   ]
+  },
+  {
+   "term": "Straddle",
+   "def": "A put and a call on the same stock, strike and expiration; bought for volatility, sold for stability.",
+   "pages": [
+    92
+   ]
+  },
+  {
+   "term": "Time decay",
+   "def": "Loss of option value as expiration approaches.",
+   "pages": [
+    99
+   ]
+  },
+  {
+   "term": "Warrant",
+   "def": "Long-term, issuer-created right to buy stock above the current market; often a sweetener on bond issues.",
+   "pages": [
+    93
+   ]
+  }
+ ]
+}
